@@ -1,0 +1,187 @@
+{
+  "main": {
+    "id": "c14df55f1886fcb9",
+    "type": "split",
+    "children": [
+      {
+        "id": "025cc3d363bfb6ef",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "dd60c1a2a9dce038",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "JavaScript - Úvod/JavaScript - Úvod.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "JavaScript - Úvod"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "1194579f2dbd023e",
+    "type": "split",
+    "children": [
+      {
+        "id": "35e46a164c1ddd09",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6dff688c6f16ef6a",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "b3ad1a8836add73e",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "f18acdfec9fd88aa",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "c16e2815bf7bdcec",
+    "type": "split",
+    "children": [
+      {
+        "id": "dfca1e492a418189",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "cb4cf59570ba0145",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Programování v JavaScriptu.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Programování v JavaScriptu"
+            }
+          },
+          {
+            "id": "88b163ec5ddc5a7e",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Programování v JavaScriptu.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Programování v JavaScriptu"
+            }
+          },
+          {
+            "id": "60479169d3e0bf0f",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "1b8d83683c6540de",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Programování v JavaScriptu.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Programování v JavaScriptu"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "publish:Publish changes...": false
+    }
+  },
+  "active": "dd60c1a2a9dce038",
+  "lastOpenFiles": [
+    "JavaScript - Pokračování/JavaScript - Pokračování.md",
+    "JavaScript - Úvod/JavaScript - Úvod.md",
+    "JavaScript - Expert.md",
+    "img/august-gusteau-foto.jpg",
+    "Programování v JavaScriptu.md",
+    "Verzování - GIT.md",
+    "TypeScript.md",
+    "img",
+    "Untitled.md",
+    "JavaScript - Pokračování",
+    "JavaScript - Úvod",
+    "create a link.md"
+  ]
+}

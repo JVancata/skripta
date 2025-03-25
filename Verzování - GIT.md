@@ -1,0 +1,1 @@
+Na začátku se bez toho na pár úlohách obejdeš, ale umět to musíš.
