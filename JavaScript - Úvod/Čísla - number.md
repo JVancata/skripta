@@ -54,8 +54,9 @@ console.log(2 ** 5); // 32
 console.log(2 ** 6); // 64
 ```
 ## Porovnávání čísel
-Používáme výhradně trojité rovná se `===` ([strict equality](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality)). 
-Použití pouze dvou rovná se `==` sice funguje, ale **nekontroluje datový** typ a to vede k chybám.
+Používáme jedině **trojité rovná se** `===` ([strict equality](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality)). 
+
+Použití pouze dvou rovná se `==` sice funguje, ale **nekontroluje datový typ** a to vede k chybám.
 ```javascript
 const number3 = 666;
 const number4 = 665;
@@ -89,10 +90,6 @@ console.log(number3 <= (number4 + 1)); // true
 >[!tip]- Menší než
 > ![[less-than.png]]
 ## Nutné vědět
-Do proměnné typu `number` **nelze uložit** číslo větší než [`9_007_199_254_740_991`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER) (devět biliard). Sice ho tam narveš, ale **ztrácíš přesnost** a nemůžeš se na výsledek [spolehnout](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isSafeInteger). 
-
-Pokud chceš pracovat s většími čísly, použij **[`BigInt`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt)**.
-
 Dej si **pozor** na hodnotu [`NaN`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN) (not a number).  Jednou nebo později na to narazíš, tak se připrav.
 
 ```javascript
@@ -111,6 +108,10 @@ console.log(Number.isNaN(parsedNumber)) // true - NaN musíme zjistit takto
 >[Zdroj obrázku](https://adamjedlicka.notion.site/Meme-ka-3458e0f7a1c3431bbf231e3a52550552#7e963e73ba1e48438c503440f69aee70)- vysokoškolská skripta.
 >
 >
+
+Do proměnné typu `number` **nelze uložit** číslo větší než [`9_007_199_254_740_991`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER) (devět biliard). Sice ho tam narveš, ale **ztrácíš přesnost** a nemůžeš se na výsledek [spolehnout](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isSafeInteger). 
+
+Pokud chceš pracovat s většími čísly, použij **[`BigInt`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt)**.
 
 > [!danger]+ Pozor na přesnost desetinných čísel (**floating point arithmetic**)!
 > Vlož do konzole tento kód:
@@ -144,8 +145,11 @@ Vyrazíš s chábrama a chrábryněma na festival Rock For People tvým žihadle
 Dohromady do Hradce a zpátky ujedeš **225 km** a spotřebuješ **15 litrů benzínu**.
 Benzín Tě vyšel na 36.90 Kč za litr.
 
-1. Jaká byla průměrná spotřeba benzínu na 100 km?
-2. Cenu benzínu dělíte mezi 4 lidi, kolik Ti každý z nich pošle peněz?
+1. Jaká byla **průměrná spotřeba** benzínu na 100 km?
+2. Cenu benzínu dělíte mezi 4 lidi, **kolik peněz** Ti každý z nich pošle?
+
+> [!question]- Nápověda - vzoreček průměrné spotřeby
+> `Průměrná spotřeba = (spotřebováno litrů / uražená vzdálenost) * 100`
 
 > [!todo]- Řešení
 > V tomto případě nás přesnost **nezajímá**.
@@ -173,16 +177,38 @@ Benzín Tě vyšel na 36.90 Kč za litr.
 # Úloha 2 - FE!N 🔥
 Ve Spotify wrapped 2024 máš nejposlouchanější skladbu FE!N od Travise Scotta.
 
-Kolik sekund, minut a hodin si strávil\*a poslechem?
-Kolikrát se z Tvých sluchátek ozvalo "FE!N"?
+1. Kolik sekund, minut a hodin si **strávil\*a poslechem**?
+2. Kolikrát se z Tvých sluchátek **ozvalo** "FE!N"?
 
 **Detaily:**
-- Skladba má **3 minuty a 11 sekund**
-- Hrála ti za rok 2024 dohromady **112krát**
+- Skladba trvá **3 minuty a 11 sekund**
+- Hrála Ti za rok 2024 dohromady **112krát**
 - FE!N se v jednom přehrání skladby objeví **69krát**
 - Vždy posloucháš až do konce.
 
+> [!question]- Nápověda - výpočet
+> Použiješ `modulo` - zbytek po dělení.
+> 
+> Nejdřív si spočítej celkový počet **sekund**.
+> 
+> Potom spočítej **celkový počet** **minut** `Celkem minut = celkem sekund / 60` a zaokrouhli ho dolů.
+> 
+> Potom z toho udělej celkový počet **hodin**  `Celkem hodin = celkem minut / 60` a zaokrouhli ho dolů.
+> 
+> Teď už to jenom naformátovat na výstup 😊 Tady už ti pomůže operátor modulo `%`.
+> 
+> Vypíšeš:
+> 	1. `Hodiny`
+> 	2. `Minuty % 60` - zajímají tě jen minuty, co nejsou obsaženy v hodinách.
+> 	3. `Sekundy % 60` - zajímají tě jen sekundy, co nejsou obsaženy v minutách.
+> 
+
 > [!todo]- Řešení
+> 
+> Tady na to jdu složitějším způsobem, než píšu v nápovědě.
+> 
+> Když budu mít čas, upravím to. Nebo mi pošli Tvůj hezčí kód a já ho sem dám, dík :-)
+> 
 > ```javascript
 > // 3 minuty a 11 sekund
 > const songDuration = 3 * 60 + 11;
@@ -218,7 +244,7 @@ Potřebuješ vypočítat, kolik zaplatíš státu na **dani z příjmu**.
 
 Účetní ti doporučila využití [paušálních výdajů](https://www.fakturoid.cz/almanach/dane/pausalni-vydaje) ve výši 60 %.
 
-**Výpočty:**
+**Vzorečky:**
 `Výdaje = příjem * paušál výdajů`
 `Základ daně = příjmy - výdaje`
 `Daň z příjmů = základ daně * sazba daně z příjmů`
@@ -231,7 +257,7 @@ Potřebuješ vypočítat, kolik zaplatíš státu na **dani z příjmu**.
 | **Výdaje**        | 600 000 Kč   |
 | **Základ daně**   | 400 000 Kč   |
 | **Daň**           | 60 000 Kč    |
-Kolik by si na dani zaplatil\*a, kdyby tvůj příjem byl:
+Kolik by si na **dani zaplatil\*a**, kdyby tvůj příjem byl:
 - 100 000 Kč
 - 895 432 Kč
 - 108 920 Kč
@@ -241,3 +267,10 @@ Neuvažuj slevy na dani.
 >[!todo]- Řešení
 >TODO :-)
 
+> [!hint]- Jak zaplatit na daních 0 Kč?
+> 
+> [§ 240](https://www.zakonyprolidi.cz/cs/2009-40)
+> 
+> (1) Kdo ve větším rozsahu zkrátí daň, clo, pojistné na sociální zabezpečení, příspěvek na státní politiku zaměstnanosti, pojistné na úrazové pojištění, pojistné na zdravotní pojištění, poplatek nebo jinou podobnou povinnou platbu anebo vyláká výhodu na některé z těchto povinných plateb, bude potrestán **odnětím svobody na šest měsíců až tři léta** nebo zákazem činnosti.
+> 
+> ![[secret-ingredient.png]]
