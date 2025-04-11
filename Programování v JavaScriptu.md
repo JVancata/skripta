@@ -30,3 +30,12 @@ Stačí se postupně prokousávat tématy a plnit všechny programovací úlohy.
 
 ## Zdroje
 Prakticky všechny příklady a informace na této stránce jsou čerpány z [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript). Je to nejkvalitnější zdroj informací, co se JavaScriptu týče.
+
+Na všechny zdroje se snažím odkazovat přímo v textu. Pokud jsem kód nepsal já, je uveden zdroj, kde jsem ho vzal.
+
+Nepoužívám k tvorbě těchto materiálů generativní umělou inteligenci. Myslím si, že je důležité rozumět tomu jak funguje a umět ji využít. Pokud je nějaký obsah generován, vždy je to explicitně uvedeno.
+
+## Licence
+Cílem této stránky je naučit čtenáře programovat v JavaScriptu, používej tento obsah prosím ke svému vzdělávání. Klidně pomocí něj vzdělávej i další lidi, třeba tvoje vlastní studenty, přátele a nebo kolegy v práci. Vždy ale prosím uveď odkaz na tento web. Jestli na tom i nějakou korunu vyděláš mi nevadí, ale vždy se odkaž zpátky sem.
+
+Nechci, aby můj obsah byl součástí cizích služeb (např. jazykových modelů). Když napíšeš cokoli do ChatGPT, už si s tím můžou dělat, co chtějí. U některých programovacích úloh to třeba využijeme - napíšeme si prompt pro jazykový model a budeme zkoušet generovat kód - ale to bude vždy v textu specificky označeno.
