@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Programování v JavaScriptu.md",
+                "file": "JavaScript - Úvod/Čísla - `number`.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Programování v JavaScriptu"
+              "title": "Čísla - `number`"
             }
           }
         ]
@@ -171,17 +171,20 @@
   },
   "active": "dd60c1a2a9dce038",
   "lastOpenFiles": [
-    "Algoritmizace/1. Uvozovky.md",
-    "TypeScript.md",
-    "Programování v JavaScriptu.md",
-    "JavaScript - Expert.md",
+    "JavaScript - Úvod/Komplexní datové typy.md",
     "JavaScript - Úvod/JavaScript - Úvod.md",
+    "JavaScript - Úvod/Čísla - `number`.md",
+    "Algoritmizace/1. Uvozovky.md",
+    "Programování v JavaScriptu.md",
+    "Verzování - GIT.md",
+    "TypeScript.md",
+    "JavaScript - Expert.md",
+    "JavaScript - Úvod/Primitivní datové typy.md",
     "Algoritmizace",
     "Untitled.md",
     "JavaScript - Pokračování/JavaScript - Pokračování.md",
     "img/its-all-objekt.jpg",
     "img/august-gusteau-foto.jpg",
-    "Verzování - GIT.md",
     "img",
     "JavaScript - Pokračování",
     "JavaScript - Úvod",
