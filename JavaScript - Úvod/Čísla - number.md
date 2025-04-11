@@ -11,47 +11,6 @@ Při zápisu můžeš použít **tríček s podtržítkem** `_`. Nedělá to vů
 9_007_199_254_740_991 === 9007199254740991 // true
 9_007_199_254_740_991 === Number.MAX_SAFE_INTEGER // true
 ```
-
-Do proměnné typu `number` **nelze uložit** číslo větší než [`9_007_199_254_740_991`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER) (devět kvadriliónů). Sice ho tam narveš, ale **ztrácíš přesnost** a nemůžeš se na výsledek [spolehnout](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isSafeInteger). 
-
-Pokud chceš pracovat s většími čísly, použij **[`BigInt`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt)**.
-
-Dej si **pozor** na hodnotu [`NaN`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN) (not a number).  Jednou nebo později na to narazíš, tak se připrav.
-
-```javascript
-const parsedNumber = parseInt("asdf");
-console.log(parsedNumber); // NaN
-console.log(typeof parsedNumber); // number - hodnota "not a number" je number
-console.log(parsedNumber === NaN) // false - NaN se nerovná NaN
-console.log(Number.isNaN(parsedNumber)) // true - NaN musíme zjistit takto
-```
-
-> [!danger] Pozor na přesnost desetinných čísel (**floating point arithmetic**)!
-> Vlož do konzole tento kód:
-> ```javascript
-> const fractionSum = 0.2+0.1;
-> console.log(fractionSum);
-> console.log(fractionSum === 0.3); // Je to true, nebo false?
-> ```
-> 
-> **Co se to děje?!** Bohužel to není bug 🐞, ale **feature**. Začínáme zabrušovat do **teoretické informatiky**.
-> 
-> Na vysvětlení problému je perfektní video od [Computerphile](https://www.youtube.com/@Computerphile).
-> 
-> ![Computerphile vysvětlení desetinných čísel](https://www.youtube.com/watch?v=PZRI1IfStY0)
-> 
-> Nemusíš to umět kompletně vysvětlit z paměti, ale **musíš o tomto problému vědět**!
-> 
-> Pro nás je **klíčové**:
-> 1. Desetinná čísla **NEJSOU** přesná.
-> 2. Pokud chceme "přesně" počítat s desetinnými čísly, potřebujeme [`Number.EPSILON`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/EPSILON)
-> 	- To neplatí vždy, například peníze (halíře) takhle počítat **nemůžeme**. 
-> 3. Pokud přesnost **nepotřebujeme**, postačí nám
-> 	- [Zaokrouhlení nahoru](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/ceil)
-> 	- [Zaokrouhlení dolu](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor)
-> 	- [Zaokrouhlení](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/round)
-> 	- [Zaokrouhlení desetinných čísel](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/fround)
-
 # Operace s čísly
 ## Sčítání, odčítání, násobení, dělení
 ```javascript
@@ -75,7 +34,6 @@ Pozor na **dělení nulou**!
 ```javascript
 console.log(100 / 0); // Infinity
 ```
-
 ## Zbytek po dělení - modulo `%`
 ```javascript
 const durationSeconds = 125;
@@ -128,6 +86,48 @@ console.log(number3 <= number4); // false
 console.log(number3 <= (number4 + 1)); // true
 ```
 
+>[!tip]- Menší než
+> ![[less-than.png]]
+## Nutné vědět
+Do proměnné typu `number` **nelze uložit** číslo větší než [`9_007_199_254_740_991`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER) (devět kvadriliónů). Sice ho tam narveš, ale **ztrácíš přesnost** a nemůžeš se na výsledek [spolehnout](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isSafeInteger). 
+
+Pokud chceš pracovat s většími čísly, použij **[`BigInt`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt)**.
+
+Dej si **pozor** na hodnotu [`NaN`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN) (not a number).  Jednou nebo později na to narazíš, tak se připrav.
+
+```javascript
+const parsedNumber = parseInt("asdf");
+console.log(parsedNumber); // NaN
+console.log(typeof parsedNumber); // number - hodnota "not a number" je number
+console.log(parsedNumber === NaN) // false - NaN se nerovná NaN
+console.log(Number.isNaN(parsedNumber)) // true - NaN musíme zjistit takto
+```
+
+> [!danger]+ Pozor na přesnost desetinných čísel (**floating point arithmetic**)!
+> Vlož do konzole tento kód:
+> ```javascript
+> const fractionSum = 0.2+0.1;
+> console.log(fractionSum);
+> console.log(fractionSum === 0.3); // Je to true, nebo false?
+> ```
+> 
+> **Co se to děje?!** Bohužel to není bug 🐞, ale **feature**. Začínáme zabrušovat do **teoretické informatiky**.
+> 
+> Na vysvětlení problému je perfektní video od [Computerphile](https://www.youtube.com/@Computerphile).
+> 
+> ![Computerphile vysvětlení desetinných čísel](https://www.youtube.com/watch?v=PZRI1IfStY0)
+> 
+> Nemusíš to umět kompletně vysvětlit z paměti, ale **musíš o tomto problému vědět**!
+> 
+> Pro nás je **klíčové**:
+> 1. Desetinná čísla **NEJSOU** přesná.
+> 2. Pokud chceme "přesně" počítat s desetinnými čísly, potřebujeme [`Number.EPSILON`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/EPSILON)
+> 	- To neplatí vždy, například peníze (halíře) takhle počítat **nemůžeme**. 
+> 3. Pokud přesnost **nepotřebujeme**, postačí nám
+> 	- [Zaokrouhlení nahoru](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/ceil)
+> 	- [Zaokrouhlení dolu](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor)
+> 	- [Zaokrouhlení](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/round)
+> 	- [Zaokrouhlení desetinných čísel](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/fround)
 # Úloha 1 - FE!N
 Ve Spotify wrapped 2024 máš nejposlouchanější skladbu FE!N od Travise Scotta.
 
