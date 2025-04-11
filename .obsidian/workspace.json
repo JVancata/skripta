@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "JavaScript - Úvod/Čísla - number.md",
+                "file": "JavaScript - Pokračování/JavaScript - Pokračování.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Čísla - number"
+              "title": "JavaScript - Pokračování"
             }
           }
         ]
@@ -171,14 +171,16 @@
   },
   "active": "dd60c1a2a9dce038",
   "lastOpenFiles": [
-    "img/secret-ingredient.png",
+    "img/toaletak.webp",
+    "JavaScript - Pokračování/JavaScript - Pokračování.md",
+    "Algoritmizace/1. Uvozovky.md",
     "JavaScript - Úvod/Čísla - number.md",
     "JavaScript - Úvod/JavaScript - Úvod.md",
-    "Algoritmizace/1. Uvozovky.md",
+    "JavaScript - Úvod/Komplexní datové typy.md",
+    "img/secret-ingredient.png",
     "img/gustavo.webp",
     "img/gustavo.jpg",
     "img/less-than.png",
-    "JavaScript - Úvod/Komplexní datové typy.md",
     "Programování v JavaScriptu.md",
     "Verzování - GIT.md",
     "TypeScript.md",
@@ -186,7 +188,6 @@
     "JavaScript - Úvod/Primitivní datové typy.md",
     "Algoritmizace",
     "Untitled.md",
-    "JavaScript - Pokračování/JavaScript - Pokračování.md",
     "img/its-all-objekt.jpg",
     "img/august-gusteau-foto.jpg",
     "img",
