@@ -131,13 +131,46 @@ console.log(Number.isNaN(parsedNumber)) // true - NaN musíme zjistit takto
 > Pro nás je **klíčové**:
 > 1. Desetinná čísla **NEJSOU** přesná.
 > 2. Pokud chceme "přesně" počítat s desetinnými čísly, potřebujeme [`Number.EPSILON`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/EPSILON)
-> 	- To neplatí vždy, například peníze (halíře) takhle počítat **nemůžeme**. 
-> 3. Pokud přesnost **nepotřebujeme**, postačí nám
+> 	- To neplatí vždy, například peníze (halíře) v bance takhle počítat **nemůžeme**. 
+> 	- Pokud nám jde o to, kolik mají kámoši poslat za objednanou pizzu, tak je to fuk.
+> 1. Pokud přesnost **nepotřebujeme**, postačí nám
 > 	- [Zaokrouhlení nahoru](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/ceil)
 > 	- [Zaokrouhlení dolu](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor)
 > 	- [Zaokrouhlení](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/round)
 > 	- [Zaokrouhlení desetinných čísel](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/fround)
-# Úloha 1 - FE!N
+# Úloha 1 - Spotřeba benzínu 🚗
+Vyrazíš s chábrama a chrábryněma na festival Rock For People tvým žihadlem Ford Fiesta z roku 2005.
+
+Dohromady do Hradce a zpátky ujedeš **225 km** a spotřebuješ **15 litrů benzínu**.
+Benzín Tě vyšel na 36.90 Kč za litr.
+
+1. Jaká byla průměrná spotřeba benzínu na 100 km?
+2. Cenu benzínu dělíte mezi 4 lidi, kolik Ti každý z nich pošle peněz?
+
+> [!todo]- Řešení
+> V tomto případě nás přesnost **nezajímá**.
+> 
+> Jinak bychom **šli do pekla** za použití desetinných čísel při počítání peněz.
+> 
+> ```javascript
+> const gasPrice = 36.90;
+> const distanceTraveledKilometers = 225;
+> const gasConsumedLiters = 15;
+> const peopleOnBoardCount = 4;
+> 
+> const averageConsumption = (gasConsumedLiters / distanceTraveledKilometers) * 100;
+> const totalGasPrice = gasConsumedLiters * gasPrice;
+> const gasPriceShare = totalGasPrice / peopleOnBoardCount;
+> 
+> // Desetinné číslo
+> console.log("Průměrná spotřeba: ", averageConsumption);
+> // Pozor, zde se z výsledku stává `string`
+> console.log("Průměrná spotřeba (dvě desetinná): ", averageConsumption.toPrecision(3));
+> 
+> // Můžeme v klidu zaokrouhlit, jednu korunu nikdo řešit nebude.
+> console.log("Cena benzínu na hlavu: ", Math.round(gasPriceShare));
+> ```
+# Úloha 2 - FE!N 🔥
 Ve Spotify wrapped 2024 máš nejposlouchanější skladbu FE!N od Travise Scotta.
 
 Kolik sekund, minut a hodin si strávil\*a poslechem?
@@ -177,19 +210,20 @@ Kolikrát se z Tvých sluchátek ozvalo "FE!N"?
 > 
 > console.log("Celkem ti zahrálo FE!N:", playCount * phrasesPerSong);
 > ```
-# Úloha 2 - Paušální výdaje OSVČ 💰
+# Úloha 3 - Paušální výdaje OSVČ 💰
 Začínáš programovat na vlastní živnost (OSVČ) a přišel čas vyplnění daňového přiznání.
 
-Za rok 2024 se ti povedlo vydělat 1 milion Kč, gratuluju!
-Potřebuješ vypočítat, kolik zaplatíš státu na dani z příjmů.
+Za rok 2024 se ti povedlo vydělat **1 milion Kč**, gratuluju!
+Potřebuješ vypočítat, kolik zaplatíš státu na **dani z příjmu**.
 
 Účetní ti doporučila využití [paušálních výdajů](https://www.fakturoid.cz/almanach/dane/pausalni-vydaje) ve výši 60 %.
 
+**Výpočty:**
 `Výdaje = příjem * paušál výdajů`
 `Základ daně = příjmy - výdaje`
 `Daň z příjmů = základ daně * sazba daně z příjmů`
 
-Tvoje situace vypadá takto:
+**Tvoje situace vypadá takto:**
 
 | **Příjem**        | 1 000 000 Kč |
 | ----------------- | ------------ |
@@ -203,3 +237,7 @@ Kolik by si na dani zaplatil\*a, kdyby tvůj příjem byl:
 - 108 920 Kč
 
 Neuvažuj slevy na dani.
+
+>[!todo]- Řešení
+>TODO :-)
+
