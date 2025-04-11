@@ -1,4 +1,4 @@
-JavaScript je programovací jazyk, který dnes běží prakticky všude. Můžeme v něm psát webové, mobilní a desktopové aplikace a i aplikace, které běží na serveru.
+JavaScript je programovací jazyk, který dnes běží **prakticky všude**. Můžeme v něm psát webové, mobilní a desktopové aplikace a i aplikace, které běží na serveru.
 
 >[!info]- Přesnější definice
 >JavaScript:
@@ -77,7 +77,7 @@ Proměnná může obsahovat různé typy dat, zatím jsme si ukázali `string` a
 
 | Typ         | Vysvětlení                                       | Příklady                                   |
 | ----------- | ------------------------------------------------ | ------------------------------------------ |
-| `number`    | [[Čísla - `number`\|číslo nebo desetinné číslo]] | `0`, `0.5`, `69`, `NaN`, `-Infinity`, `-0` |
+| `number`    | [[Čísla - number\|číslo nebo desetinné číslo]] | `0`, `0.5`, `69`, `NaN`, `-Infinity`, `-0` |
 | `string`    | jakýkoli text a nebo prázdný string              | `"a"`, `"Hello world!"`, `""`              |
 | `boolean`   | hodnota ano/ne                                   | `true`, `false`                            |
 | `null`      | [[JavaScript - Pokračování\|prázdná hodnota]]    | `null`                                     |
