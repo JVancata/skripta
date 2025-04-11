@@ -27,7 +27,7 @@ const multiple = number1 * number2;
 console.log(multiple); // 2541
 
 const fraction = number1 / number2;
-console.log(fraction); // -0.42857142857142855
+console.log(fraction); // 0.42857142857142855
 ```
 
 Pozor na **dělení nulou**!
@@ -89,7 +89,7 @@ console.log(number3 <= (number4 + 1)); // true
 >[!tip]- Menší než
 > ![[less-than.png]]
 ## Nutné vědět
-Do proměnné typu `number` **nelze uložit** číslo větší než [`9_007_199_254_740_991`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER) (devět kvadriliónů). Sice ho tam narveš, ale **ztrácíš přesnost** a nemůžeš se na výsledek [spolehnout](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isSafeInteger). 
+Do proměnné typu `number` **nelze uložit** číslo větší než [`9_007_199_254_740_991`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER) (devět biliard). Sice ho tam narveš, ale **ztrácíš přesnost** a nemůžeš se na výsledek [spolehnout](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isSafeInteger). 
 
 Pokud chceš pracovat s většími čísly, použij **[`BigInt`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt)**.
 
@@ -102,6 +102,15 @@ console.log(typeof parsedNumber); // number - hodnota "not a number" je number
 console.log(parsedNumber === NaN) // false - NaN se nerovná NaN
 console.log(Number.isNaN(parsedNumber)) // true - NaN musíme zjistit takto
 ```
+
+>[!tip]- `NaN !== NaN`
+>NaN se nerovná sám sobě. Musíme ho vždy kontrolovat přes funkci [`Number.isNaN()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN#testing_against_nan).
+>
+>![[gustavo.jpg]]
+>
+>[Zdroj obrázku](https://adamjedlicka.notion.site/Meme-ka-3458e0f7a1c3431bbf231e3a52550552#7e963e73ba1e48438c503440f69aee70)- vysokoškolská skripta.
+>
+>
 
 > [!danger]+ Pozor na přesnost desetinných čísel (**floating point arithmetic**)!
 > Vlož do konzole tento kód:
