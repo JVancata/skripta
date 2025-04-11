@@ -44,7 +44,7 @@ console.log(viewCount);
 | ------------------------------------- | --------------------------------------------- |
 | Nikdy nemůžeme přiřadit novou hodnotu | Hodnotu můžeme změnit a můžeme přiřadit novou |
 | Snažíme se použít vždy                | Snažíme se používat co nejméně                |
-| Nikdy nemůžeme znovu nadefinovat      | Nikdy nemůžeme znovu nadefinovat              |
+| Nikdy nemůžeme znovu deklarovat       | Nikdy nemůžeme znovu deklarovat               |
 | Vždy drží stejný datový typ (logicky) | Datový typ se může změnit                     |
 
 Kód, který využívá proměnnou, musí následovat až po její **deklaraci**. Počítač (interpreter) to čte stejně jako Ty - **odshora** a **zleva**. 
@@ -67,28 +67,76 @@ Vždy proměnnou nazvi tak, aby byl **z názvu jasný obsah**.
 **Vyzkoušej**:
 - [ ] Nadefinovat proměnnou, která obsahuje název tvého oblíbeného filmu.
 - [ ] Nadefinovat proměnnou, která obsahuje počet lidí na planetě zemi.
-	- [ ] Přičti jednoho člověka
-	- [ ] Odečti 100 lidí
-	- [ ] Vynásob počet lidí dvěma
+	- [ ] Přičti jednoho člověka (`+`)
+	- [ ] Odečti 100 lidí (`-`)
+	- [ ] Vynásob počet lidí dvěma (`*`)
 	- [ ] Zredukuj populaci na polovinu
 
 ## Primitivní datové typy
 Proměnná může obsahovat různé typy dat, zatím jsme si ukázali `string` a `number`.
 
-| Typ         | Vysvětlení                                    | Příklady                                               |
-| ----------- | --------------------------------------------- | ------------------------------------------------------ |
-| `number`    | číslo nebo desetinné číslo                    | `0`, `0.5`, `69`, `NaN`, `Infinity`, `-Infinity`, `-0` |
-| `string`    | jakýkoli text a nebo prázdný string           | `"a"`, `"Hello world!"`, `""`                          |
-| `boolean`   | hodnota ano/ne                                | `true`, `false`                                        |
-| `null`      | [[JavaScript - Pokračování\|prázdná hodnota]] | `null`                                                 |
-| `undefined` | [[JavaScript - Pokračování\|prázdná hodnota]] | `undefined`                                            |
+| Typ         | Vysvětlení                                    | Příklady                                   |
+| ----------- | --------------------------------------------- | ------------------------------------------ |
+| `number`    | číslo nebo desetinné číslo                    | `0`, `0.5`, `69`, `NaN`, `-Infinity`, `-0` |
+| `string`    | jakýkoli text a nebo prázdný string           | `"a"`, `"Hello world!"`, `""`              |
+| `boolean`   | hodnota ano/ne                                | `true`, `false`                            |
+| `null`      | [[JavaScript - Pokračování\|prázdná hodnota]] | `null`                                     |
+| `undefined` | [[JavaScript - Pokračování\|prázdná hodnota]] | `undefined`                                |
 ### `number`
-- Celá čísla - `0`, `69` nebo `9007199254740991`
+- Celá čísla - `0`, `69` nebo `9_007_199_254_740_991`
 - Desetinná čísla - `0.1`, `0.2`
-- Not a number - `NaN`
-- Infinity
+- Not a number - [`NaN`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN) - pozor na něj!
+- [`Infinity`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity)
 
-Callout na zaokrouhlovací chyby, nebo jak se tomu říká, prostě precission
+Při zápisu můžeš použít **tríček s podtržítkem** `_`. Nedělá to vůbec nic, jenom tím **zlepšíš čitelnost** - hezky oddělíš řády. 
+
+```javascript
+100000 === 100_000 // true
+9_007_199_254_740_991 === 9007199254740991 // true
+9_007_199_254_740_991 === Number.MAX_SAFE_INTEGER // true
+```
+
+Do proměnné typu `number` **nelze uložit** číslo větší než [`9_007_199_254_740_991`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER) (devět kvadriliónů). Sice ho tam narveš, ale **ztrácíš přesnost** a nemůžeš se na výsledek [spolehnout](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isSafeInteger). 
+
+Pokud chceš pracovat s většími čísly, použij **[`BigInt`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt)**.
+
+Dej si **pozor** na hodnotu [`NaN`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN) (not a number).  Jednou nebo později na to narazíš, tak se připrav.
+
+```javascript
+const parsedNumber = parseInt("asdf");
+console.log(parsedNumber); // NaN
+console.log(typeof parsedNumber); // number - hodnota "not a number" je number
+console.log(parsedNumber === NaN) // false - NaN se nerovná NaN
+console.log(Number.isNaN(parsedNumber)) // true - NaN musíme zjistit takto
+```
+
+> [!danger] Pozor na přesnost desetinných čísel (**floating point arithmetic**)!
+> Vlož do konzole tento kód:
+> ```javascript
+> const sum = 0.2+0.1;
+> console.log(sum);
+> console.log(sum === 0.3); // Je to true, nebo false?
+> ```
+> 
+> **Co se to děje?!** Bohužel to není bug 🐞, ale **feature**. Začínáme zabrušovat do **teoretické informatiky**.
+> 
+> Na vysvětlení problému je perfektní video od [Computerphile](https://www.youtube.com/@Computerphile).
+> 
+> ![Computerphile vysvětlení desetinných čísel](https://www.youtube.com/watch?v=PZRI1IfStY0)
+> 
+> Nemusíš to umět kompletně vysvětlit z paměti, ale **musíš o tomto problému vědět**!
+> 
+> Pro nás je **klíčové**:
+> 1. Desetinná čísla **NEJSOU** přesná.
+> 2. Pokud chceme "přesně" počítat s desetinnými čísly, potřebujeme [`Number.EPSILON`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/EPSILON)
+> 	- To neplatí vždy, například peníze (halíře) takhle počítat **nemůžeme**. 
+> 3. Pokud přesnost **nepotřebujeme**, postačí nám
+> 	- [Zaokrouhlení nahoru](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/ceil)
+> 	- [Zaokrouhlení dolu](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor)
+> 	- [Zaokrouhlení](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/round)
+> 	- [Zaokrouhlení desetinných čísel](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/fround)
+
+
 ## Objekty - `object`
 
 Díky objektům můžeme v JavaScriptu tvořit **komplexní datové struktury** (další odborný pojem, gratuluji!)
