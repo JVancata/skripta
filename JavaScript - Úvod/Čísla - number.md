@@ -169,7 +169,8 @@ Benzín Tě vyšel na 36.90 Kč za litr.
 > // Desetinné číslo
 > console.log("Průměrná spotřeba: ", averageConsumption);
 > // Pozor, zde se z výsledku stává `string`
-> console.log("Průměrná spotřeba (dvě desetinná): ", averageConsumption.toPrecision(3));
+> console.log("Průměrná spotřeba (dvě desetinná): ", 
+> averageConsumption.toFixed(2));
 > 
 > // Můžeme v klidu zaokrouhlit, jednu korunu nikdo řešit nebude.
 > console.log("Cena benzínu na hlavu: ", Math.round(gasPriceShare));
