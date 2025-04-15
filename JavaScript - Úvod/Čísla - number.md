@@ -1,7 +1,7 @@
 Čísla jsou:
-- Celá čísla - `0`, `69` nebo `9_007_199_254_740_991`
-- Desetinná čísla - `0.1`, `0.2`
-- Not a number - [`NaN`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN) - pozor na něj!
+- **Celá čísla** - `0`, `69` nebo `9_007_199_254_740_991`
+- **Desetinná čísla** - `0.1`, `0.2` - oddělujeme je desetinnou tečkou
+- **Not a Number** - [`NaN`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN) - pozor na něj!
 - [`Infinity`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity) - vznikne dělením nulou
 
 Při zápisu můžeš použít **tríček s podtržítkem** `_`. Nedělá to vůbec nic, jenom tím **zlepšíš čitelnost** - hezky oddělíš řády. 
@@ -9,7 +9,6 @@ Při zápisu můžeš použít **tríček s podtržítkem** `_`. Nedělá to vů
 ```javascript
 100000 === 100_000 // true
 9_007_199_254_740_991 === 9007199254740991 // true
-9_007_199_254_740_991 === Number.MAX_SAFE_INTEGER // true
 ```
 # Operace s čísly
 ## Sčítání, odčítání, násobení, dělení
@@ -17,78 +16,56 @@ Při zápisu můžeš použít **tríček s podtržítkem** `_`. Nedělá to vů
 const number1 = 33;
 const number2 = 77;
 
-const summed = number1 + number2;
-console.log(summed); // 110
-
-const difference = number1 - number2;
-console.log(difference); // -44
-
-const multiple = number1 * number2;
-console.log(multiple); // 2541
-
-const fraction = number1 / number2;
-console.log(fraction); // 0.42857142857142855
+console.log(number1 + number2); // Sčítání
+console.log(number1 - number2); // Odčítání
+console.log(number1 * number2); // Násobení
+console.log(number1 / number2); // Dělení
 ```
 
 Pozor na **dělení nulou**!
 ```javascript
-console.log(100 / 0); // Infinity
+console.log(100 / 0); // Výsledek je Infinity, pozor
 ```
 ## Zbytek po dělení - modulo `%`
 ```javascript
 const durationSeconds = 125;
 // Minuta má 60 sekund
-console.log(durationSeconds % 60); // 5
+console.log(durationSeconds % 60); // Výsledek je 5
 ```
 ## Umocnění - `**`
 ```javascript
-// Dva na druhou
-console.log(2 ** 2); // 4
-// Dva na třetí
-console.log(2 ** 3); // 8
-// Dva na čtvrtou
-console.log(2 ** 4); // 16
-// Dva na pátou
-console.log(2 ** 5); // 32
-// Dva na šestou
-console.log(2 ** 6); // 64
+console.log(2 ** 2); // Dva na druhou
+console.log(2 ** 3); // Dva na třetí
+console.log(2 ** 4); // Dva na čtvrtou
+console.log(2 ** 5); // Dva na pátou
+console.log(2 ** 6); // Dva na šestou
 ```
 ## Porovnávání čísel
 Používáme jedině **trojité rovná se** `===` ([strict equality](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality)). 
 
-Použití pouze dvou rovná se `==` sice funguje, ale **nekontroluje datový typ** a to vede k chybám.
+| **název**    | operátor | **příklad**    | **výsledek** |
+| ------------ | -------- | -------------- | ------------ |
+| Rovná se (✅) | `===`    | `666 === 555`  | `false`      |
+| Rovná se (❌) | `==`     | `"777" == 777` | `true`       |
+| Nerovná se   | `!==`    | `111 !== 222`  | `true`       |
+
+Použití pouze **dvou rovná se** `==` sice funguje, ale **nekontroluje datový typ** a to vede k chybám. Můžeme porovnávat `number` se `string`, což vůbec **nedává** smysl.
+
 ```javascript
-const number3 = 666;
-const number4 = 665;
-const numberString = "666";
-
-// Čísla se rovnají
-console.log(number3 === number4); // false
-// Čísla se nerovnají
-console.log(number3 !== number4); // true
-console.log(number3 !== (number4 + 1)); // false
-// Kontrola typu
-console.log(number3 == numberString); // true - ďáblovo dílo, nepoužívat!
-console.log(number3 === numberString); // false - zde je svět v pořádku
-
-// Pozor, zde se už typ nekontroluje. Vždy ošetři, že počítáš s čísly.
-// Číslo je větší než
-console.log(number3 > number4); // true
-console.log(number3 > (number4 + 1)); // false
-// Číslo je větší nebo rovno než
-console.log(number3 >= number4); // true
-console.log(number3 >= (number4 + 1)); // true
-
-// Číslo je menší než
-console.log(number3 < number4); // false
-console.log(number3 < (number4 + 1)); // false
-// Číslo je menší nebo rovno než
-console.log(number3 <= number4); // false
-console.log(number3 <= (number4 + 1)); // true
+console.log(666 == "666"); // true - Ďáblovo dílo, nepoužívat 👿
+console.log(666 === "666"); // false - Zde je svět v pořádku 🤗
 ```
 
 >[!tip]- Menší než
 > ![[less-than.png]]
+
+| **název**        | operátor | **příklad**  | **výsledek** |
+| ---------------- | -------- | ------------ | ------------ |
+| Větší než        | `>`      | `15 > 14`    | `true`       |
+| Větší než        | `>`      | `15 > 15`    | `false`      |
+| Menší než        | `<`      | `101 < 102`  | `true`       |
+| Větší nebo rovno | `>=`     | `200 >= 200` | `true`       |
+| Menší nebo rovno | `<=`     | `500 <= 500` | `true`       |
 ## Nutné vědět
 Dej si **pozor** na hodnotu [`NaN`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN) (not a number).  Jednou nebo později na to narazíš, tak se připrav.
 
@@ -97,7 +74,7 @@ const parsedNumber = parseInt("asdf");
 console.log(parsedNumber); // NaN
 console.log(typeof parsedNumber); // number - hodnota "not a number" je number
 console.log(parsedNumber === NaN) // false - NaN se nerovná NaN
-console.log(Number.isNaN(parsedNumber)) // true - NaN musíme zjistit takto
+console.log(Number.isNaN(parsedNumber)) // true - NaN musíme kontrolovat takto
 ```
 
 >[!tip]- `NaN !== NaN`
@@ -143,10 +120,10 @@ Pokud chceš pracovat s většími čísly, použij **[`BigInt`](https://develop
 Vyrazíš s chábrama a chrábryněma na festival Rock For People tvým žihadlem Ford Fiesta z roku 2005.
 
 Dohromady do Hradce a zpátky ujedeš **225 km** a spotřebuješ **15 litrů benzínu**.
-Benzín Tě vyšel na 36.90 Kč za litr.
+Benzín Tě vyšel na **36.90 Kč** za litr.
 
-1. Jaká byla **průměrná spotřeba** benzínu na 100 km?
-2. Cenu benzínu dělíte mezi 4 lidi, **kolik peněz** Ti každý z nich pošle?
+1. Cenu benzínu dělíte mezi 4 lidi, **kolik peněz** Ti každý z nich pošle?
+2. Jaká byla **průměrná spotřeba** benzínu na 100 km?
 
 > [!question]- Nápověda - vzoreček průměrné spotřeby
 > `Průměrná spotřeba = (spotřebováno litrů / uražená vzdálenost) * 100`
@@ -176,14 +153,14 @@ Benzín Tě vyšel na 36.90 Kč za litr.
 > console.log("Cena benzínu na hlavu: ", Math.round(gasPriceShare));
 > ```
 # Úloha 2 - FE!N 🔥
-Ve Spotify wrapped 2024 máš nejposlouchanější skladbu FE!N od Travise Scotta.
+Ve Spotify wrapped 2024 máš nejposlouchanější skladbu FE!N od Travise Scotta, hrála Ti dohromady **112krát**.
 
-1. Kolik sekund, minut a hodin si **strávil\*a poslechem**?
-2. Kolikrát se z Tvých sluchátek **ozvalo** "FE!N"?
+1. Kolikrát se z Tvých sluchátek **ozvalo** "FE!N"?
+2. Kolik sekund, minut a hodin si **strávil\*a poslechem**?
+	- **formát**: Celkový čas poslechu je 5 hodin, 56 minut a 32 sekund
 
 **Detaily:**
 - Skladba trvá **3 minuty a 11 sekund**
-- Hrála Ti za rok 2024 dohromady **112krát**
 - FE!N se v jednom přehrání skladby objeví **69krát**
 - Vždy posloucháš až do konce.
 

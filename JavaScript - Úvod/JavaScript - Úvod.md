@@ -2,16 +2,18 @@ JavaScript je programovací jazyk, který dnes běží **prakticky všude**. Mů
 
 >[!info]- Přesnější definice
 >JavaScript:
->- je interpretovaný (nebo [JIT kompilovaný](https://developer.mozilla.org/en-US/docs/Glossary/Just_In_Time_Compilation)) programovací jazyk.
->- je slabě typovaný (loosly typed) - proměnné mohou za běhu měnit typ
->- single threaded - běží pouze na jednom jádře
->- objektově orientovaný, imperativní a zároveň i deklarativní
+>- je **interpretovaný** (nebo [JIT kompilovaný](https://developer.mozilla.org/en-US/docs/Glossary/Just_In_Time_Compilation)) programovací jazyk.
+>- je **slabě typovaný** (loosly typed) - proměnné mohou za běhu měnit typ
+>- **single threaded** - běží pouze na jednom jádře
+>- **objektově orientovaný**, imperativní a zároveň i deklarativní
 >  
  Nejčastěji běží v **prohlížeči**, ale stejně funguje i na [serveru](https://nodejs.org/en). Dají se v něm psát i [mobilní](https://reactnative.dev/) a [desktopové](https://www.electronjs.org/) aplikace. 
 > 
 > Kromě názvu nemá s **Javou** nic společného.
 
-Otevři **vývojářskou konzoli** v prohlížeči (F12) a klikni na záložku "console". Zkopíruj a vlož následující kód a stiskni enter.
+Otevři **vývojářskou konzoli** v prohlížeči (F12) a klikni na záložku "console". **Zkopíruj** a **vlož** následující kód a stiskni enter.
+
+Možná ti to nedovolí vkládat text, **bacha**. Přečti si tu chybovou hlášku, co to píše.
 
 ```javascript
 const greet = () => {
@@ -19,46 +21,84 @@ const greet = () => {
 }
 
 greet();
-// Ahoj světe!
 ```
 
-Gratuluju, už jsi oficiálně programátor\*ka!
+Gratuluju, už jsi oficiálně **programátor\*ka**!
 # Proměnné
 
-Proměnná je **základ** programování, uchováváme v ní **data** a následně s nimi pracujeme.
+Proměnná je **základ** programování, uchováváme v ní **data** a následně s nimi pracujeme. 
 
-Proměnná se v JavaScriptu **deklaruje** pomocí **klíčových slov** `const` a `let`. V kódu níže **deklarujeme** dvě proměnné - název kurzu a počet shlédnutí - a rovnou do nich přiřazujeme hodnotu.
+Hodnotu **vypíšeme** pomocí `console.log`
 
 ```javascript
 const pageTitle = "JavaScript - Úvod";
 console.log(pageTitle);
-// JavaScript - Úvod
 
 let viewCount = 100;
 viewCount = viewCount + 1;
 console.log(viewCount);
-// 101
 ```
 
-| `const`                               | `let`                                         |
-| ------------------------------------- | --------------------------------------------- |
-| Nikdy nemůžeme přiřadit novou hodnotu | Hodnotu můžeme změnit a můžeme přiřadit novou |
-| Snažíme se použít vždy                | Snažíme se používat co nejméně                |
-| Nikdy nemůžeme znovu deklarovat       | Nikdy nemůžeme znovu deklarovat               |
-| Vždy drží stejný datový typ (logicky) | Datový typ se může změnit                     |
+Proměnná se v JavaScriptu **deklaruje** pomocí **klíčových slov** `const` a `let`. V kódu nahoře **deklarujeme** dvě proměnné - název kurzu a počet shlédnutí.
 
-Kód, který využívá proměnnou, musí následovat až po její **deklaraci**. Počítač (interpreter) to čte stejně jako Ty - **odshora** a **zleva**. 
+| `const`                                   | `let`                                             |
+| ----------------------------------------- | ------------------------------------------------- |
+| Nikdy **nemůžeme** přiřadit novou hodnotu | Hodnotu **můžeme** změnit a můžeme přiřadit novou |
+| Snažíme se použít **vždy**                | Snažíme se používat co **nejméně**                |
+| Nikdy **nemůžeme** znovu deklarovat       | Nikdy **nemůžeme** znovu deklarovat               |
+| Vždy drží **stejný** datový typ (logicky) | Datový typ se **může změnit**                     |
+Vždy proměnnou nazvi anglicky tak, aby byl **z názvu jasný obsah**. Nic se nestane, ale líp se to čte.
 
-Název proměnné musí být **unikátní**, nemůžeme ho znovu použít (později si vysvětlíme, že to není tak jednoduché). 
+```javascript
+// ✅ Správně!
+const accountBalance = 800;
+const favouriteMovieLink = "https://www.csfd.cz/film/345767";
 
-Vždy proměnnou nazvi tak, aby byl **z názvu jasný obsah**.
+// ❌ Špatně!
+const nevim = 12;
+const variable = "2902736809/2010";
+const háčkyČárkyToTakyUmíAlePůjdešDoPekla = 666;
+```
 
 **Gratuluju**, rozumíš prvnímu odbornému termínu - **deklarace proměnné**!
 
-> [!caution]- Co je to klíčové slovo `var`?
-> Když budeš na internetu hledat JS kód (a nebo Ti ho bude generovat AI), určitě narazíš na klíčové slovo `var`.
+Kód, který využívá proměnnou, **musí následovat** až po její **deklaraci**. Počítač (interpreter) to čte stejně jako Ty - **odshora** a **zleva**.
+
+> [!todo]- Proč to nefunguje?
+> Spusť si následující kód:
+> ```javascript
+> console.log(personName);
+> const personName = "František Palacký";
+> ```
 > 
+>Víš, proč to nefunguje?
+
+Jeden název proměnné **nemůžeme** použít dvakrát - musí být **unikátní** (později si vysvětlíme, že to není tak jednoduché).
+
+> [!todo]- Proč to nefunguje?
+> Spusť si následující kód:
+> ```javascript
+> const personAge = 68;
+> const personAge = 82;
+> ```
+> Víš, proč to nefunguje?
+> 
+> Pozor, ani toto nebude fungovat:
+> ```javascript
+> let personShoeSize = 41;
+> let personShoeSize = 42;
+> ```
+> 
+> Ani `let` nemůžeme **založit** dvakrát se stejným názvem. Můžeme ale udělat toto:
+> ```javascript
+> let personShoeSize = 41;
+> personShoeSize = 42;
+> ```
+
+> [!caution]- Co je to klíčové slovo `var`?
 > Úplně jednoduše: **nepoužívat**!
+> 
+> Když budeš na internetu hledat JS kód (a nebo Ti ho bude generovat AI), určitě narazíš na klíčové slovo `var`. 
 > 
 > Pokud Tě zajímá důvod, najdeš ho v sekci [[JavaScript - Expert]] - **"variable hoisting"**.
 > 
@@ -73,16 +113,30 @@ Vždy proměnnou nazvi tak, aby byl **z názvu jasný obsah**.
 	- [ ] Zredukuj populaci na polovinu (`/`)
 
 # Primitivní datové typy
-Proměnná může obsahovat různé typy dat, zatím jsme si ukázali `string` a `number`.
+Proměnná může obsahovat různé **typy** dat, zatím jsme si ukázali `string` a `number`.
 
-| Typ         | Vysvětlení                                       | Příklady                                   |
-| ----------- | ------------------------------------------------ | ------------------------------------------ |
+| Typ         | Vysvětlení                                     | Příklady                                   |
+| ----------- | ---------------------------------------------- | ------------------------------------------ |
 | `number`    | [[Čísla - number\|číslo nebo desetinné číslo]] | `0`, `0.5`, `69`, `NaN`, `-Infinity`, `-0` |
-| `string`    | jakýkoli text a nebo prázdný string              | `"a"`, `"Hello world!"`, `""`              |
-| `boolean`   | hodnota ano/ne                                   | `true`, `false`                            |
-| `null`      | [[JavaScript - Pokračování\|prázdná hodnota]]    | `null`                                     |
-| `undefined` | [[JavaScript - Pokračování\|prázdná hodnota]]    | `undefined`                                |
-Projdi si jednotlivé kapitoly 
+| `string`    | jakýkoli text a nebo prázdný string            | `"a"`, `"Hello world!"`, `""`              |
+| `boolean`   | hodnota ano/ne                                 | `true`, `false`                            |
+| `null`      | [[JavaScript - Pokračování\|prázdná hodnota]]  | `null`                                     |
+| `undefined` | [[JavaScript - Pokračování\|prázdná hodnota]]  | `undefined`                                |
+Typ proměnné si můžeme v kódu **ověřit** pomocí klíčového slovíčka [`typeof`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof).
+```javascript
+const exampleString = "👁👅👁";
+const exampleNumber = 0.5;
+const exampleBoolean = true;
+
+console.log(typeof exampleString);
+console.log(typeof exampleNumber);
+console.log(typeof exampleBoolean);
+```
+# Podmínky
+Bude se ti hodit projít si vysvětlení [[Čísla - number|čísel]], stringů a booleanů.
+
+Podmínky `if` nám umožní... :-)
+
 # Komplexní datové typy
 
 | Typ      | Vysvětlení                                                | Příklady                                        |
@@ -94,12 +148,5 @@ Projdi si jednotlivé kapitoly
 | `Set`    | array, ale bez pořadí a prvky jsou unikátní (**množina**) | `new Set([1, 2, 3, 4])`                         |
 
 Výklad je rozveden v [[Komplexní datové typy|následující kapitole]].
-### Template na otázku :-D
 
-> [!todo] Co se stane, když pořadí prohodíš?
-> Spusť si následující kód.
-> ```javascript
-> console.log(personName);
-> const personName = "František Palacký";
-> ```
 
