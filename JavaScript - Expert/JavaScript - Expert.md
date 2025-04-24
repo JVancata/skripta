@@ -15,3 +15,6 @@ Tyto témata se Ti bude hodit znát, když budeš hledat svojí první programá
 # Closures
 
 # Variable hoisting - var
+
+# Pass by value
+https://www.aleksandrhovhannisyan.com/blog/javascript-pass-by-reference/
