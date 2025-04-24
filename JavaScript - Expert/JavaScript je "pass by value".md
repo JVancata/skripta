@@ -4,7 +4,7 @@ V JavaScript se **všechny** data předávají přes **hodnotu**. Nikdy přes re
 
 Na internetu se různě píše, že [[JavaScript - Úvod#Primitivní datové typy|primitivní datové typy]] se předávají pomocí **hodnoty** (value) a objekty se předávají pomocí **reference**, ALE TECHNICKY TO NENÍ PRAVDA!
 
-Nejlíp si o ukážeme na následujících dvou snippetech:
+Nejlíp si to ukážeme na následujících dvou snippetech:
 ```javascript
 const cislo = 42;
 let druheCislo = cislo;
