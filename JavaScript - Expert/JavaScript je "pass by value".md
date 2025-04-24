@@ -70,3 +70,22 @@ Vytvořili jsme dva různé objekty, které se nachází na odlišných adresác
 > 
 > **Objekty v JavaScriptu jsou jenom pointery**.
 
+Pro důkaz toho, že hodnotou objektu je jenom pointer slouží následující kód převzatý z původního článku.
+
+```js
+const já = { name: 'Aneta' };
+let mojePřezdívka = já;
+mojePřezdívka = { name: 'Anča' };
+
+console.log(já); // { name: 'Aneta' }
+console.log(mojePřezdívka); // { name: 'Anča' }
+```
+
+V kódu se děje toto:
+1. Do proměnné `já` přiřadíme pointer na paměť. 
+	- V paměti na dané adrese máme objekt `{ name: 'Aneta' }`.
+2. Do proměnné `mojePřezdívka` přiřadíme hodnotu proměnné `já` - pointer na paměť.
+3. Do proměnné `mojePřezdívka` přiřadíme **nový pointer** na paměť
+	- V paměti na dané adrese máme objekt `{ name: 'Anča' }`.
+
+Vidíme, že hodnota proměnné `já` se nemění a proměnná stále ukazuje na původní místo v paměti. Změnili jsme pouze, kam ukazuje proměnná `mojePřezdívka`. Díky tomu, že JavaScript předává data "by value" (přes hodnotu), se původní proměnná `já` nijak nemění.
