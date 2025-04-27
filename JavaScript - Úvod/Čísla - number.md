@@ -222,19 +222,15 @@ Potřebuješ vypočítat, kolik zaplatíš státu na **dani z příjmu**.
 
 Účetní ti doporučila využití [paušálních výdajů](https://www.fakturoid.cz/almanach/dane/pausalni-vydaje) ve výši 60 %.
 
-**Vzorečky:**
-`Výdaje = příjem * paušál výdajů`
-`Základ daně = příjmy - výdaje`
-`Daň z příjmů = základ daně * sazba daně z příjmů`
-
 **Tvoje situace vypadá takto:**
 
-| **Příjem**        | 1 000 000 Kč |
-| ----------------- | ------------ |
-| **Paušál výdajů** | 60 %         |
-| **Výdaje**        | 600 000 Kč   |
-| **Základ daně**   | 400 000 Kč   |
-| **Daň**           | 60 000 Kč    |
+| **Příjem**        | 1 000 000 Kč |                                                                                                       |
+| ----------------- | ------------ | ----------------------------------------------------------------------------------------------------- |
+| **Paušál výdajů** | 60 %         | [Dáno zákonem](https://financnisprava.gov.cz/cs/dane/dane/dan-z-prijmu/fyzicke-osoby/podnikatel-osvc) |
+| **Výdaje**        | 600 000 Kč   | `příjem * Paušál výdajů`                                                                              |
+| **Základ daně**   | 400 000 Kč   | `Příjem - Výdaje`                                                                                     |
+| **Sazba daně**    | 15 %         | [Dáno zákonem](https://portal.gov.cz/informace/dane-z-prijmu-fyzickych-osob-INF-293)                  |
+| **Daň**           | 60 000 Kč    | `Základ daně * Sazba daně`                                                                            |
 Kolik by si na **dani zaplatil\*a**, kdyby tvůj příjem byl:
 - 100 000 Kč
 - 895 432 Kč
