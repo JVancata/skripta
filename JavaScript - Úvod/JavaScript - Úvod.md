@@ -137,6 +137,12 @@ Bude se ti hodit projít si vysvětlení [[Čísla - number|čísel]], stringů 
 
 Podmínky `if` nám umožní... :-)
 
+Early return
+# Funkce
+Arrow function vs function
+
+Data in -> data out
+
 # Komplexní datové typy
 
 | Typ      | Vysvětlení                                                | Příklady                                        |
