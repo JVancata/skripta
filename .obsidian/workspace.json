@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "JavaScript - Úvod/JavaScript - Úvod.md",
+                "file": "Moudra/Chesterton’s Fence.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "JavaScript - Úvod"
+              "title": "Chesterton’s Fence"
             }
           },
           {
@@ -27,16 +27,15 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "JavaScript - Úvod/Stringy - string.md",
+                "file": "Moudra/Chesterton’s Fence.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Stringy - string"
+              "title": "Chesterton’s Fence"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -184,31 +183,35 @@
       "publish:Publish changes...": false
     }
   },
-  "active": "2413607aecafec2f",
+  "active": "b1bc6137de295d24",
   "lastOpenFiles": [
-    "React/React - úvod.md",
+    "Moudra/Mluvení.md",
+    "Moudra/Chesterton’s Fence.md",
+    "JavaScript - Úvod/Čísla - number.md",
+    "Programování v JavaScriptu.md",
+    "JavaScript - Úvod/Stringy - string.md",
     "JavaScript - Úvod/JavaScript - Úvod.md",
+    "img/yoda.gif",
+    "JavaScript - Expert/JavaScript - Expert.md",
+    "Moudra",
+    "JavaScript - Expert/JavaScript je pass by value.md",
+    "Algoritmizace/3. Banka.md",
+    "Algoritmizace/4. Spojový seznam.md",
+    "Algoritmizace/2. Český palindrom.md",
+    "Algoritmizace/1. Uvozovky.md",
+    "React/React - úvod.md",
     "JavaScript - Úvod/Regex - regulární výrazy.md",
     "React",
-    "JavaScript - Úvod/Stringy - string.md",
-    "JavaScript - Úvod/Čísla - number.md",
-    "Algoritmizace/4. Spojový seznam.md",
-    "Algoritmizace/3. Banka.md",
-    "JavaScript - Expert/JavaScript - Expert.md",
-    "JavaScript - Expert/JavaScript je pass by value.md",
     "content.md",
     "JavaScript - Expert/JavaScript je \"pass by value\".md",
     "Pasted image 20250424111046.png",
     "JavaScript - Expert",
     "JavaScript - Úvod/Komplexní datové typy.md",
     "JavaScript - Pokračování/JavaScript - Pokračování.md",
-    "Algoritmizace/2. Český palindrom.md",
     "img/toaletak.webp",
     "img/secret-ingredient.png",
     "img/gustavo.jpg",
     "img/less-than.png",
-    "Algoritmizace/1. Uvozovky.md",
-    "Programování v JavaScriptu.md",
     "Verzování - GIT.md",
     "TypeScript.md",
     "JavaScript - Úvod/Primitivní datové typy.md",

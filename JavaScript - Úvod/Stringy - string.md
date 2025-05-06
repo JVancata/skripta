@@ -1,7 +1,8 @@
-String (česky řetězec) je vlastně **libovolný text**. Technicky správně, je to **sekvence znaků**.
+String (česky **řetězec**) je vlastně **libovolný text**. Technicky správně je to **sekvence znaků**.
 
 ```javascript
 const message = "Čau 👋 Můžeš sem napsat úplně cokoli budeš chtít.";
+console.log(message);
 ```
 
 >[!tip]- Kódování pro `string` je UTF-16 a umí vyjádřit vše v Unicode
@@ -24,7 +25,7 @@ Zápis pomocí **backticků** má dvě výhody
  1. můžeš zápis **roztáhnout na více řádků** a zachová se tím odřádkování
  2. můžeš použít **template literály** (zní to strašidelně, ale neboj)
 
-Pomocí **template literálů** (template stringů) můžeš mezi svůj text **vkládat proměnné**. Zkus si spustit následující kód.
+Zkus si spustit následující kód:
 ```javascript
 // ✅ Správné skládání stringů
 const favouriteAnimal = "Šnek 🐌";
@@ -36,6 +37,7 @@ Dobrá volba!
 `;
 console.log(animalMessage);
 ```
+Pomocí **template literálů** (template stringů) můžeš mezi svůj text **vkládat proměnné**. 
 
 Nic na tom není, ne? Nemusíš potom dělat toto:
 ```javascript
@@ -44,7 +46,6 @@ const favouriteFood = "Cibule 🧅";
 const foodMessage = "Jo, " + favouriteFood + " mi taky moc chutná!\n\nSnídaně bez " + favouriteFood + " není pořádná snídaně."
 console.log(foodMessage);
 ```
-
 # Porovnání stringů
 Stringy mezi sebou porovnáš **úplně stejně, jako čísla**.
 
@@ -58,9 +59,9 @@ console.log(string1 === string2);
 // Vždycky používej > a < jenom pro abecední řazení, nikdy porovnání čísel.
 console.log(string3 > string2);
 ```
-Vždycky mezi sebou porovnávej jen proměnný se **stejným typem**.
+Vždycky mezi sebou porovnávej jen proměnné se **stejným typem**.
 
-Pokud na `string` chceš použít `>` a `<`, tak jedině za účelem **abecedního řazení**. Sice to umí porovnávat čísla, ale nedává to smysl.
+Pokud na `string` chceš použít `>` a `<`, tak jedině za účelem **abecedního řazení**. Sice to umí porovnávat čísla, ale nedává to smysl. Je to jako porovnávat 🍎 a 🍐.
 # Procházení stringu
 [0], [1]...
 # Metody na stringu
