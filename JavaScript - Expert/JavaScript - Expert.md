@@ -1,14 +1,5 @@
 Tyto témata se Ti bude hodit znát, když budeš hledat svojí první programátorskou práci.
-
-# Event Loop
-
-# Clean Code
-
 # Design Patterns
-
-# Trunk Based Development
-
-# Git flow
 
 # Micro frontends
 
@@ -16,5 +7,4 @@ Tyto témata se Ti bude hodit znát, když budeš hledat svojí první programá
 
 # Variable hoisting - var
 
-# Pass by value
-https://www.aleksandrhovhannisyan.com/blog/javascript-pass-by-reference/
+

@@ -117,11 +117,11 @@ Proměnná může obsahovat různé **typy** dat, zatím jsme si ukázali `strin
 
 | Typ         | Vysvětlení                                     | Příklady                                   |
 | ----------- | ---------------------------------------------- | ------------------------------------------ |
-| `number`    | [[Čísla - number\|číslo nebo desetinné číslo]] | `0`, `0.5`, `69`, `NaN`, `-Infinity`, `-0` |
+| `number`    | [[number\|číslo nebo desetinné číslo]] | `0`, `0.5`, `69`, `NaN`, `-Infinity`, `-0` |
 | `string`    | jakýkoli text a nebo prázdný string            | `"a"`, `"Hello world!"`, `""`              |
 | `boolean`   | hodnota ano/ne                                 | `true`, `false`                            |
-| `null`      | [[JavaScript - Pokračování\|prázdná hodnota]]  | `null`                                     |
-| `undefined` | [[JavaScript - Pokračování\|prázdná hodnota]]  | `undefined`                                |
+| `null`      | [[Rozdíl mezi null a undefined\|prázdná hodnota]]  | `null`                                     |
+| `undefined` | [[Rozdíl mezi null a undefined\|prázdná hodnota]]  | `undefined`                                |
 Typ proměnné si můžeme v kódu **ověřit** pomocí klíčového slovíčka [`typeof`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof).
 ```javascript
 const exampleString = "👁👅👁";
@@ -133,7 +133,7 @@ console.log(typeof exampleNumber);
 console.log(typeof exampleBoolean);
 ```
 # Podmínky
-Bude se ti hodit projít si vysvětlení [[Čísla - number|čísel]], stringů a booleanů.
+Bude se ti hodit projít si vysvětlení [[number|čísel]], stringů a booleanů.
 
 Podmínky `if` nám umožní... :-)
 

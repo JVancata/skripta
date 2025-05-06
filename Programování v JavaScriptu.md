@@ -27,7 +27,7 @@ Stačí se postupně prokousávat tématy a plnit všechny programovací úlohy.
 
 1. Vysvětlíme pár [[JavaScript - Úvod|základních pojmů]] a spustíme si **první projekty**, žádné zázraky se zatím dít nebudou. Očekávej pár jednoduchých funkcí, které Ti ukážou základy jazyka. 
    
-2. Pokračovat budeme trošku [[JavaScript - Pokračování|zajímavějšími projekty]]. Začneme postupně tvořit interaktivní webové aplikace - klikneme do stránky a ona něco udělá.
+2. Pokračovat budeme trošku [[Rozdíl mezi null a undefined|zajímavějšími projekty]]. Začneme postupně tvořit interaktivní webové aplikace - klikneme do stránky a ona něco udělá.
 
 ## Zdroje
 Prakticky všechny příklady a informace na této stránce jsou čerpány z [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript). Je to nejkvalitnější zdroj informací, co se JavaScriptu týče.
