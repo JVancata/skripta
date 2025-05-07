@@ -9,6 +9,8 @@ A je jedno, jestli to je nějaký nepoužitý soubor, funkce na formátování t
 
 Vždy nejdřív pochop, **proč jsou věci tak, jak jsou**. Až potom je můžeš začít **měnit**.
 
+![[delete-useless-code.gif]]
+
 Mně se to stalo na úplně každém projektu, kde jsem začal pracovat. Hned, co jsem přišel, jsem si myslel, že **vím nejlíp**. A že by se to mělo vlastně celé **předělat**, protože nevědí, co dělají.
 
 Omyl. Strávil jsem 14 dní práce tím, abych zjistil, že to vlastně měli vymyšlené daleko lépe, než jsem to sám navrhl. A **styděl** jsem se za to.
