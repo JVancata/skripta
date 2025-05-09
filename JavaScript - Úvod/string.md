@@ -83,3 +83,32 @@ Ukázat na příkladu
 - [BigInts](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt) are converted with the same algorithm as [`toString(10)`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/toString).
 - [Symbols](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) throw a [`TypeError`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError).
 - Objects are first [converted to a primitive](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Data_structures#primitive_coercion) by calling its [`[Symbol.toPrimitive]()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) (with `"string"` as hint), `toString()`, and `valueOf()` methods, in that order. The resulting primitive is then converted to a string.
+
+# Úloha 1 - Plivání faktů 🗣️ 
+Chceš zdůraznit, že věta, kterou někdo řekl, je **fakt důležitá** a měla by se tesat do kamene - tzv. je "fire" 🔥.
+
+Udělej funkci, která pořádně **opepří obyčejnou větu**, ať to nemusíš dělat ručně.
+
+| Původní věta                                                                                                                                                                                                                                                                                                                                                   | Nová věta                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Tung Tung Tung Sahur je největší GOAT                                                                                                                                                                                                                                                                                                                          | 🔥 TUNG 🗣 TUNG 🗣 TUNG 🗣 SAHUR🗣 JE 🗣 NEJVĚTŠÍ 🗣 GOAT 🔥                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| Segedínský guláš, lidově někdy zkracováno na segedín, je jeden ze známých druhů gulášů. Vaří se z vepřového masa (libového vykostěného bůčku nebo plecka). Další důležitou surovinou je kysané bílé zelí. Dále se používá cibule, olej nebo sádlo, mletá sladká červená paprika, sůl, černý pepř, bobkový list (údajně proti nadýmání) a pro zjemnění smetana. | 🔥 SEGEDÍNSKÝ 🗣 GULÁŠ, 🗣 LIDOVĚ 🗣 NĚKDY 🗣 ZKRACOVÁNO 🗣 NA 🗣 SEGEDÍN, 🗣 JE 🗣 JEDEN 🗣 ZE 🗣 ZNÁMÝCH 🗣 DRUHŮ 🗣 GULÁŠŮ. 🗣 VAŘÍ 🗣 SE 🗣 Z 🗣 VEPŘOVÉHO 🗣 MASA 🗣 (LIBOVÉHO 🗣 VYKOSTĚNÉHO 🗣 BŮČKU 🗣 NEBO 🗣 PLECKA). 🗣 DALŠÍ 🗣 DŮLEŽITOU 🗣 SUROVINOU 🗣 JE 🗣 KYSANÉ 🗣 BÍLÉ 🗣 ZELÍ. 🗣 DÁLE 🗣 SE 🗣 POUŽÍVÁ 🗣 CIBULE, 🗣 OLEJ 🗣 NEBO 🗣 SÁDLO, 🗣 MLETÁ 🗣 SLADKÁ 🗣 ČERVENÁ 🗣 PAPRIKA, 🗣 SŮL, 🗣 ČERNÝ 🗣 PEPŘ, 🗣 BOBKOVÝ 🗣 LIST 🗣 (ÚDAJNĚ 🗣 PROTI 🗣 NADÝMÁNÍ) 🗣 A 🗣 PRO 🗣 ZJEMNĚNÍ 🗣 SMETANA. 🔥 |
+1. Vždycky dej na **začátek a konec** jeden emoji
+2. Mezi **každé slovo** vlož další emoji
+3. Všechny malá písmena **převeď na velká**
+
+> [!todo]- Řešení
+> ```javascript
+> const makeSentenceFire = (input) => {
+>     const trimmed = input.trim();
+>     
+>     // Kdyby tam náhodou dal někdo prázdný string, nebo string s mezerami
+>     if(!trimmed) return "🔥";
+>     
+>     const upperCase = trimmed.toUpperCase();
+>     const shouted = upperCase.replaceAll(" ", " 🗣 ");
+>     const fire = `🔥 ${shouted} 🔥`;
+>     
+>     return fire;
+> }
+> ```
