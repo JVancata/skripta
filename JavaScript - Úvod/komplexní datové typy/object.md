@@ -84,7 +84,3 @@ Pozor! Syntaxe JavaScript objektu a JSONu **není stejná**, v detailech se liš
 >Děje se to kvůli [prototype chainingu](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain). V JS každý typ **dědí** (inheritance) z `object`. 
 >
 >Je to otázka na kterou by se Tě mohli **ptát při pohovoru**. Zároveň, pokud tento koncept neznáš, můžeš si do kódu jednoduše zanést bezpečnostní díry.
-
-# Pole - `array`
-
-# Datum - `Date`

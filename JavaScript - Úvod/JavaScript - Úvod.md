@@ -115,13 +115,13 @@ Jeden název proměnné **nemůžeme** použít dvakrát - musí být **unikátn
 # Primitivní datové typy
 Proměnná může obsahovat různé **typy** dat, zatím jsme si ukázali `string` a `number`.
 
-| Typ         | Vysvětlení                                     | Příklady                                   |
-| ----------- | ---------------------------------------------- | ------------------------------------------ |
-| `number`    | [[number\|číslo nebo desetinné číslo]] | `0`, `0.5`, `69`, `NaN`, `-Infinity`, `-0` |
-| `string`    | jakýkoli text a nebo prázdný string            | `"a"`, `"Hello world!"`, `""`              |
-| `boolean`   | hodnota ano/ne                                 | `true`, `false`                            |
-| `null`      | [[Rozdíl mezi null a undefined\|prázdná hodnota]]  | `null`                                     |
-| `undefined` | [[Rozdíl mezi null a undefined\|prázdná hodnota]]  | `undefined`                                |
+| Typ         | Vysvětlení                                        | Příklady                                   |
+| ----------- | ------------------------------------------------- | ------------------------------------------ |
+| `number`    | [[number\|číslo nebo desetinné číslo]]            | `0`, `0.5`, `69`, `NaN`, `-Infinity`, `-0` |
+| `string`    | [[string\|jakýkoli text a nebo prázdný string]]   | `"a"`, `"Hello world!"`, `""`              |
+| `boolean`   | [[boolean\|hodnota ano/ne]]                       | `true`, `false`                            |
+| `null`      | [[Rozdíl mezi null a undefined\|prázdná hodnota]] | `null`                                     |
+| `undefined` | [[Rozdíl mezi null a undefined\|prázdná hodnota]] | `undefined`                                |
 Typ proměnné si můžeme v kódu **ověřit** pomocí klíčového slovíčka [`typeof`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof).
 ```javascript
 const exampleString = "👁👅👁";
@@ -133,11 +133,73 @@ console.log(typeof exampleNumber);
 console.log(typeof exampleBoolean);
 ```
 # Podmínky
-Bude se ti hodit projít si vysvětlení [[number|čísel]], stringů a booleanů.
+Můžeme se v kódu **rozhodovat**, co se má stát, pokud nastala nějaká **podmínka**.
 
-Podmínky `if` nám umožní... :-)
+Stačí nám dvě **klíčová slovíčka** - `if` a `else`. Buď to, nebo to.
 
-Early return
+```javascript
+const isRaining = true;
+
+// Pokud je proměnná isRaining true, vykoná se následující kód
+if (isRaining) {
+	console.log("Prší 🌧");
+	// Např. ti připomene v 7:00, že si máš vzít deštník.
+}
+// Pokud je proměnná isRaining false, vykoná se následující kód
+else {
+	console.log("Neprší 😁");
+}
+```
+
+Kód v `if` bloku se vykoná vždy, když je hodnota `true`. Na vysvětlení vyhodnocení podmínek slouží celá kapitola [[boolean]].
+
+```javascript
+const age = 17;
+
+if (age < 18) {
+	console.log("Zákaz prodeje alkoholických nápojů, tabákových výrobků, kuřáckých pomůcek, elektronických cigaret, nikotinových sáčků bez obsahu tabáku a bylinných výrobků určených ke kouření osobám mladším 18 let");
+}
+```
+
+Ukážeme si složitější situaci na následujícím **diagramu**:
+
+```mermaid
+flowchart LR
+    A(["function getItemsByWeather()"]) --> B{"Prší venku?"}
+    B -- true --> C["Vem si deštník"]
+    B -- false --> D{"Je teplo?"}
+    D -- true --> n1["Vem si kraťasy"]
+    D -- false --> n5["Vem si mikinu"]
+    n2["Svítí sluníčko?"] -- true --> n3["Vem si sluneční brýle a čepici"]
+    n1 --> n2
+    n5 --> n2
+    C --> D
+    n2@{ shape: diam}
+```
+
+Ten bychom v JavaScriptu zapsali takto:
+
+```javascript
+function getItemsByWeather(isRaining, isWarmWeather, isSunny) {
+	if (isRaining) {
+		console.log("Vem si deštník");
+	}
+	
+	if (isWarmWeather) {
+		console.log("Vem si kraťasy");
+	}
+	else {
+		console.log("Vem si mikinu");
+	}
+	
+	if (isSunny) {
+		console.log("Vem si slunčení brýle a čepici");
+	}
+}
+
+getItemsByWeather(false, true, true); // Spusť si to a schválně, co to vypíše.
+```
+
 # Funkce
 Arrow function vs function
 
@@ -145,14 +207,10 @@ Data in -> data out
 
 # Komplexní datové typy
 
-| Typ      | Vysvětlení                                                | Příklady                                        |
-| -------- | --------------------------------------------------------- | ----------------------------------------------- |
-| `object` | libovolná datová struktura                                | `{title: "FE!N", isBanger: true}`               |
-| `array`  | více hodnot s určitým pořadím (**pole**)                  | `[1, 2, 13, 1337, 69, 420]`                     |
-| `BigInt` | libovolně velké celé číslo                                | `100n`, `BigInt(200000)`                        |
-| `Date`   | datum a čas                                               | `new Date()`, `new Date("2025-01-01 04:20:00")` |
-| `Set`    | array, ale bez pořadí a prvky jsou unikátní (**množina**) | `new Set([1, 2, 3, 4])`                         |
-
-Výklad je rozveden v [[Komplexní datové typy|následující kapitole]].
-
-
+| Typ      | Vysvětlení                                                      | Příklady                                        |
+| -------- | --------------------------------------------------------------- | ----------------------------------------------- |
+| `object` | [[object#Objekty - `object`\|libovolná datová struktura]]       | `{title: "FE!N", isBanger: true}`               |
+| `array`  | [[array\|více hodnot s určitým pořadím (**pole**)]]             | `[1, 2, 13, 1337, 69, 420]`                     |
+| `BigInt` | [[BigInt\|libovolně velké celé číslo]]                          | `100n`, `BigInt(200000)`                        |
+| `Date`   | [[Date\|datum a čas]]                                           | `new Date()`, `new Date("2025-01-01 04:20:00")` |
+| `Set`    | [[Set\|množina - array, ale bez pořadí a prvky jsou unikátní ]] | `new Set([1, 2, 3, 4])`                         |

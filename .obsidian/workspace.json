@@ -13,25 +13,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algoritmizace/4. Cyklus ve spojovém seznamu.md",
+                "file": "JavaScript - Úvod/primitivní datové typy/boolean.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "4. Cyklus ve spojovém seznamu"
+              "title": "boolean"
             }
           },
           {
             "id": "b9320aa335efa1a5",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "JavaScript - Úvod/JavaScript - Úvod.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "JavaScript - Úvod"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -179,10 +184,23 @@
       "publish:Publish changes...": false
     }
   },
-  "active": "b1bc6137de295d24",
+  "active": "b9320aa335efa1a5",
   "lastOpenFiles": [
-    "Algoritmizace/4. Spojový seznam.md",
+    "JavaScript - Úvod/Regex - regulární výrazy.md",
+    "JavaScript - Úvod/JavaScript - Úvod.md",
+    "JavaScript - Úvod/primitivní datové typy/boolean.md",
+    "JavaScript - Úvod/primitivní datové typy/number.md",
+    "JavaScript - Úvod/primitivní datové typy/string.md",
+    "JavaScript - Pokročilý/Early return.md",
+    "JavaScript - Úvod/komplexní datové typy/Set.md",
+    "JavaScript - Úvod/komplexní datové typy/BigInt.md",
+    "JavaScript - Úvod/komplexní datové typy/object.md",
+    "JavaScript - Úvod/komplexní datové typy/Date.md",
+    "JavaScript - Úvod/komplexní datové typy/array.md",
+    "JavaScript - Úvod/komplexní datové typy",
+    "JavaScript - Úvod/primitivní datové typy",
     "Algoritmizace/4. Cyklus ve spojovém seznamu.md",
+    "Algoritmizace/4. Spojový seznam.md",
     "Algoritmizace/0. Jak na algoritmizační úlohy.md",
     "img/just-do-it.png",
     "Pasted image 20250515145139.png",
@@ -190,7 +208,6 @@
     "img/project-manager.png",
     "img/project-manager.png",
     "Moudra/Chesterton’s Fence.md",
-    "JavaScript - Úvod/boolean.md",
     "img/project-manager.png",
     "img/project-manager.png",
     "Technická expertíza/Výpočetní složitost.md",
@@ -201,18 +218,10 @@
     "JavaScript - Expert/JavaScript - Expert.md",
     "img/delete-useless-code.gif",
     "JavaScript - Expert/Event loop.md",
-    "JavaScript - Úvod/JavaScript - Úvod.md",
-    "JavaScript - Úvod/Komplexní datové typy.md",
     "JavaScript - Pokročilý/Rozdíl mezi null a undefined.md",
     "JavaScript - Expert/Pass by value.md",
     "React/React - úvod.md",
-    "Programování v JavaScriptu.md",
-    "Algoritmizace/3. Banka.md",
-    "Algoritmizace/2. Český palindrom.md",
-    "JavaScript - Úvod/Regex - regulární výrazy.md",
     "Technická expertíza",
-    "TypeScript.md",
-    "Moudra/Mluvení.md",
     "img/yoda.gif",
     "Moudra",
     "React",
