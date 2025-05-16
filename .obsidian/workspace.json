@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algoritmizace/4. Cyklus ve spojovém seznamu.md",
+                "file": "Algoritmizace/0. Jak na algoritmizační úlohy.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "4. Cyklus ve spojovém seznamu"
+              "title": "0. Jak na algoritmizační úlohy"
             }
           },
           {
@@ -181,8 +181,10 @@
   },
   "active": "b1bc6137de295d24",
   "lastOpenFiles": [
-    "Pasted image 20250515145139.png",
+    "img/just-do-it.png",
+    "Algoritmizace/0. Jak na algoritmizační úlohy.md",
     "Algoritmizace/4. Cyklus ve spojovém seznamu.md",
+    "Pasted image 20250515145139.png",
     "Technická expertíza/ChatGPT - velké jazykové modely.md",
     "img/project-manager.png",
     "img/project-manager.png",
@@ -217,11 +219,7 @@
     "Pasted image 20250424111046.png",
     "JavaScript - Expert",
     "img/toaletak.webp",
-    "img/secret-ingredient.png",
-    "img/gustavo.jpg",
-    "img/less-than.png",
     "Algoritmizace",
-    "img/its-all-objekt.jpg",
     "img",
     "JavaScript - Pokročilý",
     "JavaScript - Úvod"
