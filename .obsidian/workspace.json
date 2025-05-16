@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "JavaScript - Úvod/string.md",
+                "file": "Algoritmizace/4. Cyklus ve spojovém seznamu.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "string"
+              "title": "4. Cyklus ve spojovém seznamu"
             }
           },
           {
@@ -181,9 +181,11 @@
   },
   "active": "b1bc6137de295d24",
   "lastOpenFiles": [
+    "Pasted image 20250515145139.png",
+    "Algoritmizace/4. Cyklus ve spojovém seznamu.md",
     "Technická expertíza/ChatGPT - velké jazykové modely.md",
-    "JavaScript - Úvod/string.md",
-    "JavaScript - Úvod/number.md",
+    "img/project-manager.png",
+    "img/project-manager.png",
     "Moudra/Chesterton’s Fence.md",
     "JavaScript - Úvod/boolean.md",
     "img/project-manager.png",
@@ -211,7 +213,6 @@
     "Moudra/Mluvení.md",
     "img/yoda.gif",
     "Moudra",
-    "Algoritmizace/1. Uvozovky.md",
     "React",
     "Pasted image 20250424111046.png",
     "JavaScript - Expert",
