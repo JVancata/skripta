@@ -1,5 +1,5 @@
 > [!quote]
-> What I would have done differently is I would have avoided some of the compromises that I made when I first got early adopters and they said: "could you change this?"
+> What I would have done differently is I would have avoided some of the compromises that I made when I first got early adopters and they said: "Could you change this?"
 > 
 > \- Brendan Eich, autor JavaScriptu[^1]
 
