@@ -40,32 +40,6 @@ console.log(2 ** 4); // Dva na čtvrtou
 console.log(2 ** 5); // Dva na pátou
 console.log(2 ** 6); // Dva na šestou
 ```
-## Porovnávání čísel
-Používáme jedině **trojité rovná se** `===` ([strict equality](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality)). 
-
-| **název**    | operátor | **příklad**    | **výsledek** |
-| ------------ | -------- | -------------- | ------------ |
-| Rovná se (✅) | `===`    | `666 === 555`  | `false`      |
-| Rovná se (❌) | `==`     | `"777" == 777` | `true`       |
-| Nerovná se   | `!==`    | `111 !== 222`  | `true`       |
-
-Použití pouze **dvou rovná se** `==` sice funguje, ale **nekontroluje datový typ** a to vede k chybám. Můžeme porovnávat `number` se `string`, což vůbec **nedává** smysl.
-
-```javascript
-console.log(666 == "666"); // true - Ďáblovo dílo, nepoužívat 👿
-console.log(666 === "666"); // false - Zde je svět v pořádku 🤗
-```
-
->[!tip]- Menší než
-> ![[less-than.png]]
-
-| **název**        | operátor | **příklad**  | **výsledek** |
-| ---------------- | -------- | ------------ | ------------ |
-| Větší než        | `>`      | `15 > 14`    | `true`       |
-| Větší než        | `>`      | `15 > 15`    | `false`      |
-| Menší než        | `<`      | `101 < 102`  | `true`       |
-| Větší nebo rovno | `>=`     | `200 >= 200` | `true`       |
-| Menší nebo rovno | `<=`     | `500 <= 500` | `true`       |
 ## Nutné vědět
 Dej si **pozor** na hodnotu [`NaN`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN) (not a number).  Jednou nebo později na to narazíš, tak se připrav.
 

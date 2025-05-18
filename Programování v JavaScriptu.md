@@ -21,6 +21,8 @@ Programuj **každou úlohu**, která je v těchto materiálech zadaná, i kdyby 
 Vše ostatní je **bonus**. Nepotřebuješ být žádný profesor matematiky, nebo druhé zrození Alberta Einsteina. Nějaké předešlé znalosti programování se hodí, ale zvládneš to i bez nich.
 
 Jestli něčemu nerozumíš, tak to klidně **přeskoč**. Vrátíš se k tomu později, až to budeš potřebovat.
+
+Když ti to dvakrát nepůjde naprogramovat, tak to napotřetí už dáš.
 ## Osnova
 
 Stačí se postupně prokousávat tématy a plnit všechny programovací úlohy.

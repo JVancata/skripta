@@ -164,7 +164,7 @@ if (age < 18) {
 Ukážeme si složitější situaci na následujícím **diagramu**:
 
 ```mermaid
-flowchart LR
+flowchart TD
     A(["function getItemsByWeather()"]) --> B{"Prší venku?"}
     B -- true --> C["Vem si deštník"]
     B -- false --> D{"Je teplo?"}

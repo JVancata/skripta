@@ -46,22 +46,6 @@ const favouriteFood = "Cibule 🧅";
 const foodMessage = "Jo, " + favouriteFood + " mi taky moc chutná!\n\nSnídaně bez " + favouriteFood + " není pořádná snídaně."
 console.log(foodMessage);
 ```
-# Porovnání stringů
-Stringy mezi sebou porovnáš **úplně stejně, jako čísla**.
-
-```javascript
-const string1 = "12";
-const string2 = "24";
-const string3 = "🥔";
-
-// Tohle dává smysl
-console.log(string1 === string2);
-// Vždycky používej > a < jenom pro abecední řazení, nikdy porovnání čísel.
-console.log(string3 > string2);
-```
-Vždycky mezi sebou porovnávej jen proměnné se **stejným typem**.
-
-Pokud na `string` chceš použít `>` a `<`, tak jedině za účelem **abecedního řazení**. Sice to umí porovnávat čísla, ale nedává to smysl. Je to jako porovnávat 🍎 a 🍐.
 # Procházení stringu
 [0], [1]...
 # Metody na stringu
