@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "JavaScript - Úvod/primitivní datové typy/boolean.md",
+                "file": "Moudra/Zpětná vazba.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "boolean"
+              "title": "Zpětná vazba"
             }
           }
         ],
@@ -186,9 +186,11 @@
   },
   "active": "b9320aa335efa1a5",
   "lastOpenFiles": [
+    "img/they-are-wrong.png",
+    "JavaScript - Úvod/primitivní datové typy/boolean.md",
+    "Moudra/Zpětná vazba.md",
     "JavaScript - Úvod/primitivní datové typy/string.md",
     "JavaScript - Úvod/primitivní datové typy/number.md",
-    "JavaScript - Úvod/primitivní datové typy/boolean.md",
     "Programování v JavaScriptu.md",
     "JavaScript - Úvod/JavaScript - Úvod.md",
     "JavaScript - Pokročilý/Regex - regulární výrazy.md",
@@ -219,15 +221,12 @@
     "JavaScript - Expert/JavaScript - Expert.md",
     "img/delete-useless-code.gif",
     "JavaScript - Expert/Event loop.md",
-    "JavaScript - Pokročilý/Rozdíl mezi null a undefined.md",
-    "JavaScript - Expert/Pass by value.md",
     "Technická expertíza",
     "img/yoda.gif",
     "Moudra",
     "React",
     "Pasted image 20250424111046.png",
     "JavaScript - Expert",
-    "img/toaletak.webp",
     "Algoritmizace",
     "img",
     "JavaScript - Pokročilý",
