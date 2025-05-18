@@ -15,6 +15,7 @@ To, že někdo:
 - je na vyšší pozici, než ty
 - vydělává víc peněz, než ty
 - je víc ***cokoli***, než ty
+
 Neznamená nutně, že **nemele kraviny** 🐄 a že tomu rozumí. Možná má pravdu, možná ne.
 
 | **Zpětná vazba**                                                                    | Hned řešit? | Zvážit? | **Proč**                                                                                                                                      |

@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Moudra/Zpětná vazba.md",
+                "file": "Moudra/Kvantita vede ke kvalitě.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Zpětná vazba"
+              "title": "Kvantita vede ke kvalitě"
             }
           }
         ],
@@ -186,9 +186,15 @@
   },
   "active": "b9320aa335efa1a5",
   "lastOpenFiles": [
+    "Moudra/Survivorship Bias.md",
+    "Moudra/Mluvení.md",
+    "Moudra/Kvantita vede ke kvalitě.md",
+    "Moudra/Chesterton’s Fence.md",
+    "Moudra/Zpětná vazba.md",
+    "img/survivorship-bias.png",
+    "img/less-than.png",
     "img/they-are-wrong.png",
     "JavaScript - Úvod/primitivní datové typy/boolean.md",
-    "Moudra/Zpětná vazba.md",
     "JavaScript - Úvod/primitivní datové typy/string.md",
     "JavaScript - Úvod/primitivní datové typy/number.md",
     "Programování v JavaScriptu.md",
@@ -210,7 +216,6 @@
     "Technická expertíza/ChatGPT - velké jazykové modely.md",
     "img/project-manager.png",
     "img/project-manager.png",
-    "Moudra/Chesterton’s Fence.md",
     "img/project-manager.png",
     "img/project-manager.png",
     "Technická expertíza/Výpočetní složitost.md",
@@ -218,14 +223,10 @@
     "Technická expertíza/Verzování - GIT.md",
     "Technická expertíza/Clean Code.md",
     "Technická expertíza/Verzování - Trunk Based Development.md",
-    "JavaScript - Expert/JavaScript - Expert.md",
     "img/delete-useless-code.gif",
-    "JavaScript - Expert/Event loop.md",
     "Technická expertíza",
-    "img/yoda.gif",
     "Moudra",
     "React",
-    "Pasted image 20250424111046.png",
     "JavaScript - Expert",
     "Algoritmizace",
     "img",

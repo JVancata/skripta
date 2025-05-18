@@ -1,0 +1,1 @@
+https://austinkleon.com/2020/12/10/quantity-leads-to-quality-the-origin-of-a-parable/
