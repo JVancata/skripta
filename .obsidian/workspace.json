@@ -4,39 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "759e4f425cd97e0f",
+        "id": "feb2ed76e70b3d6b",
         "type": "tabs",
         "children": [
           {
-            "id": "b1bc6137de295d24",
+            "id": "ab798ddc6c970208",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "JavaScript - Úvod/primitivní datové typy/boolean.md",
+                "file": "Moudra/Konkurence je dobrá pro spotřebitele.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "boolean"
-            }
-          },
-          {
-            "id": "b9320aa335efa1a5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Moudra/Kvantita vede ke kvalitě.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Kvantita vede ke kvalitě"
+              "title": "Konkurence je dobrá pro spotřebitele"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -184,49 +169,49 @@
       "publish:Publish changes...": false
     }
   },
-  "active": "b9320aa335efa1a5",
+  "active": "ab798ddc6c970208",
   "lastOpenFiles": [
-    "Moudra/Survivorship Bias.md",
-    "Moudra/Mluvení.md",
-    "Moudra/Kvantita vede ke kvalitě.md",
+    "Moudra/Impostor syndrome.md",
+    "Moudra/Konkurence je dobrá pro spotřebitele.md",
+    "img/amogus.png",
     "Moudra/Chesterton’s Fence.md",
-    "Moudra/Zpětná vazba.md",
-    "img/survivorship-bias.png",
-    "img/less-than.png",
+    "Moudra/Kvantita vede ke kvalitě.md",
+    "Moudra/Investování.md",
+    "Technická expertíza/Verzování - Trunk Based Development.md",
+    "Technická expertíza/Verzování - Git Flow.md",
+    "Technická expertíza/Verzování - GIT.md",
+    "Technická expertíza/ChatGPT - velké jazykové modely.md",
+    "Technická expertíza/Clean Code.md",
+    "React/React - úvod.md",
+    "Algoritmizace/0. Jak na algoritmizační úlohy.md",
+    "Algoritmizace/4. Cyklus ve spojovém seznamu.md",
     "img/they-are-wrong.png",
-    "JavaScript - Úvod/primitivní datové typy/boolean.md",
+    "img/survivorship-bias.png",
+    "img/just-do-it.png",
+    "Moudra/Zpětná vazba.md",
+    "Moudra/Survivorship Bias.md",
     "JavaScript - Úvod/primitivní datové typy/string.md",
     "JavaScript - Úvod/primitivní datové typy/number.md",
-    "Programování v JavaScriptu.md",
-    "JavaScript - Úvod/JavaScript - Úvod.md",
+    "JavaScript - Úvod/primitivní datové typy/boolean.md",
+    "JavaScript - Úvod/primitivní datové typy",
+    "JavaScript - Úvod/komplexní datové typy/object.md",
+    "JavaScript - Úvod/komplexní datové typy/array.md",
+    "JavaScript - Úvod/komplexní datové typy/Set.md",
+    "JavaScript - Úvod/komplexní datové typy/Date.md",
+    "JavaScript - Úvod/komplexní datové typy/BigInt.md",
+    "JavaScript - Úvod/komplexní datové typy",
     "JavaScript - Pokročilý/Regex - regulární výrazy.md",
     "JavaScript - Pokročilý/Early return.md",
-    "JavaScript - Úvod/komplexní datové typy/Set.md",
-    "JavaScript - Úvod/komplexní datové typy/BigInt.md",
-    "JavaScript - Úvod/komplexní datové typy/object.md",
-    "JavaScript - Úvod/komplexní datové typy/Date.md",
-    "JavaScript - Úvod/komplexní datové typy/array.md",
-    "JavaScript - Úvod/komplexní datové typy",
-    "JavaScript - Úvod/primitivní datové typy",
-    "Algoritmizace/4. Cyklus ve spojovém seznamu.md",
-    "Algoritmizace/4. Spojový seznam.md",
-    "Algoritmizace/0. Jak na algoritmizační úlohy.md",
-    "img/just-do-it.png",
     "Pasted image 20250515145139.png",
-    "Technická expertíza/ChatGPT - velké jazykové modely.md",
-    "img/project-manager.png",
-    "img/project-manager.png",
     "img/project-manager.png",
     "img/project-manager.png",
     "Technická expertíza/Výpočetní složitost.md",
-    "Technická expertíza/Verzování - Git Flow.md",
-    "Technická expertíza/Verzování - GIT.md",
-    "Technická expertíza/Clean Code.md",
-    "Technická expertíza/Verzování - Trunk Based Development.md",
     "img/delete-useless-code.gif",
     "Technická expertíza",
+    "img/yoda.gif",
     "Moudra",
     "React",
+    "Pasted image 20250424111046.png",
     "JavaScript - Expert",
     "Algoritmizace",
     "img",
