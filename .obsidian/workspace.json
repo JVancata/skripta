@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Moudra/Konkurence je dobrá pro spotřebitele.md",
+                "file": "Zadání/1. Soundboard.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Konkurence je dobrá pro spotřebitele"
+              "title": "1. Soundboard"
             }
           }
         ]
@@ -171,8 +171,12 @@
   },
   "active": "ab798ddc6c970208",
   "lastOpenFiles": [
-    "Moudra/Impostor syndrome.md",
+    "Programování v JavaScriptu.md",
+    "Zadání/1. Soundboard.md",
+    "Moudra/Streisand effect.md",
+    "Zadání",
     "Moudra/Konkurence je dobrá pro spotřebitele.md",
+    "Moudra/Impostor syndrome.md",
     "img/amogus.png",
     "Moudra/Chesterton’s Fence.md",
     "Moudra/Kvantita vede ke kvalitě.md",
@@ -200,12 +204,9 @@
     "JavaScript - Úvod/komplexní datové typy/Date.md",
     "JavaScript - Úvod/komplexní datové typy/BigInt.md",
     "JavaScript - Úvod/komplexní datové typy",
-    "JavaScript - Pokročilý/Regex - regulární výrazy.md",
-    "JavaScript - Pokročilý/Early return.md",
     "Pasted image 20250515145139.png",
     "img/project-manager.png",
     "img/project-manager.png",
-    "Technická expertíza/Výpočetní složitost.md",
     "img/delete-useless-code.gif",
     "Technická expertíza",
     "img/yoda.gif",
@@ -215,7 +216,6 @@
     "JavaScript - Expert",
     "Algoritmizace",
     "img",
-    "JavaScript - Pokročilý",
-    "JavaScript - Úvod"
+    "JavaScript - Pokročilý"
   ]
 }
