@@ -1,0 +1,7 @@
+name: skripta
+services:
+  quartz:
+    build:
+      context: ./
+    ports:
+      - "8080:80"
