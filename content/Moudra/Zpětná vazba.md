@@ -25,6 +25,7 @@ Neznamená nutně, že **nemele kraviny** 🐄 a že tomu rozumí. Možná má p
 | Máš na webu **moc obrázků**, dej jich tam míň                                       | ❌           | ✅       | Možná má pravdu a můžeš to zkusit, třeba se to bude lépe číst.                                                                                |
 | Ve tvojí appce jsem se ztratil a nevěděl jsem, kam klikat                           | ❔           | ✅       | Asi tam máš problém, appky musí být stavěny okolo uživatele, ne okolo vývojáře. <br><br>Když to nechápe jeden, asi jich bude mít problém víc. |
 | Nelíbí se mi grafický styl ve tvojí hře, mělo by to být více ***takové a makové***. | ❌           | ❌       | Minecraft je nejprodávanější hra na světě a textury jsou 16x16 pixelů.                                                                        |
+
 Zpětnou vazbu **ber vážně**, ale Tvoje umění (i kód je umění) **tvoříš** jenom Ty.
 
 >[!tip]- Nemysli si, že víš všechno nejlíp
