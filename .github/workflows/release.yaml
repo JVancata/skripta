@@ -1,0 +1,14 @@
+# Runner is on the same machine as the deployment (shortcut).
+name: Docker build
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: self-hosted
+    steps:
+    - run: git -C ~/skripta pull
+    - run: echo ${{ secrets.SUDO_PASSWORD }} | sudo -S docker compose -f ~/skripta/compose.yaml build
+    - run: echo ${{ secrets.SUDO_PASSWORD }} | sudo -S docker compose -f ~/skripta/compose.yaml up --detach
