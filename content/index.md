@@ -1,3 +1,6 @@
+---
+title: Programování v JavaScriptu
+---
 # Ahoj!
 
 Cílem této stránky je Tě naučit programovat v **JavaScriptu** (wow!). Předám Ti **všechny znalosti**, co jsem nasbíral a ukážu Ti, že programování není žádná věda. Zkusím Ti předat i pár **dobrých rad**, co by ti mohlo pomoct v kariéře programátora.
