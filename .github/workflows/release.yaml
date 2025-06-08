@@ -3,7 +3,7 @@ name: Docker build
 
 on:
   push:
-    branches: [ "m aster" ]
+    branches: [ "master" ]
 
 jobs:
   build:
