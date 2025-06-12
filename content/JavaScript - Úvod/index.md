@@ -10,7 +10,7 @@ JavaScript je programovací jazyk, který dnes běží **prakticky všude**. Mů
 >- **single threaded** - běží pouze na jednom jádře
 >- **objektově orientovaný**, imperativní a zároveň i deklarativní
 >  
- Nejčastěji běží v **prohlížeči**, ale stejně funguje i na [serveru](https://nodejs.org/en). Dají se v něm psát i [mobilní](https://reactnative.dev/) a [desktopové](https://www.electronjs.org/) aplikace. 
+ > Nejčastěji běží v **prohlížeči**, ale stejně funguje i na [serveru](https://nodejs.org/en). Dají se v něm psát i [mobilní](https://reactnative.dev/) a [desktopové](https://www.electronjs.org/) aplikace. 
 > 
 > Kromě názvu nemá s **Javou** nic společného.
 
