@@ -1,5 +1,5 @@
 ---
-title: JavaScript - úvod
+title: JavaScript - Úvod
 ---
 JavaScript je programovací jazyk, který dnes běží **prakticky všude**. Můžeme v něm psát webové, mobilní a desktopové aplikace a i aplikace, které běží na serveru.
 
