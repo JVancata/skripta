@@ -2,7 +2,7 @@ Tento výklad je zjednodušení [článku od Aleksandra Hovhannisyana](https://w
 
 V JavaScript se **všechny** data předávají přes **hodnotu**. Nikdy přes referenci. 
 
-Na internetu se různě píše, že [[JavaScript - Úvod#Primitivní datové typy|primitivní datové typy]] se předávají pomocí **hodnoty** (value) a objekty se předávají pomocí **reference**, ALE TECHNICKY TO NENÍ PRAVDA!
+Na internetu se různě píše, že [[JavaScript - Úvod/index#Primitivní datové typy|primitivní datové typy]] se předávají pomocí **hodnoty** (value) a objekty se předávají pomocí **reference**, ALE TECHNICKY TO NENÍ PRAVDA!
 
 Nejlíp si to ukážeme na následujících dvou snippetech:
 ```javascript
