@@ -65,6 +65,8 @@ const háčkyČárkyToTakyUmíAlePůjdešDoPekla = 666;
 
 **Gratuluju**, rozumíš prvnímu odbornému termínu - **deklarace proměnné**!
 
+Do proměnných jdou ukládat různé typy dat - [[number|čísla]], [[string|stringy]], [[Date|datumy]]... Rozlišujeme mezi sebou [[JavaScript - Úvod/primitivní datové typy/index|primitivní]] a [[JavaScript - Úvod/komplexní datové typy/index|komplexní]] datové typy.
+
 Kód, který využívá proměnnou, **musí následovat** až po její **deklaraci**. Počítač (interpreter) to čte stejně jako Ty - **odshora** a **zleva**.
 
 > [!todo]- Proč to nefunguje?
@@ -115,26 +117,6 @@ Jeden název proměnné **nemůžeme** použít dvakrát - musí být **unikátn
 	- [ ] Vynásob počet lidí dvěma (`*`)
 	- [ ] Zredukuj populaci na polovinu (`/`)
 
-# Primitivní datové typy
-Proměnná může obsahovat různé **typy** dat, zatím jsme si ukázali `string` a `number`.
-
-| Typ         | Vysvětlení                                        | Příklady                                   |
-| ----------- | ------------------------------------------------- | ------------------------------------------ |
-| `number`    | [[number\|číslo nebo desetinné číslo]]            | `0`, `0.5`, `69`, `NaN`, `-Infinity`, `-0` |
-| `string`    | [[string\|jakýkoli text a nebo prázdný string]]   | `"a"`, `"Hello world!"`, `""`              |
-| `boolean`   | [[boolean\|hodnota ano/ne]]                       | `true`, `false`                            |
-| `null`      | [[Rozdíl mezi null a undefined\|prázdná hodnota]] | `null`                                     |
-| `undefined` | [[Rozdíl mezi null a undefined\|prázdná hodnota]] | `undefined`                                |
-Typ proměnné si můžeme v kódu **ověřit** pomocí klíčového slovíčka [`typeof`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof).
-```javascript
-const exampleString = "👁👅👁";
-const exampleNumber = 0.5;
-const exampleBoolean = true;
-
-console.log(typeof exampleString);
-console.log(typeof exampleNumber);
-console.log(typeof exampleBoolean);
-```
 # Podmínky
 Můžeme se v kódu **rozhodovat**, co se má stát, pokud nastala nějaká **podmínka**.
 
@@ -208,12 +190,3 @@ Arrow function vs function
 
 Data in -> data out
 
-# Komplexní datové typy
-
-| Typ      | Vysvětlení                                                      | Příklady                                        |
-| -------- | --------------------------------------------------------------- | ----------------------------------------------- |
-| `object` | [[object#Objekty - `object`\|libovolná datová struktura]]       | `{title: "FE!N", isBanger: true}`               |
-| `array`  | [[array\|více hodnot s určitým pořadím (**pole**)]]             | `[1, 2, 13, 1337, 69, 420]`                     |
-| `BigInt` | [[BigInt\|libovolně velké celé číslo]]                          | `100n`, `BigInt(200000)`                        |
-| `Date`   | [[Date\|datum a čas]]                                           | `new Date()`, `new Date("2025-01-01 04:20:00")` |
-| `Set`    | [[Set\|množina - array, ale bez pořadí a prvky jsou unikátní ]] | `new Set([1, 2, 3, 4])`                         |

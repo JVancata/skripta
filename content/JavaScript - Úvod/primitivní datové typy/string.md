@@ -57,16 +57,27 @@ console.log(foodMessage);
 .replace
 .includes
 # String coercion
-Ukázat na příkladu
 
-- Strings are returned as-is.
-- [`undefined`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined) turns into `"undefined"`.
-- [`null`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null) turns into `"null"`.
-- `true` turns into `"true"`; `false` turns into `"false"`.
-- Numbers are converted with the same algorithm as [`toString(10)`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toString).
-- [BigInts](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt) are converted with the same algorithm as [`toString(10)`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/toString).
-- [Symbols](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) throw a [`TypeError`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError).
-- Objects are first [converted to a primitive](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Data_structures#primitive_coercion) by calling its [`[Symbol.toPrimitive]()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) (with `"string"` as hint), `toString()`, and `valueOf()` methods, in that order. The resulting primitive is then converted to a string.
+Když převádíme jiné **datové typy** na `string`, musíme si **dávat pozor**, co se nám reálně vypíše.
+
+| hodnota                | typeof      | .toString()         |
+| ---------------------- | ----------- | ------------------- |
+| `"Čus 👋"`             | `string`    | `"Čus 👋"`          |
+| `10`                   | `number`    | `"10"`              |
+| `NaN`                  | `number`    | `"NaN"`             |
+| `true`                 | `boolean`   | `"true"`            |
+| `null`                 | `object`    | `"null"`            |
+| `undefined`            | `undefined` | `"undefined"`       |
+| `NaN`                  | `number`    | `"NaN"`             |
+| `{website: "alza.cz"}` | `object`    | `"[object Object]"` |
+
+Můžou se pak stát vtipný situace, když to správně neošetříš.
+
+```javascript
+const person = {};
+console.log(`Dobrá ráno, ${person.name}!
+Dnes Ti je ${parseInt(person.age)} let!`);
+```
 
 # Úloha 1 - Plivání faktů 🗣️ 
 Chceš zdůraznit, že věta, kterou někdo řekl, je **fakt důležitá** a měla by se tesat do kamene - tzv. je "fire" 🔥.
