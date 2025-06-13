@@ -8,7 +8,7 @@ Cílem této stránky je Tě naučit programovat v **JavaScriptu** (wow!). Před
 Budu se snažit, aby Tě **bavil** jak výklad, tak i **projekty**, které budeme programovat.
 
 > [!info]+ Proč se učit JavaScript?
-> Je super. Dokážeš v něm naprogramovat **[[JavaScript - Úvod/index|prakticky cokoli]]**. 
+> Je super. Dokážeš v něm naprogramovat **[[1. JavaScript - Úvod/index|prakticky cokoli]]**. 
 > 
 > Budeme dělat webové aplikace, servery, mobilní aplikace a třeba i hry. Naučíš se i vše okolo programování, co je do praxe potřeba.
 ## Předpoklady
@@ -30,7 +30,7 @@ Když ti to dvakrát nepůjde naprogramovat, tak to napotřetí už dáš.
 
 Stačí se postupně prokousávat tématy a plnit všechny programovací úlohy.
 
-1. Vysvětlíme pár [[JavaScript - Úvod/index|základních pojmů]] a spustíme si **první projekty**, žádné zázraky se zatím dít nebudou. Očekávej pár jednoduchých funkcí, které Ti ukážou základy jazyka. 
+1. Vysvětlíme pár [[1. JavaScript - Úvod/index|základních pojmů]] a spustíme si **první projekty**, žádné zázraky se zatím dít nebudou. Očekávej pár jednoduchých funkcí, které Ti ukážou základy jazyka. 
    
 2. Pokračovat budeme trošku [[Rozdíl mezi null a undefined|zajímavějšími projekty]]. Začneme postupně tvořit interaktivní webové aplikace - klikneme do stránky a ona něco udělá.
 

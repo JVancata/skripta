@@ -1,5 +1,5 @@
 ---
-title: JavaScript - Úvod
+title: 1. JavaScript - Úvod
 ---
 JavaScript je programovací jazyk, který dnes běží **prakticky všude**. Můžeme v něm psát webové, mobilní a desktopové aplikace a i aplikace, které běží na serveru.
 
@@ -65,7 +65,7 @@ const háčkyČárkyToTakyUmíAlePůjdešDoPekla = 666;
 
 **Gratuluju**, rozumíš prvnímu odbornému termínu - **deklarace proměnné**!
 
-Do proměnných jdou ukládat různé typy dat - [[number|čísla]], [[string|stringy]], [[Date|datumy]]... Rozlišujeme mezi sebou [[JavaScript - Úvod/primitivní datové typy/index|primitivní]] a [[JavaScript - Úvod/komplexní datové typy/index|komplexní]] datové typy.
+Do proměnných jdou ukládat různé typy dat - [[number|čísla]], [[string|stringy]], [[Date|datumy]]... Rozlišujeme mezi sebou [[1. JavaScript - Úvod/primitivní datové typy/index|primitivní]] a [[1. JavaScript - Úvod/komplexní datové typy/index|komplexní]] datové typy.
 
 Kód, který využívá proměnnou, **musí následovat** až po její **deklaraci**. Počítač (interpreter) to čte stejně jako Ty - **odshora** a **zleva**.
 
