@@ -1,3 +1,6 @@
+---
+title: Algoritmizace
+---
 Úlohy nejsou řazeny podle složitosti, některý budou easy, některý těžký.
 
 Když nevíš, jak úlohu řešit, tak to **alespoň nějak zkus**.

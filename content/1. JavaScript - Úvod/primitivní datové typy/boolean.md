@@ -174,6 +174,7 @@ Pokud je byť jen jedna z nich nepravda, tak je celý výraz nepravda.
 | ❌ `false` | ❌ `false` | ❌ `false`   |
 | ✅ `true`  | ❌ `false` | ❌ `false`   |
 | ❌ `false` | ✅ `true`  | ❌ `false`   |
+
 AND se čte jako "**a zároveň**". [^1]
 
 Následující kód přečteš takto: "Pokud je výška větší nebo rovna 180 centimetrům a zároveň je věk větší nebo roven 18, můžeš na horskou dráhu."

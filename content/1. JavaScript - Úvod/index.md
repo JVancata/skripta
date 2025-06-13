@@ -105,7 +105,7 @@ Jeden název proměnné **nemůžeme** použít dvakrát - musí být **unikátn
 > 
 > Když budeš na internetu hledat JS kód (a nebo Ti ho bude generovat AI), určitě narazíš na klíčové slovo `var`. 
 > 
-> Pokud Tě zajímá důvod, najdeš ho v sekci [[JavaScript - Expert]] - **"variable hoisting"**.
+> Pokud Tě zajímá důvod, najdeš ho v sekci [[JavaScript - Expert/index]] - **"variable hoisting"**.
 > 
 > Jak jsme si řekli, že nejdřív musíš proměnnou nadefinovat a pak až jí použít, tak to pro `var` **neplatí**. Není to výhoda, kód to dělá **nepřehledným** a způsobuje to **neočekáváné** chování.
 

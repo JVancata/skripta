@@ -1,6 +1,6 @@
 Doteď jsme se sice bez něj obešli, ale nutně ho potřebujeme. 
 
-TS je dnes prakticky standard v každém seriózním projektu.
+TS je dnes standard v každém seriózním projektu.
 
 > [!info]+ Co je to TypeScript?
 > TypeScript je **typový systém** nad JavaScriptem. Řeší základní problém - **loose typing**. 
