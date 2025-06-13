@@ -73,6 +73,11 @@ Když převádíme jiné **datové typy** na `string`, musíme si **dávat pozor
 
 Můžou se pak stát vtipný situace, když to správně neošetříš.
 
+> [!tip]- Mandarinky
+> ![[mandarinky.png]]
+> 
+> [Opět propůjčeno](https://adamjedlicka.notion.site/Meme-ka-3458e0f7a1c3431bbf231e3a52550552#7e963e73ba1e48438c503440f69aee70)
+
 ```javascript
 const person = {};
 console.log(`Dobrá ráno, ${person.name}!

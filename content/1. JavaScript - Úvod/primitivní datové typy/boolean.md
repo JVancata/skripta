@@ -135,7 +135,7 @@ Občas potřebujeme **převrátit** `false` na `true` a naopak. Z nepravdy uděl
 
 > [!tip]- `!true`
 > 
-> ![[Pasted image 20250613110050.png]]
+> ![[demagog.png]]
 
 | X         | Výsledek ! | Výsledek !! |
 | --------- | ---------- | ----------- |
