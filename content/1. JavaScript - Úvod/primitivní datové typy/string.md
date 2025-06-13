@@ -33,8 +33,8 @@ const animalMessage = `Čau!
 
 Tvoje oblíbený zvíře je prej ${favouriteAnimal}!
 
-Dobrá volba!
-`;
+Dobrá volba!`;
+
 console.log(animalMessage);
 ```
 Pomocí **template literálů** (template stringů) můžeš mezi svůj text **vkládat proměnné**. 
