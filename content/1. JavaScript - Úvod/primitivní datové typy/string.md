@@ -54,7 +54,7 @@ Někdy potřebuješ **projít** `string` po jednotlivých **znacích** (písmenk
 Stringy jsou v JavaScriptu [iterable](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols), funguje tedy úplně to stejné, co u [[array|arraye]].
 
 ```javascript
-const animals = "🦓🐴🦄🐔🐹🐗🐶🐒🦍🦧";
+const animals = "Zvířátka: 🦓🐴🦄🐔🐹🐗🐶🐒🦍🦧";
 
 // ✅ Můžeš je proloopovat přes for const of
 for (const animal of animals) {
@@ -68,13 +68,16 @@ console.log(animalsArray);
 // ✅ Nebo můžeš použít spread syntax
 animalsArray = [...animals];
 console.log(animalsArray);
+
+// ⚠ Dej si ale opět pozor na speciální emoji (spojené z více různých emoji)
+console.log(Array.from("👩‍👩‍👧‍👧"));
 ```
 
 ⚠ Dej si ale **pozor** na procházení `string` přes indexy, pokud si ho předtím nepřevedeš na `array`.
 
 ```javascript
 // ⚠ BACHA!!!
-// Emoji (a i jiné Unicode znaky) jsou napozadí 2 různé UTF-16 znaky
+// Emoji (a i jiné Unicode znaky) jsou napozadí 2 a více různých UTF-16 znaků
 const emojis = "🎈🎆🎇🧨✨🎉🎊🎃";
 console.log(emojis[0]);
 console.log(emojis[1]);
@@ -83,13 +86,52 @@ console.log(emojis[emojis.length - 1]);
 // ⚠ To stejné platí, když uděláš .split("")
 console.log(emojis.split(""));
 ```
-Jak jsme si popsali nahoře, (nejen) emoji jsou **dva různé UTF-16 znaky**. Podívej se, jakej bordel to dělá.
 
+> [!info]- Jak správně procházet string s emoji
+> 
+> Jak jsme si popsali nahoře, emoji jsou **dva různé UTF-16 znaky**. Některé emoji jsou dokonce složeny z ještě více znaků.
+> 
+> Na speciální emoji potřebuješ použít [Intl.Segmenter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter).
+> 
+> ```javascript
+> const segmenter = new Intl.Segmenter();
+> 
+> const getStringSegments = (input) => {
+> 	const segments = Array.from(segmenter.segment(input));
+> 	return segments.map((segment) => segment.segment);
+> }
+> 
+> console.log(getStringSegments("Tohle jsou spešl emoji: 👩‍👩‍👧‍👧👧🏻🧒🏾👶🏿👨🏼‍🦰"))
+> ```
+> 
 # Metody na stringu
-.length
-.toLowerCase
-.toUpperCase
-.trim
+
+## .length
+
+```js
+// Délka stringu, bacha na emoji!!!
+console.log("Čau".length);
+console.log("😁".length);
+console.log("👩‍👩‍👧‍👧".length);
+```
+## .toLowerCase
+```javascript
+console.log("Ahoj, PŘEVEDU TO MALÝ, OK?".toLowerCase());
+```
+## .toUpperCase
+```javascript
+console.log("ČAU, převedu to velký, ok?".toUpperCase());
+```
+## .trim
+```javascript
+console.log("    Vyhodím mezery ze začátku a z konce, jo?     ".trim());
+```
+## .split
+
+```javascript
+// todo
+console.log("Udělám ze stringu array podle rozdělovače, třeba ho rozdělám na mezery".split(" "));
+```
 .split
 .replace
 .includes
