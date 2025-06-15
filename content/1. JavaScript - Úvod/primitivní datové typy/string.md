@@ -5,10 +5,12 @@ const message = "Čau 👋 Můžeš sem napsat úplně cokoli budeš chtít.";
 console.log(message);
 ```
 
->[!tip]- Kódování pro `string` je UTF-16 a umí vyjádřit vše v Unicode
->Asi to nemá moc cenu rozvádět pro obsah těchto skript, kdyžtak si to můžeš přečíst v [dokumentaci](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_code_points_and_grapheme_clusters)
+>[!tip] Kódování pro `string` je UTF-16 a umí vyjádřit vše v Unicode
+>Aby se ti povedlo nacpat do `string` vše z **Unicode**, tak na zakódování nějakých znaků musíš **použít 2 UTF-16 znaky**.
 >
->Sám tomu moc nerozumím, ale aby se ti povedlo nacpat do `string` vše z Unicode, tak na zakódování nějakých Unicode znaků musíš použít 2 UTF-16 znaky.
+>⚠ Pozor třeba na **emoji** - to jsou skoro vždy 2 UTF-16 znaky
+>
+>Asi to nemá moc cenu rozvádět, kdyžtak si to můžeš přečíst v [dokumentaci](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_code_points_and_grapheme_clusters)
 # Zápis stringu
 
 Existuje **více způsobů** pro zápis stringu
@@ -47,7 +49,42 @@ const foodMessage = "Jo, " + favouriteFood + " mi taky moc chutná!\n\nSnídaně
 console.log(foodMessage);
 ```
 # Procházení stringu
-[0], [1]...
+Někdy potřebuješ **projít** `string` po jednotlivých **znacích** (písmenkách).
+
+Stringy jsou v JavaScriptu [iterable](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols), funguje tedy úplně to stejné, co u [[array|arraye]].
+
+```javascript
+const animals = "🦓🐴🦄🐔🐹🐗🐶🐒🦍🦧";
+
+// ✅ Můžeš je proloopovat přes for const of
+for (const animal of animals) {
+	console.log(`Zvíře: ${animal}`);
+}
+
+// ✅ Můžeš je převést na array a pak si s nima dělat, co chceš
+let animalsArray = Array.from(animals);
+console.log(animalsArray);
+
+// ✅ Nebo můžeš použít spread syntax
+animalsArray = [...animals];
+console.log(animalsArray);
+```
+
+⚠ Dej si ale **pozor** na procházení `string` přes indexy, pokud si ho předtím nepřevedeš na `array`.
+
+```javascript
+// ⚠ BACHA!!!
+// Emoji (a i jiné Unicode znaky) jsou napozadí 2 různé UTF-16 znaky
+const emojis = "🎈🎆🎇🧨✨🎉🎊🎃";
+console.log(emojis[0]);
+console.log(emojis[1]);
+console.log(emojis[emojis.length - 1]);
+
+// ⚠ To stejné platí, když uděláš .split("")
+console.log(emojis.split(""));
+```
+Jak jsme si popsali nahoře, (nejen) emoji jsou **dva různé UTF-16 znaky**. Podívej se, jakej bordel to dělá.
+
 # Metody na stringu
 .length
 .toLowerCase
