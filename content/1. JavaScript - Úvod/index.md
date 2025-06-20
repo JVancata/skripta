@@ -141,20 +141,24 @@ console.log(getUserWelcomeMessage("Tomáši"));
 console.log(getUserWelcomeMessage("Štěpáne"));
 ```
 
-Vidíš, že funkce jde zapsat **dvěma různými způsoby**. Je mezi nimi rozdíl, ale pro začátek Tě vůbec **nemusí zajímat**.[^1] Buď konzistentní, zkus ty zápisy nemíchat.
-
 | **Název funkce**          | `getUserGreeting` |
 | ------------------------- | ----------------- |
 | **Parametr funkce a typ** | `name` - `string` |
 | **Typ návratové hodnoty** | `string`          |
 
+> [!tip] Buď konzistentní
+> Vidíš, že funkce jde zapsat **dvěma různými způsoby**. 
+> 
+> Je mezi nimi rozdíl, ale pro začátek Tě vůbec **nemusí zajímat**.[^1] Buď konzistentní, zkus ty zápisy nemíchat.
+
 **Parametrů** funkce můžeš mít kolik chceš a můžou mít úplně jakýkoli datový typ - číslo, string, další funkce, objekt, array...
 
 **Tělo funkce** může dělat ve svém [scope](https://developer.mozilla.org/en-US/docs/Glossary/Scope)[^4] úplně cokoli - počítat, načítat data, zapisovat data...
 
-Funkce může **vracet** (returnovat) úplně cokoli - číslo, objekt, null, undefined...
+Funkce může **vracet** (returnovat) úplně cokoli - číslo, [[object|objekt]], [[Rozdíl mezi null, undefined a nullish|null]], [[Rozdíl mezi null, undefined a nullish|undefined]]...
+## Příklad použití funkcí
 
-**Příklad použití funkcí** - zjednodušený výpočet úroku na ročním termínovaném vkladu[^2]:
+Zjednodušený výpočet úroku na ročním termínovaném vkladu[^2]:
 ```javascript
 // Neřešíme nepřesnost desetinných čísel, neděláme core systém banky 💰
 const CAPITAL_INCOME_TAX_RATE = 0.15; // 15 %
@@ -196,24 +200,27 @@ console.log("Celkem máš po 1 roce: ", values.finalAmountAfterTax);
 
 Na příkladu je použitej i [default parameter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters) `taxRate` - použije se výchozí hodnota, pokud ho nevyplníš.
 
-**Pravidla čisté funkce:**
+## Pravidla čisté funkce
+
 - Funkce dělá **jednu věc** a tu dělá dobře (je atomická)
 - Funkce funguje **samostatně** (nemá sideffecty)
 	- Pracuje jenom parametry, ne s hodnotami "okolo"[^3]
 	- Vrací hodnoty, nesahá na hodnoty "okolo"
 - Má konzistentní výstup - vrací vždy stejný datový typ
-- Když má více vstupních/výstupních parametrů, používej objekty
+- Když má více vstupních/výstupních parametrů, používej [[object|objekty]]
 
 Když máš čistou funkci, můžeš k ní napsat **testy** a můžeš jí věřit. Na začátku určitě budeš mít funkce špinavý, ale neboj, to **budeme ladit**. Vždycky Ti poradím.
 
-**Vyzkoušej udělat funkci, která**:
+## Vyzkoušej si
+
+Udělej funkci, která:
 - [ ] spočítá počet lidí na planetě Zemi po redukci populace na polovinu (lusknutí Rukavicí nekonečna)
 - [ ] spočítá týdenní počet prodaných smažáků v jídelně
-	-  ve škole je 500 studentů a denně si ho koupí 10 % z nich
+	- [ ] ve škole je 500 studentů a denně si ho koupí 10 % z nich
 - [ ] spočítá počet gramů cukru v nápoji při zadání množství (ml) a množství (g) cukru na 100 gramů
-	- 355ml plechovka RedBullu má 11 g cukru na 100 ml
-	- 100ml sklenice vody má 0 g cukru na 100 ml
-	- 1l lahev pomerančového džusu má 9.1 g cukru na 100 ml
+	- [ ] 355ml plechovka RedBullu má 11 g cukru na 100 ml
+	- [ ] 100ml sklenice vody má 0 g cukru na 100 ml
+	- [ ] 1l lahev pomerančového džusu má 9.1 g cukru na 100 ml
 
 # Podmínky
 Můžeme se v kódu **rozhodovat**, co se má stát, pokud nastala nějaká **podmínka**.
@@ -225,8 +232,8 @@ const isRaining = true;
 
 // Pokud je proměnná isRaining true, vykoná se následující kód
 if (isRaining) {
-	console.log("Prší 🌧");
 	// Například ti připomene v 7:00, že si máš vzít deštník.
+	console.log("Prší 🌧");
 }
 // Pokud je proměnná isRaining false, vykoná se následující kód
 else {

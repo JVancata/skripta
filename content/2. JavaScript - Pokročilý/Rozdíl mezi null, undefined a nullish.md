@@ -17,3 +17,7 @@
 >
 >[Zdroj obrázku](https://adamjedlicka.notion.site/Meme-ka-3458e0f7a1c3431bbf231e3a52550552#7e963e73ba1e48438c503440f69aee70)
 
+# Nullish
+Nullish hodnota je buď `null`, nebo `undefined`.
+
+Na nullish hodnoty můžeme používat [nullish coalescing](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing) a [optional chaining](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining).

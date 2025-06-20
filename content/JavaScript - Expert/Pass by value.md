@@ -62,7 +62,7 @@ Vytvořili jsme dva různé objekty, které se nachází na odlišných adresác
 
 >[!tip] Pozor - v JavaScriptu je vlastně všechno `object`, ale ne tak úplně
 > 
-> V kapitole [[Rozdíl mezi null a undefined]] jsme si řekli, že v JavaScriptu je vše `object`, proč se teda příklad nahoře s dvěmi čísly nechová jako příklad s objekty?
+> V kapitole [[Rozdíl mezi null, undefined a nullish]] jsme si řekli, že v JavaScriptu je vše `object`, proč se teda příklad nahoře s dvěmi čísly nechová jako příklad s objekty?
 > 
 > Protože JavaScript předává všechna data podle **hodnoty**, ne reference. Hodnota čísla `42` je `42`, i když je na jeho prototypu funkce `.toString()`. Pokud tedy takto k sobě přiřadíme dvě proměnné, vždy se předá hodnota a číslo `42` se v paměti zkopíruje.
 > 
