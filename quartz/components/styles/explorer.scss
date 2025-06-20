@@ -120,6 +120,10 @@ button.desktop-explorer {
     padding: 0;
     overscroll-behavior: contain;
 
+    & li {
+      padding: 0.15rem;
+    }
+
     & li > a {
       color: var(--dark);
       opacity: 0.75;
