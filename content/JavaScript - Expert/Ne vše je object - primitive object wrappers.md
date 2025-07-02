@@ -34,4 +34,18 @@ console.log(x.kohoZdravim);
 
 Wrapper objekty primitivních typů by se **nikdy neměly používat** napřímo. Wrappery jsou typu `object` a rovnají se jenom samy sobě.
 
+Navíc je ještě rozdíl, když použiješ globální wrapper objekt a když použiješ jeho konstruktor.
+
+```javascript
+// Vrací primitivní hodnotu
+const primitive = Number(123);
+console.log(typeof primitive);
+
+// Vrací celý wrapper object
+const obj = new Number(123);
+console.log(typeof obj);
+
+console.log(primitive === obj);
+```
+
 Je to otázka na kterou by se Tě mohli **ptát při technickém pohovoru**.
