@@ -37,7 +37,7 @@ console.log(druhyObjekt.jmeno); // Martina Smrádková
 
 Když se v JavaScriptu nepředávají data přes referenci, jaktože se změnil klíč `jmeno` i v proměnné `objekt`?
 
->[!important] Hodnota proměnné typu `object` a `array` je jenom **pointer** na adresu v paměti.
+>[!important] Hodnota proměnné typu `object` a `array` je jenom **pointer** na adresu v paměti
 
 Objekt (a array) vlastně neví nic o hodnotě, která v objektu reálně je. Pouze na ni ukazuje.
 
@@ -60,15 +60,9 @@ const osoba2 = "Data se dozvíš na adrese 0x001AB2"
 
 Vytvořili jsme dva různé objekty, které se nachází na odlišných adresách a `===` **porovnává adresy** (pointery). Objekt (a array) je vždy jenom pointer - adresa v paměti.
 
->[!tip] Pozor - v JavaScriptu je vlastně všechno `object`, ale ne tak úplně
+>[!tip] Objekty v JavaScriptu jsou jenom pointery
 > 
-> V kapitole [[Rozdíl mezi null, undefined a nullish]] jsme si řekli, že v JavaScriptu je vše `object`, proč se teda příklad nahoře s dvěmi čísly nechová jako příklad s objekty?
-> 
-> Protože JavaScript předává všechna data podle **hodnoty**, ne reference. Hodnota čísla `42` je `42`, i když je na jeho prototypu funkce `.toString()`. Pokud tedy takto k sobě přiřadíme dvě proměnné, vždy se předá hodnota a číslo `42` se v paměti zkopíruje.
-> 
-> Pokud takto přiřazujeme `object`, v paměti zkopírujeme **pointer** - adresu.
-> 
-> **Objekty v JavaScriptu jsou jenom pointery**.
+> Pokud přiřazujeme `object`, v paměti zkopírujeme **pointer** - adresu.
 
 Pro důkaz toho, že hodnotou objektu je jenom pointer slouží následující kód převzatý z původního článku.
 
