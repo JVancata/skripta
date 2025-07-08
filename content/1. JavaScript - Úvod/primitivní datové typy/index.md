@@ -12,6 +12,7 @@ Proměnná může obsahovat různé **typy** dat, zatím jsme si ukázali `strin
 | `null`      | [[Rozdíl mezi null, undefined a nullish\|prázdná hodnota]] | `null`                                     |
 | `undefined` | [[Rozdíl mezi null, undefined a nullish\|prázdná hodnota]] | `undefined`                                |
 | `bigint`    | [[bigint\|libovolně velké celé číslo]]                     | `100n`                                     |
+| `symbol`    | To zatím nepotřebuješ znát 😊                              |                                            |
 Typ proměnné si můžeme v kódu **ověřit** pomocí klíčového slovíčka [`typeof`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof).
 
 ```javascript
