@@ -44,21 +44,113 @@ completedProjects.forEach((project) => {
 	console.log(`Název projektu: ${project}.`);
 })
 ```
+
+### Vyzkoušej
+- [ ] udělej si pole známek z libovolného předmětu (obyčejná čísla) a vypiš všechny známky
+	- [ ] před známky lepší než 3 dej ✅
+	- [ ] před známky horší než 3 den ❌
+	- [ ] před trojky dej ⚠
+- [ ] udělej si pole s objekty - recenze restaurace
+	- [ ] každá recenze má jméno zákazníka, text recenze a počet hvězdiček (1-5)
+	- [ ] vypiš všechny recenze a počet hvězdiček vypiš pomocí emoji ⭐️
 # Metody na array
 
 ## .find()
+Najde a vrátí první prvek v poli, který splňuje nějakou podmínku.
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find
+```javascript
+const products = [
+	{ id: 1, name: "Yeezy" },
+	{ id: 2, name: "Air Jordan" },
+	{ id: 3, name: "Nike Dunk" },
+	{ id: 4, name: "Adidas Samba" },
+];
 
+const found = products.find((product) => product.id === 3);
+console.log(found);
+```
 ## .includes()
+Vrátí `true`/`false`, jestli se daný prvek nachází v poli.
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes
 
+```javascript
+const cities = ["Prague", "Berlin", "Tokyo", "Budapest"];
+
+console.log(cities.includes("Munich"));
+console.log(cities.includes("Tokyo"));
+```
+Tady si dej pozor – na objekty to [[object#Objekty se nerovnají|nebude fungovat]].[^1]
 ## .map
+Vrátí nový `array`, který obsahuje pozměněná (pře**map**ovaná) data.
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
+
+```javascript
+const plants = [
+	{id: 1, name: "Ficus Robusta", price: 199},
+	{id: 2, name: "Rhaphidophora tetrasperma", price: 479},
+	{id: 3, name: "Řasokoule", price: 79},
+	{id: 4, name: "Monstera Adansonii", price: 429},
+];
+
+const outputArray = plants.map((plant) => {
+	return `${plant.name} - ${plant.price} Kč`;
+})
+
+// Z arraye uděláme string - všechny prvky spojíme pomocí \n (nový řádek)
+const outputText = outputArray.join("\n");
+
+console.log("Nabídka našeho květinářství 🪴");
+console.log(outputText);
+```
+
+Nový array je vždycky stejně dlouhý jako ten původní.
 
 ## .join()
+Spojí všechny prvky do jednoho `string` a mezi jednotlivé prvky dá **oddělovač**.
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join
 
-## .reverse()
+```javascript
+const food = ["🌭", "🥖", "🍔", "🥓"];
 
+// Jako oddělovač dáváme emoji
+console.log(food.join(" 😋 "));
+
+// Jako oddělovač nedáváme nic
+console.log(food.join());
+```
+## .reverse() a .toReversed()
+Obrátí celé pole - prvek na konci bude na začátku a prvek na začátku bude na konci.
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse
+
+```javascript
+const animals = ["Křeček 🐹", "Kočka 🐱", "Pes 🐶", "Velryba 🐳"];
+console.log(animals);
+
+animals.reverse();
+
+// Původní pole se změnilo
+console.log(animals);
+```
+
+Pozor, `.reverse()` změní pole in-place. To znamená, že tím šáhne na původní hodnotu a nevytváří nové pole.
+
+Pokud chceš pracovat s novým polem a původní neměnit, použij `.toReversed()`
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toReversed
+
+```javascript
+const animals = ["Křeček 🐹", "Kočka 🐱", "Pes 🐶", "Velryba 🐳"];
+console.log(animals);
+
+const reversedAnimals = animals.toReversed();
+
+console.log("Původní zvířata: ", animals);
+console.log("Obrácená zvířata: ", reversedAnimals);
+```
+## .sort() a .toSorted()
 ## .some()
 
 ## .filter()
 
 ## .pop()
 
+[^1]: Objekty jsou pointery na paměť. Když míří jinam, tak je jedno, jestli je tam stejná hodnota. Když dostanu dvě adresy – jednu v Praze, druhou v Brně – tak je jedno, že tam bydlí stejný počet lidí. Je to jiná adresa, jiný místo.

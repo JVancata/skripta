@@ -109,7 +109,7 @@ Jeden název proměnné **nemůžeme** použít dvakrát - musí být **unikátn
 > 
 > Jak jsme si řekli, že nejdřív musíš proměnnou nadefinovat a pak až jí použít, tak to pro `var` **neplatí**. Není to výhoda, kód to dělá **nepřehledným** a způsobuje to **neočekáváné** chování.
 
-**Vyzkoušej**:
+## Vyzkoušej:
 - [ ] Nadefinovat proměnnou, která obsahuje název tvého oblíbeného filmu.
 - [ ] Nadefinovat proměnnou, která obsahuje počet lidí na planetě zemi.
 	- [ ] Přičti jednoho člověka (`+`)
@@ -211,7 +211,7 @@ Na příkladu je použitej i [default parameter](https://developer.mozilla.org/e
 
 Když máš čistou funkci, můžeš k ní napsat **testy** a můžeš jí věřit. Na začátku určitě budeš mít funkce špinavý, ale neboj, to **budeme ladit**. Vždycky Ti poradím.
 
-## Vyzkoušej si
+### Vyzkoušej
 
 Udělej funkci, která:
 - [ ] spočítá počet lidí na planetě Zemi po redukci populace na polovinu (lusknutí Rukavicí nekonečna)

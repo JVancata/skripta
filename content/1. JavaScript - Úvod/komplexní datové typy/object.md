@@ -53,5 +53,19 @@ console.log(indentifier.key33)
 ```
 
 Pozor! Syntaxe JavaScript objektu a JSONu **není stejná**, v detailech se liší!
+## Objekty se nerovnají
+Tohle je trochu techničtější, ale v [[Pass by value]] je vysvětleno, že hodnota `object` je jenom **pointer na paměť**.
+
+V praxi to znamená toto:
+```javascript
+const product1 = { id: 1, name: "Káva" };
+const product2 = { id: 1, name: "Káva" };
+
+console.log(product1 === product2); // false
+```
+
+I když jsou objekty stejný, tak pro JavaScript nejsou. JavaScript u objektu kontroluje, jestli míří na stejné místo v paměti a to se tady neděje.
+
+Když chceš mezi sebou porovnávat objekty, musíš to nějak vymyslet. Třeba je porovnávat na základě jednoho stejného klíče (např. id). Nebo porovnat všechny klíče.
 ## Spread syntaxe
 TODO: `{ ...object }`
