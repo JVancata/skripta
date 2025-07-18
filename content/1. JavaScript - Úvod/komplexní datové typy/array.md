@@ -57,6 +57,7 @@ completedProjects.forEach((project) => {
 
 ## .find()
 Najde a vrátí první prvek v poli, který splňuje nějakou podmínku.
+
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find
 ```javascript
 const products = [
@@ -71,6 +72,7 @@ console.log(found);
 ```
 ## .includes()
 Vrátí `true`/`false`, jestli se daný prvek nachází v poli.
+
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes
 
 ```javascript
@@ -82,6 +84,7 @@ console.log(cities.includes("Tokyo"));
 Tady si dej pozor – na objekty to [[object#Objekty se nerovnají|nebude fungovat]].[^1]
 ## .map
 Vrátí nový `array`, který obsahuje pozměněná (pře**map**ovaná) data.
+
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
 
 ```javascript
@@ -107,6 +110,7 @@ Nový array je vždycky stejně dlouhý jako ten původní.
 
 ## .join()
 Spojí všechny prvky do jednoho `string` a mezi jednotlivé prvky dá **oddělovač**.
+
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join
 
 ```javascript
@@ -120,6 +124,7 @@ console.log(food.join());
 ```
 ## .reverse() a .toReversed()
 Obrátí celé pole - prvek na konci bude na začátku a prvek na začátku bude na konci.
+
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse
 
 ```javascript
@@ -135,6 +140,7 @@ console.log(animals);
 Pozor, `.reverse()` změní pole in-place. To znamená, že tím šáhne na původní hodnotu a nevytváří nové pole.
 
 Pokud chceš pracovat s novým polem a původní neměnit, použij `.toReversed()`
+
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toReversed
 
 ```javascript
@@ -147,6 +153,30 @@ console.log("Původní zvířata: ", animals);
 console.log("Obrácená zvířata: ", reversedAnimals);
 ```
 ## .sort() a .toSorted()
+Pomocí porovnávací funkce **seřadí** pole.[^2]
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
+
+Porovnávací funkce přijímá dva parametry - `a` a `b` a vrací hodnotu podle jejich pořadí.
+
+| Podmínka               | Návratová hodnota                   |
+| ---------------------- | ----------------------------------- |
+| `a` je řazeno před `b` | -1 (nebo klidně jiné záporné číslo) |
+| `a` je řazeno za `b`   | 1 (nebo klidně jiné kladné číslo)   |
+| `a` je stejné jako `b` | 0                                   |
+`(a, b) => a - b` seřadí čísla ve vzestupném pořadí.
+
+```javascript
+const countries = [
+	{ name: "SK", population: 5_473_631 },
+	{ name: "CZ", population: 10_604_294 },
+	
+]
+```
+
+
+
+`.sort()` změní pole in-place (změní původní hodnotu). Když to nechceš, použij `.toSorted()`. 
 ## .some()
 
 ## .filter()
@@ -154,3 +184,5 @@ console.log("Obrácená zvířata: ", reversedAnimals);
 ## .pop()
 
 [^1]: Objekty jsou pointery na paměť. Když míří jinam, tak je jedno, jestli je tam stejná hodnota. Když dostanu dvě adresy – jednu v Praze, druhou v Brně – tak je jedno, že tam bydlí stejný počet lidí. Je to jiná adresa, jiný místo.
+
+[^2]: Nepotřebuješ znát žádný řadící algoritmy. Všechno je vyřešený.
