@@ -56,7 +56,6 @@ completedProjects.forEach((project) => {
 	- [ ] každá recenze má jméno zákazníka, text recenze a počet hvězdiček (1-5)
 	- [ ] vypiš všechny recenze a počet hvězdiček vypiš pomocí emoji ⭐️
 # Metody na array
-
 ## .find()
 Najde a vrátí první první prvek v poli, který splňuje nějakou podmínku. Vždy vrací jenom jeden.
 
@@ -111,7 +110,6 @@ console.log(outputText);
 ```
 
 Nový array je vždycky stejně dlouhý jako ten původní.
-
 ## .join()
 Spojí všechny prvky do jednoho `string` a mezi jednotlivé prvky dá **oddělovač**.
 
@@ -216,7 +214,6 @@ if (shouldLockAccount) {
 	console.log("🚨 DETEKOVÁNY PODEZŘELÉ TRANSAKCE 🚨");
 }
 ```
-
 ## .filter()
 Vyfiltruje prvky, který splňují podmínku. Vrací `array`.
 
@@ -235,7 +232,6 @@ const gamblingCompanies = companies.filter((company) => company.field === "GAMBL
 
 console.log(gamblingCompanies);
 ```
-
 ## .pop()
 Vrátí poslední prvek v poli a odebere ho. Použiješ to, když potřebuješ datovou strukturu **zásobník**.
 
@@ -248,7 +244,9 @@ const last = vegetables.pop();
 console.log(last);
 console.log(vegetables);
 ```
+# .shift()
 
+[Array.shift()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift)
 
 [^1]: Objekty jsou pointery na paměť. Když míří jinam, tak je jedno, jestli je tam stejná hodnota. Když dostanu dvě adresy – jednu v Praze, druhou v Brně – tak je jedno, že tam bydlí stejný počet lidí. Je to jiná adresa, jiný místo.
 
