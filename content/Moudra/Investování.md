@@ -2,7 +2,6 @@
 > Investování do nemovitostí dělá každej druhej jouda.
 > 
 > \- Tomáš Faltejsek
-> 
 
 Myšlenka – nevyplatí se více investovat do vlastního vzdělání, aby si vydělával\*a víc peněz, než se snažit dělat to, co dělají všichni ostatní?
 

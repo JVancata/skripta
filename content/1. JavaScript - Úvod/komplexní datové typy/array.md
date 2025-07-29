@@ -15,6 +15,7 @@ console.log(`Počet hotový projektů: ${completedProjects.length}`);
 
 // Přidání nového projektu
 completedProjects.push("Spin the wheel");
+
 console.log(`Počet hotový projektů: ${completedProjects.length}`);
 console.log(completedProjects);
 ```
@@ -40,6 +41,7 @@ Když chceš projít všechny prvky v poli a vypsat je, použiješ `.forEach()`.
 
 ```javascript
 const completedProjects = ["Soundboard", "Reader bar", "Countdown timer"];
+
 completedProjects.forEach((project) => {
 	console.log(`Název projektu: ${project}.`);
 })
@@ -56,15 +58,17 @@ completedProjects.forEach((project) => {
 # Metody na array
 
 ## .find()
-Najde a vrátí první prvek v poli, který splňuje nějakou podmínku.
+Najde a vrátí první první prvek v poli, který splňuje nějakou podmínku. Vždy vrací jenom jeden.
 
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find
+[Array.find()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find)
+
 ```javascript
 const products = [
 	{ id: 1, name: "Yeezy" },
 	{ id: 2, name: "Air Jordan" },
 	{ id: 3, name: "Nike Dunk" },
 	{ id: 4, name: "Adidas Samba" },
+	{ id: 3, name: "Jiná bota co má stejný ID jako Nike Dunk" },
 ];
 
 const found = products.find((product) => product.id === 3);
@@ -73,7 +77,7 @@ console.log(found);
 ## .includes()
 Vrátí `true`/`false`, jestli se daný prvek nachází v poli.
 
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes
+[Array.includes()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes)
 
 ```javascript
 const cities = ["Prague", "Berlin", "Tokyo", "Budapest"];
@@ -85,7 +89,7 @@ Tady si dej pozor – na objekty to [[object#Objekty se nerovnají|nebude fungov
 ## .map
 Vrátí nový `array`, který obsahuje pozměněná (pře**map**ovaná) data.
 
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
+[Array.map()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
 
 ```javascript
 const plants = [
@@ -111,7 +115,8 @@ Nový array je vždycky stejně dlouhý jako ten původní.
 ## .join()
 Spojí všechny prvky do jednoho `string` a mezi jednotlivé prvky dá **oddělovač**.
 
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join
+[Array.join()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join)
+
 
 ```javascript
 const food = ["🌭", "🥖", "🍔", "🥓"];
@@ -125,7 +130,7 @@ console.log(food.join());
 ## .reverse() a .toReversed()
 Obrátí celé pole - prvek na konci bude na začátku a prvek na začátku bude na konci.
 
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse
+[Array.reverse()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse)
 
 ```javascript
 const animals = ["Křeček 🐹", "Kočka 🐱", "Pes 🐶", "Velryba 🐳"];
@@ -141,7 +146,8 @@ Pozor, `.reverse()` změní pole in-place. To znamená, že tím šáhne na pův
 
 Pokud chceš pracovat s novým polem a původní neměnit, použij `.toReversed()`
 
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toReversed
+[Array.toReversed()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toReversed)
+
 
 ```javascript
 const animals = ["Křeček 🐹", "Kočka 🐱", "Pes 🐶", "Velryba 🐳"];
@@ -155,7 +161,7 @@ console.log("Obrácená zvířata: ", reversedAnimals);
 ## .sort() a .toSorted()
 Pomocí porovnávací funkce **seřadí** pole.[^2]
 
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
+[Array.sort()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort) a [Array.toSorted()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toSorted)
 
 Porovnávací funkce přijímá dva parametry - `a` a `b` a vrací hodnotu podle jejich pořadí.
 
@@ -170,19 +176,80 @@ Porovnávací funkce přijímá dva parametry - `a` a `b` a vrací hodnotu podle
 const countries = [
 	{ name: "SK", population: 5_473_631 },
 	{ name: "CZ", population: 10_604_294 },
-	
-]
+	{ name: "HU", population: 9_584_627 },
+];
+
+// Vzestupně
+const ascending = countries.toSorted((a, b) => {
+	return a.population - b.population;
+});
+console.log(ascending);
+
+// Sestupně 
+const descending = countries.toSorted((a, b) => {
+	return b.population - a.population;
+});
+console.log(descending);
 ```
-
-
 
 `.sort()` změní pole in-place (změní původní hodnotu). Když to nechceš, použij `.toSorted()`. 
 ## .some()
+Vrací `true` nebo `false`, pokud alespoň jeden prvek v poli splňuje podmínku.
+
+[Array.some()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some)
+
+```javascript
+const AMOUNT_THRESHOLD = 10_000;
+
+const transactions = [
+	{ name: "McDonalds Praha 10", amount: 149 },
+	{ name: "Albert Hradecká 13", amount: 49 },
+	{ name: "Spotify", amount: 99 },
+	{ name: "INVESTIČNÍ PLATFORMA GARANTOVANÉ ZISKY", amount: 150_000 },
+];
+
+const shouldLockAccount = transactions.some((transaction) => {
+	return transaction.amount > AMOUNT_THRESHOLD
+});
+
+if (shouldLockAccount) {
+	console.log("🚨 DETEKOVÁNY PODEZŘELÉ TRANSAKCE 🚨");
+}
+```
 
 ## .filter()
+Vyfiltruje prvky, který splňují podmínku. Vrací `array`.
+
+[Array.filter()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
+
+```javascript
+const companies = [
+	{ name: "Agrofert", field: "AGRICULTURE" },
+	{ name: "Fortuna", field: "GAMBLING" },
+	{ name: "Lidl", field: "GROCERIES" },
+	{ name: "Pražská plynárenská", field: "UTILITIES" },
+	{ name: "Sazka", field: "GAMBLING" },
+];
+
+const gamblingCompanies = companies.filter((company) => company.field === "GAMBLING");
+
+console.log(gamblingCompanies);
+```
 
 ## .pop()
+Vrátí poslední prvek v poli a odebere ho. Použiješ to, když potřebuješ datovou strukturu **zásobník**.
+
+[Array.pop()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop)
+
+```javascript
+const vegetables = ["Brokolice 🥦", "Paprika 🫑", "Okurka 🥒", "Rajče 🍅"];
+const last = vegetables.pop();
+
+console.log(last);
+console.log(vegetables);
+```
+
 
 [^1]: Objekty jsou pointery na paměť. Když míří jinam, tak je jedno, jestli je tam stejná hodnota. Když dostanu dvě adresy – jednu v Praze, druhou v Brně – tak je jedno, že tam bydlí stejný počet lidí. Je to jiná adresa, jiný místo.
 
-[^2]: Nepotřebuješ znát žádný řadící algoritmy. Všechno je vyřešený.
+[^2]: Nepotřebuješ znát žádný řadící algoritmy. Všechno je vyřešený za Tebe pod pokličkou.

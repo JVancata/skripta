@@ -1,0 +1,1 @@
+Tahání dat z API
