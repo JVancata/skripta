@@ -49,7 +49,7 @@ Pak stačí [postupovat podle instrukcí](https://vite.dev/guide/#scaffolding-yo
 2. `npm create vite@latest`
 3. Napiš název projektu, třeba `reflex-game` (podle toho se vytvoří složka)
    ![[vite-init-react-project-name.png]]
-4. Vyber React
+4. Vyber React (klidně si někdy vyzkoušej i ostatní frameworky)
    ![[vite-init-react-project-react-framework.png]]
 5. Jestli se na to cejtíš, vyber TypeScript. Jestli se necejtíš, tak vyber JavaScript a TS se potom naučíme.
    ![[vite-init-react-project-javascript.png]]
