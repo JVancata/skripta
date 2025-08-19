@@ -1,5 +1,5 @@
 ---
-title: Úvod - komponenty
+title: 4. React - Úvod - komponenty
 ---
 React je JavaScriptový **frontendový framework**[^1], dneska je jeden z nejpoužívanějších[^2].
 
