@@ -110,12 +110,12 @@ Tohle není správně naprogramované, protože
 Tady na příkladu je to trochu **overkill**, naší jednoduchou "appku" jsme rozsekali do tří komponent. Ale když to nebudeš dělat, přeroste ti to přes hlavu a budeš psát **spaghetti code**. Na druhou stranu, **všeho moc škodí**. Na ten správný poměr rozsekávání přijdeš až s praxí, tak se toho neboj 😊
 
 ```jsx
-// Úplně hloupá komponenta, jenom něco vykresluje (presentational)
+// Úplně hloupá komponenta, jenom něco vykresluje (pure)
 const Greeting = ({ name }) => {
 	return <p>Vítej, {name}</p>;
 }
 
-// Úplně hloupá komponenta, jenom něco vykresluje (presentational)
+// Úplně hloupá komponenta, jenom něco vykresluje (pure)
 const PirateGreeting = ({ name }) => {
 	return <p>🏴‍☠️ Ahoj, {name}! 🏴‍☠️</p>;
 }
