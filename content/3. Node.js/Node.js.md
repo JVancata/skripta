@@ -11,6 +11,7 @@ A nebo si nainstaluješ jednu **konkrétní binárku** a sviští to.
 Sice bych to neměl úplně říkat, ale mezi verzema až takovej rozdíl není. Nainstaluj si vždycky tu nejnovětší (aktuálně v22 nebo v24) a budeš v pohodě.
 # Spuštění skriptu
 Vytvoř si soubor `main.js`
+
 ```javascript
 // main.js
 
@@ -18,6 +19,7 @@ console.log("Zdarec 👋 Tady si můžeš programovat, co jen budeš chtít.");
 ```
 
 A pak ho můžeš spustit přes `node main.js`
+
 ![[hello-world-node.png]]
 A to je úplně všechno 😁 Můžeš začít programovat.
 # NPM - Instalace knihoven
