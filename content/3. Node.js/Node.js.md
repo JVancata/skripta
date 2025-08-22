@@ -21,6 +21,7 @@ console.log("Zdarec 👋 Tady si můžeš programovat, co jen budeš chtít.");
 A pak ho můžeš spustit přes `node main.js`
 
 ![[hello-world-node.png]]
+
 A to je úplně všechno 😁 Můžeš začít programovat.
 # NPM - Instalace knihoven
 Některý knihovny si "nainstaluješ" tak, že si do stránky přidáš třeba tohle
