@@ -24,6 +24,7 @@ const greet = () => {
 }
 
 greet();
+// Výstup: Ahoj, světe!
 ```
 
 Gratuluju, už jsi oficiálně **programátor\*ka**!
@@ -36,10 +37,12 @@ Hodnotu **vypíšeme** pomocí `console.log`
 ```javascript
 const pageTitle = "JavaScript - Úvod";
 console.log(pageTitle);
+// Výstup: JavaScript - Úvod
 
 let viewCount = 100;
 viewCount = viewCount + 1;
 console.log(viewCount);
+// Výstup: 101
 ```
 
 Proměnná se v JavaScriptu **deklaruje** pomocí **klíčových slov** `const` a `let`. V kódu nahoře **deklarujeme** dvě proměnné - název kurzu a počet shlédnutí.
@@ -128,17 +131,25 @@ function getUserGreeting(name) {
 	// Návratová hodnota funkce
 	return greeting;
 }
+
 console.log(getUserGreeting("Hynku"));
+// Výstup: Zdarec, Hynku! 👋
 console.log(getUserGreeting("Viléme"));
+// Výstup: Zdarec, Viléme! 👋
 console.log(getUserGreeting("Jarmilo"));
+// Výstup: Zdarec, Jarmilo! 👋
 
 // Zápis pomocí "arrow function"
 const getUserWelcomeMessage = (name) => {
 	return `Vítej, ${name} 😁 Moc rád jsem že tu seš.`;
 }
+
 console.log(getUserWelcomeMessage("Lído"));
+// Výstup: Vítej, Lído 😁 Moc rád jsem že tu seš.
 console.log(getUserWelcomeMessage("Tomáši"));
+// Výstup: Vítej, Tomáši 😁 Moc rád jsem že tu seš.
 console.log(getUserWelcomeMessage("Štěpáne"));
+// Výstup: Vítej, Štěpáne 😁 Moc rád jsem že tu seš.
 ```
 
 | **Název funkce**          | `getUserGreeting` |
@@ -191,11 +202,17 @@ const getTermDepositValues = (depositAmount, yearlyInterestRate, taxRate = CAPIT
 }
 
 const values = getTermDepositValues(10_000, 0.031);
+
 console.log("Vložená částka: ", values.depositAmount);
+// Výstup: Vložená částka:  10000
 console.log("Úrok po jednom roce před daní: ", values.interestBeforeTax);
+// Výstup: Úrok po jednom roce před daní:  310
 console.log("Daň z úroku: ", values.interestTax);
+// Výstup: Daň z úroku:  46.5
 console.log("Úrok po zdanění: ", values.interestAfterTax);
+// Výstup: Úrok po zdanění:  263.5
 console.log("Celkem máš po 1 roce: ", values.finalAmountAfterTax);
+// Výstup: Celkem máš po 1 roce:  10263.5
 ```
 
 Na příkladu je použitej i [default parameter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters) `taxRate` - použije se výchozí hodnota, pokud ho nevyplníš.
@@ -217,7 +234,7 @@ Udělej funkci, která:
 - [ ] spočítá počet lidí na planetě Zemi po redukci populace na polovinu (lusknutí Rukavicí nekonečna)
 - [ ] spočítá týdenní počet prodaných smažáků v jídelně
 	- [ ] ve škole je 500 studentů a denně si ho koupí 10 % z nich
-- [ ] spočítá počet gramů cukru v nápoji při zadání množství (ml) a množství (g) cukru na 100 gramů
+- [ ] spočítá počet gramů cukru v nápoji při zadání množství (ml) a množství (g) cukru na 100 mililitrů
 	- [ ] 355ml plechovka RedBullu má 11 g cukru na 100 ml
 	- [ ] 100ml sklenice vody má 0 g cukru na 100 ml
 	- [ ] 1l lahev pomerančového džusu má 9.1 g cukru na 100 ml
@@ -230,7 +247,7 @@ Stačí nám dvě **klíčová slovíčka** - `if` a `else`. Buď to, nebo to.
 ```javascript
 const isRaining = true;
 
-// Pokud je proměnná isRaining true, vykoná se následující kód
+// Pokud je proměnná isRaining true, spustí se následující kód
 if (isRaining) {
 	// Například ti připomene v 7:00, že si máš vzít deštník.
 	console.log("Prší 🌧");

@@ -4,7 +4,12 @@ Do `bigint` můžeš uložit **libovolně velký číslo**[^1] a normálně s n�
 // Když zapisuješ bigint, vždycky je za číslem písmeno n
 const hugeNumber = 100_000_000_000_000_000_000_000_000_000_000_000_000n;
 console.log(hugeNumber * hugeNumber);
+// Výstup: 10000000000000000000000000000000000000000000000000000000000000000000000000000n
 console.log(hugeNumber ** hugeNumber);
+// Výstup:
+// Uncaught RangeError: Maximum BigInt size exceeded
+//    at <anonymous>:4:24
+// (anonymous) @ VM129:4
 ```
 
 K `bigintu` se můžeš chovat jako k číslu, fungují Ti tam prakticky všechny stejné operátory jako v [[number]].

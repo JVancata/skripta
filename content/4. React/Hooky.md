@@ -37,12 +37,15 @@ const [counter, setCounter] = useState(0);
 > [!tip] Zápis proměnných v [ ]
 > Působí to divně a nikdy to moc nepoužiješ, ale je to úplně jednoduchý.
 > ```js
-> const array = [1, 2, 3];
-> const [jednicka, dvojka, trojka] = array;
+> const array = [🐶, 🧅, 🦷];
+> const [pes, cibule, zub] = array;
 > 
-> console.log(jednicka);
-> console.log(dvojka);
-> console.log(trojka);
+> console.log(pes);
+> // Výstup: 🐶
+> console.log(cibule);
+> // Výstup: 🧅
+> console.log(zub);
+> // Výstup: 🦷
 > ```
 > 
 > Přes tuhle syntaxi může vytáhnout prvky z pole a pojmenovat si je. 

@@ -53,8 +53,10 @@ const string3 = "🥔";
 
 // Tohle dává smysl
 console.log(string1 === string2);
+// Výstup: false
 // Vždycky používej > a < jenom pro abecední řazení, nikdy porovnání čísel.
 console.log(string3 > string2);
+// Výstup: true
 ```
 Vždycky mezi sebou porovnávej jen proměnné se **stejným typem**.
 
@@ -75,15 +77,19 @@ let schoolName = "Střední škola přírodovědecká - katedra mravenců 🐜";
 if (schoolName) {
 	console.log(`Název školy 🎓 je: ${schoolName}`);
 }
+// Výstup: Název školy 🎓 je: Střední škola přírodovědecká - katedra mravenců 🐜
 
 schoolName = "";
 
 if (schoolName) {
+	// Tenhle kód se nespustí
 	console.log(`Název školy 🎓 je: ${schoolName}`);
+	
 }
 else {
-	console.log("Škola 🎓 nemá žádný název");
+	console.log("Škola 🎓 nemá žádný název");	
 }
+// Výstup: Škola 🎓 nemá žádný název
 ```
 
 To stejné platí i u **dalších hodnot** v tabulce dole, ale hlavně tě to zajímá ještě u **čísel**.
@@ -94,15 +100,18 @@ let beanCounter = 13; // Počet fazolí 🫘
 if (beanCounter) {
 	console.log(`Máš ${beanCounter} 🫘`);
 }
+// Výstup: Máš 13 🫘
 
 beanCounter = 0;
 
 if (beanCounter) {
+	// Tenhle kód se nespustí
 	console.log(`Máš ${beanCounter} 🫘`);
 }
 else {
 	console.log("Nemáš žádné 🫘");
 }
+// Výstup: Nemáš žádné 🫘
 ```
 
 ## ❌ Falsy hodnoty - převedou se na `false`
@@ -146,7 +155,9 @@ Občas potřebujeme **převrátit** `false` na `true` a naopak. Z nepravdy uděl
 const isOnSale = true;
 
 console.log(!isOnSale);
+// Výstup: false
 console.log(isOnSale);
+// Výstup: true
 ```
 
 Negace má ještě jedno využití - převést **truthy** hodnotu na `true` a **falsy** hodnotu na `false`. Z "**jakoby pravdy**" udělat **pravdu**.
@@ -158,11 +169,13 @@ const greetingText = "Čus bus autobus 🚌";
 const hasGreeting = !!greetingText;
 
 console.log(hasGreeting);
+// Výstup: true
 
 const emptyText = "";
 const hasText = !!emptyText;
 
 console.log(hasText);
+// Výstup: false
 ```
 # AND - &&
 Když potřebuješ vyjádřit, že dvě věci jsou **najednou pravda**, použiješ logickou spojku **AND**.
@@ -192,6 +205,7 @@ if (isAllowedOnRollercoaster) {
 else {
 	console.log("❌ Na tuhle horskou dráhu nesmíš 😭");
 }
+// Výstup: ✅ Můžeš na tuhle horskou dráhu 🎢
 ```
 
 # OR - ||
@@ -221,7 +235,7 @@ if (shouldVisitFridge) {
 else {
 	console.log("Nikam nechoď, nic ti nechybí");
 }
-
+// Výstup: Něco potřebuješ zkonzumovat, dojdi si do ledničky
 ```
 
 

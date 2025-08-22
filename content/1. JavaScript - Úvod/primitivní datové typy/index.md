@@ -21,6 +21,9 @@ const exampleNumber = 0.5;
 const exampleBoolean = true;
 
 console.log(typeof exampleString);
+// Výstup: string
 console.log(typeof exampleNumber);
+// Výstup: number
 console.log(typeof exampleBoolean);
+// Výstup: boolean
 ```

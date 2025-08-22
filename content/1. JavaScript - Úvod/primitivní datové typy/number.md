@@ -17,38 +17,55 @@ const number1 = 33;
 const number2 = 77;
 
 console.log(number1 + number2); // Sčítání
+// Výstup: 110
 console.log(number1 - number2); // Odčítání
+// Výstup: -44
 console.log(number1 * number2); // Násobení
+// Výstup: 2541
 console.log(number1 / number2); // Dělení
+// Výstup: 0.42857142857142855
 ```
 
 Pozor na **dělení nulou**!
 ```javascript
-console.log(100 / 0); // Výsledek je Infinity, pozor
+console.log(100 / 0);
+// Výstup: Infinity
 ```
 ## Zbytek po dělení - modulo `%`
 ```javascript
 const durationSeconds = 125;
 // Minuta má 60 sekund
-console.log(durationSeconds % 60); // Výsledek je 5
+console.log(durationSeconds % 60);
+// Výstup: 5
 ```
 ## Umocnění - `**`
 ```javascript
 console.log(2 ** 2); // Dva na druhou
+// Výstup: 4
 console.log(2 ** 3); // Dva na třetí
+// Výstup: 8
 console.log(2 ** 4); // Dva na čtvrtou
+// Výstup: 16
 console.log(2 ** 5); // Dva na pátou
+// Výstup: 32
 console.log(2 ** 6); // Dva na šestou
+// Výstup: 64
 ```
 ## Nutné vědět
 Dej si **pozor** na hodnotu [`NaN`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN) (not a number).  Jednou nebo později na to narazíš, tak se připrav.
 
 ```javascript
 const parsedNumber = parseInt("asdf");
-console.log(parsedNumber); // NaN
-console.log(typeof parsedNumber); // number - hodnota "not a number" je number
-console.log(parsedNumber === NaN) // false - NaN se nerovná NaN
-console.log(Number.isNaN(parsedNumber)) // true - NaN musíme kontrolovat takto
+
+console.log(parsedNumber); 
+// Výstup: NaN
+console.log(typeof parsedNumber);
+// Výstup: number
+
+console.log(parsedNumber === NaN) 
+// Výstup: false
+console.log(Number.isNaN(parsedNumber)) 
+// Výstup: true
 ```
 
 >[!tip]- `NaN !== NaN`

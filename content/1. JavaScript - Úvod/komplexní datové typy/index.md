@@ -6,8 +6,11 @@ V JavaScriptu jsou všechny komplexní datové typy pod pokličkou `object`.
 
 ```javascript
 console.log(typeof [1, 2, 3]);
+// Výstup: object
 console.log(typeof new Set());
+// Výstup: object
 console.log(typeof new Date());
+// Výstup: object
 ```
 
 | Typ      | Vysvětlení                                                      | Příklady                                        |

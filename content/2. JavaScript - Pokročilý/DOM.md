@@ -5,7 +5,7 @@
 console.log(document);
 ```
 
-Přes DOM můžeš **číst a manipulovat**, co se nám na stránce vykresluje pomocí HTML.
+Přes DOM můžeš **číst a manipulovat**, co se na stránce vykresluje pomocí HTML.
 # Query selector
 
 ```javascript

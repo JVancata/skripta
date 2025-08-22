@@ -4,20 +4,26 @@ Příklad **známek** z předmětu Programování v JavaScriptu:
 
 ```javascript
 const grades = [1, 3, 2, 1, 5];
+
 console.log(grades);
+// Výstup: [1, 3, 2, 1, 5]
 console.log("Celkový počet známek:", grades.length);
+// Výstup: Celkový počet známek: 5
 ```
 
 Nebo už naprogramované projekty:
 ```javascript
 const completedProjects = ["Soundboard", "Reader bar", "Countdown timer"];
 console.log(`Počet hotový projektů: ${completedProjects.length}`);
+// Výstup: Počet hotový projektů: 3
 
 // Přidání nového projektu
 completedProjects.push("Spin the wheel");
 
 console.log(`Počet hotový projektů: ${completedProjects.length}`);
+// Výstup: Počet hotový projektů: 4
 console.log(completedProjects);
+// Výstup: ['Soundboard', 'Reader bar', 'Countdown timer', 'Spin the wheel']
 ```
 
 V `array` můžou být **jakékoli datové typy** – čísla, stringy, objekty, datumy, další arraye... Vždycky se ale drž pravidla, že jeden array = jeden datový typ.
@@ -30,9 +36,15 @@ První prvek v `array` má vždy **index `0`**. Druhý prvek má index `1`, atd.
 const completedProjects = ["Soundboard", "Reader bar", "Countdown timer"];
 console.log("První hotový projekt:");
 console.log(completedProjects[0]);
+// Výstup:
+// První hotový projekt:
+// Soundboard
 
 console.log("Poslední hotový projekt:");
 console.log(completedProjects[completedProjects.length - 1]);
+// Výstup:
+// Poslední hotový projekt:
+// Countdown timer
 ```
 
 Pokud máš v poli 15 prvků, první je na indexu 0 a poslední na indexu 14 (délka pole - 1).
@@ -45,6 +57,10 @@ const completedProjects = ["Soundboard", "Reader bar", "Countdown timer"];
 completedProjects.forEach((project) => {
 	console.log(`Název projektu: ${project}.`);
 })
+// Výstup:
+// Název projektu: Soundboard.
+// Název projektu: Reader bar.
+// Název projektu: Countdown timer.
 ```
 
 ### Vyzkoušej
@@ -72,6 +88,7 @@ const products = [
 
 const found = products.find((product) => product.id === 3);
 console.log(found);
+// Výstup: {id: 3, name: 'Nike Dunk'}
 ```
 ## .includes()
 Vrátí `true`/`false`, jestli se daný prvek nachází v poli.
@@ -82,7 +99,9 @@ Vrátí `true`/`false`, jestli se daný prvek nachází v poli.
 const cities = ["Prague", "Berlin", "Tokyo", "Budapest"];
 
 console.log(cities.includes("Munich"));
+// Výstup: false
 console.log(cities.includes("Tokyo"));
+// Výstup: true
 ```
 Tady si dej pozor – na objekty to [[object#Objekty se nerovnají|nebude fungovat]].[^1]
 ## .map
@@ -107,6 +126,11 @@ const outputText = outputArray.join("\n");
 
 console.log("Nabídka našeho květinářství 🪴");
 console.log(outputText);
+// Výstup:
+// Ficus Robusta - 199 Kč
+// Rhaphidophora tetrasperma - 479 Kč
+// Řasokoule - 79 Kč
+// Monstera Adansonii - 429 Kč
 ```
 
 Nový array je vždycky stejně dlouhý jako ten původní.
@@ -121,9 +145,11 @@ const food = ["🌭", "🥖", "🍔", "🥓"];
 
 // Jako oddělovač dáváme emoji
 console.log(food.join(" 😋 "));
+// Výstup: 🌭 😋 🥖 😋 🍔 😋 🥓
 
 // Jako oddělovač nedáváme nic
 console.log(food.join());
+// Výstup: 🌭,🥖,🍔,🥓
 ```
 ## .reverse() a .toReversed()
 Obrátí celé pole - prvek na konci bude na začátku a prvek na začátku bude na konci.

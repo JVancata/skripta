@@ -15,9 +15,9 @@ const song = {
 }
 
 console.log(song.title)
-// "FE!N (feat. Playboi Carti)"
+// Výstup: "FE!N (feat. Playboi Carti)"
 console.log(song.author)
-// "Travis Scott"
+// Výstup: "Travis Scott"
 ```
 
 Máme **komplexní datovou strukturu** a ani to nebolelo.
@@ -45,11 +45,11 @@ const indentifier = {
 
 // Přístup ke klíčům objektu
 console.log(indentifier.key)
-// "value"
+// Výstup: "value"
 console.log(indentifier["key1"])
-// "value1"
+// Výstup: "value1"
 console.log(indentifier.key33)
-// undefined
+// Výstup: undefined
 ```
 
 Pozor! Syntaxe JavaScript objektu a JSONu **není stejná**, v detailech se liší!
@@ -61,7 +61,8 @@ V praxi to znamená toto:
 const product1 = { id: 1, name: "Káva" };
 const product2 = { id: 1, name: "Káva" };
 
-console.log(product1 === product2); // false
+console.log(product1 === product2);
+// Výstup: false
 ```
 
 I když jsou objekty stejný, tak pro JavaScript nejsou. JavaScript u objektu kontroluje, jestli míří na stejné místo v paměti a to se tady neděje.

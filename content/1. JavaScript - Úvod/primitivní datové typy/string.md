@@ -3,6 +3,7 @@ String (česky **řetězec**) je vlastně **libovolný text**. Technicky správn
 ```javascript
 const message = "Čau 👋 Můžeš sem napsat úplně cokoli budeš chtít.";
 console.log(message);
+// Výstup: Čau 👋 Můžeš sem napsat úplně cokoli budeš chtít.
 ```
 
 >[!tip] Kódování pro `string` je UTF-16 a umí vyjádřit vše v Unicode
@@ -38,6 +39,10 @@ Tvoje oblíbený zvíře je prej ${favouriteAnimal}!
 Dobrá volba!`;
 
 console.log(animalMessage);
+// Výstup:
+// Čau!
+// Tvoje oblíbený zvíře je prej Šnek 🐌!
+// Dobrá volba!
 ```
 Pomocí **template literálů** (template stringů) můžeš mezi svůj text **vkládat proměnné**. 
 
@@ -46,7 +51,11 @@ Nic na tom není, ne? Nemusíš potom dělat toto:
 // ❌ Krkolomné skládání stringů, tohle spíš nedělej
 const favouriteFood = "Cibule 🧅";
 const foodMessage = "Jo, " + favouriteFood + " mi taky moc chutná!\n\nSnídaně bez " + favouriteFood + " není pořádná snídaně."
+
 console.log(foodMessage);
+// Výstup:
+// Jo, Cibule 🧅 mi taky moc chutná!
+// Snídaně bez Cibule 🧅 není pořádná snídaně.
 ```
 # Procházení stringu
 Někdy potřebuješ **projít** `string` po jednotlivých **znacích** (písmenkách).
@@ -80,11 +89,15 @@ console.log(Array.from("👩‍👩‍👧‍👧"));
 // Emoji (a i jiné Unicode znaky) jsou napozadí 2 a více různých UTF-16 znaků
 const emojis = "🎈🎆🎇🧨✨🎉🎊🎃";
 console.log(emojis[0]);
+// Výstup: �
 console.log(emojis[1]);
+// Výstup: �
 console.log(emojis[emojis.length - 1]);
+// Výstup: �
 
 // ⚠ To stejné platí, když uděláš .split("")
 console.log(emojis.split(""));
+// Výstup: ['\uD83C', '\uDF88', '\uD83C', '\uDF86', '\uD83C', '\uDF87', '\uD83E', '\uDDE8', '✨', '\uD83C', '\uDF89', '\uD83C', '\uDF8A', '\uD83C', '\uDF83']
 ```
 
 > [!info]- Jak správně procházet string s emoji
@@ -111,20 +124,26 @@ console.log(emojis.split(""));
 ```js
 // Délka stringu, bacha na emoji!!!
 console.log("Čau".length);
+// Výstup: 3
 console.log("😁".length);
+// Výstup: 2
 console.log("👩‍👩‍👧‍👧".length);
+// Výstup: 11
 ```
 ## .toLowerCase
 ```javascript
 console.log("Ahoj, PŘEVEDU TO MALÝ, OK?".toLowerCase());
+// Výstup: ahoj, převedu to malý, ok?
 ```
 ## .toUpperCase
 ```javascript
 console.log("ČAU, převedu to velký, ok?".toUpperCase());
+// Výstup: ČAU, PŘEVEDU TO VELKÝ, OK?
 ```
 ## .trim
 ```javascript
 console.log("    Vyhodím mezery ze začátku a z konce, jo?     ".trim());
+// Výstup: "Vyhodím mezery ze začátku a z konce, jo?"
 ```
 ## .split
 
@@ -132,7 +151,7 @@ console.log("    Vyhodím mezery ze začátku a z konce, jo?     ".trim());
 // todo
 console.log("Udělám ze stringu array podle rozdělovače, třeba ho rozdělám na mezery".split(" "));
 ```
-.split
+
 .replace
 .includes
 # String coercion
@@ -161,6 +180,9 @@ Můžou se pak stát vtipný situace, když to správně neošetříš.
 const person = {};
 console.log(`Dobrá ráno, ${person.name}!
 Dnes Ti je ${parseInt(person.age)} let!`);
+// Výstup:
+// Dobrá ráno, undefined!
+// Dnes Ti je NaN let!
 ```
 
 # Úloha 1 - Plivání faktů 🗣️ 
