@@ -244,14 +244,14 @@ export async function handleBuild(argv) {
     bundle: true,
     keepNames: true,
     minifyWhitespace: true,
-    minifySyntax: true,
+    minifySyntax: false,
     platform: "node",
     format: "esm",
     jsx: "automatic",
     jsxImportSource: "preact",
     packages: "external",
     metafile: true,
-    sourcemap: true,
+    sourcemap: false,
     sourcesContent: false,
     plugins: [
       sassPlugin({
@@ -284,7 +284,8 @@ export async function handleBuild(argv) {
               },
               write: false,
               bundle: true,
-              minify: true,
+              minify: false,
+              minifyWhitespace: true,
               platform: "browser",
               format: "esm",
             })
@@ -343,7 +344,7 @@ export async function handleBuild(argv) {
     clientRefresh()
   }
 
-  let clientRefresh = () => {}
+  let clientRefresh = () => { }
   if (argv.serve) {
     const connections = []
     clientRefresh = () => connections.forEach((conn) => conn.send("rebuild"))
@@ -406,7 +407,7 @@ export async function handleBuild(argv) {
         })
         console.log(
           styleText("yellow", "[302]") +
-            styleText("grey", ` ${argv.baseDir}${req.url} -> ${newFp}`),
+          styleText("grey", ` ${argv.baseDir}${req.url} -> ${newFp}`),
         )
         res.end()
       }

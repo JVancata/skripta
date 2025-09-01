@@ -1,5 +1,6 @@
 import { QuartzConfig } from "./quartz/cfg"
 import * as Plugin from "./quartz/plugins"
+import * as CustomPlugins from "./quartz/pluginsCustom"
 
 /**
  * Quartz 4 Configuration
@@ -57,19 +58,20 @@ const config: QuartzConfig = {
       Plugin.CreatedModifiedDate({
         priority: ["frontmatter", "git", "filesystem"],
       }),
-      Plugin.SyntaxHighlighting({
-        theme: {
-          light: "github-light",
-          dark: "github-dark",
-        },
-        keepBackground: false,
-      }),
+      // Plugin.SyntaxHighlighting({
+      //   theme: {
+      //     light: "github-light",
+      //     dark: "github-dark",
+      //   },
+      //   keepBackground: false,
+      // }),
       Plugin.ObsidianFlavoredMarkdown({ enableInHtmlEmbed: false, enableCheckbox: true }),
       Plugin.GitHubFlavoredMarkdown(),
       Plugin.TableOfContents(),
       Plugin.CrawlLinks({ markdownLinkResolution: "shortest" }),
       Plugin.Description(),
       Plugin.Latex({ renderEngine: "katex" }),
+      CustomPlugins.ScriptPlayground.Transformer(),
     ],
     filters: [Plugin.RemoveDrafts()],
     emitters: [
@@ -87,7 +89,8 @@ const config: QuartzConfig = {
       Plugin.Favicon(),
       Plugin.NotFoundPage(),
       // Comment out CustomOgImages to speed up build time
-      Plugin.CustomOgImages(),
+      // Plugin.CustomOgImages(),
+      CustomPlugins.ScriptPlayground.Emitter(),
     ],
   },
 }
