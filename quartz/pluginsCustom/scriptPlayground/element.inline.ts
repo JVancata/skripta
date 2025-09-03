@@ -7,6 +7,7 @@ import { RUNNER_HTML_PATH } from "./const";
 
 class PlaygroundElement {
     private readonly sandbox: ScriptSandbox;
+    private readonly log: PlaygroundLog;
     private readonly editor: EditorView;
     private readonly originalCode: string;
 
@@ -17,9 +18,12 @@ class PlaygroundElement {
         const { container: header, runButton, resetButton } = createHeader();
         const editor = createDiv('editor');
 
+        this.log = new PlaygroundLog();
+
         container.append(
             header,
-            editor
+            editor,
+            this.log.element,
         );
 
         this.editor = new EditorView({
@@ -41,13 +45,19 @@ class PlaygroundElement {
         this.sandbox = new ScriptSandbox({
             parent: container,
             iFrameSource: RUNNER_HTML_PATH,
-            onLog: (e) => { console.log('LOG', e) },
-            onError: (e) => { console.log('ERR', e) },
+            onLog: (e) => { this.log.appendLine(e.arguments.join(' ')) },
+            onError: (e) => { this.log.appendLine(`${e.message}\n${e.stack ?? ''}`) },
         });
 
-        resetButton.addEventListener('click', () => this.resetEditor());
+        resetButton.addEventListener('click', () => {
+            this.log.reset();
+            this.resetEditor();
+        });
 
         runButton.addEventListener('click', () => {
+            console.log('click');
+            this.log.reset();
+
             runButton.disabled = true;
 
             this.runScript()
@@ -73,6 +83,44 @@ class PlaygroundElement {
         const script = this.editor.state.doc.toString();
 
         return this.sandbox.executeScript(script);
+    }
+}
+
+class PlaygroundLog {
+    public readonly element: HTMLDivElement;
+
+    private readonly body: HTMLTableSectionElement;
+
+    constructor() {
+        const container = document.createElement('div');
+        container.classList.add('table-container');
+
+        const table = document.createElement('table');
+        container.append(table);
+
+        const body = document.createElement('tbody');
+        table.append(body);
+
+        this.body = body;
+        this.element = container;
+    }
+
+    appendLine(text: string) {
+        const row = document.createElement('tr');
+
+        const textCode = document.createElement('code');
+        textCode.textContent = text;
+
+        const textCell = document.createElement('td');
+        textCell.append(textCode);
+
+        row.append(textCell);
+
+        this.body.append(row);
+    }
+
+    reset() {
+        this.body.replaceChildren();
     }
 }
 

@@ -45,8 +45,7 @@ export class ScriptSandbox {
 
     async executeScript(script: string): Promise<void> {
         await this.pendingExecute;
-
-        this.iFrame.contentWindow?.location.reload();
+        await this.reloadIFrame();
 
         const executePromise = new Promise<void>((res) => {
             const abortController = new AbortController();
@@ -83,6 +82,14 @@ export class ScriptSandbox {
 
     private isEventOwned(event: MessageEvent<any>): boolean {
         return event.source === this.iFrame.contentWindow;
+    }
+
+    private async reloadIFrame() {
+        return new Promise((res) => {
+            this.iFrame.addEventListener('load', res, { once: true });
+
+            this.iFrame.src += '';
+        });
     }
 }
 

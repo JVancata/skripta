@@ -10,7 +10,6 @@ export type SandboxConsoleEventMessage = {
 export type SandboxErrorEventMessage = {
     kind: 'error',
     message: string,
-    stack: string | undefined,
 }
 
 export type SandboxFinishedEventMessage = {

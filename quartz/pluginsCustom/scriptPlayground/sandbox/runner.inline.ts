@@ -32,7 +32,7 @@ function hookConsole() {
 function stringifyValues(args: unknown[]) {
     return args.map(arg => {
         if (typeof arg === 'object') {
-            return JSON.stringify(arg, undefined, 2);
+            return JSON.stringify(arg);
         }
 
         return String(arg);
@@ -53,15 +53,13 @@ function errorToMessage(error: unknown): SandboxErrorEventMessage {
     if (error instanceof Error) {
         return {
             kind: 'error',
-            message: error.message,
-            stack: error.stack,
+            message: `${error.name}: ${error.message}`,
         }
     }
 
     return {
         kind: 'error',
         message: String(error),
-        stack: undefined,
     }
 }
 
