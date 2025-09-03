@@ -2,8 +2,11 @@ import { EditorView, basicSetup } from "codemirror"
 import { javascript } from "@codemirror/lang-javascript"
 import { keymap } from "@codemirror/view"
 import { indentWithTab } from "@codemirror/commands"
+import { ScriptSandbox } from "./sandbox";
+import { RUNNER_HTML_PATH } from "./const";
 
 class PlaygroundElement {
+    private readonly sandbox: ScriptSandbox;
     private readonly editor: EditorView;
     private readonly originalCode: string;
 
@@ -35,7 +38,23 @@ class PlaygroundElement {
             ],
         });
 
+        this.sandbox = new ScriptSandbox({
+            parent: container,
+            iFrameSource: RUNNER_HTML_PATH,
+            onLog: (e) => { console.log('LOG', e) },
+            onError: (e) => { console.log('ERR', e) },
+        });
+
         resetButton.addEventListener('click', () => this.resetEditor());
+
+        runButton.addEventListener('click', () => {
+            runButton.disabled = true;
+
+            this.runScript()
+                .finally(() => {
+                    runButton.disabled = false;
+                });
+        });
 
         element.replaceChildren(container);
     }
@@ -48,6 +67,12 @@ class PlaygroundElement {
                 insert: this.originalCode
             }
         });
+    }
+
+    private async runScript() {
+        const script = this.editor.state.doc.toString();
+
+        return this.sandbox.executeScript(script);
     }
 }
 
