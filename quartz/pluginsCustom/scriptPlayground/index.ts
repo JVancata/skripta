@@ -1,8 +1,9 @@
 import { Root as MdRoot, Code } from "mdast";
 import { visit } from "unist-util-visit";
 import { VFile } from "vfile";
-import { PLAYGROUND_ELEMENT_TAG, SUPPORTED_LANGUAGES } from "./const";
+import { SUPPORTED_LANGUAGES } from "./const";
 import { QuartzEmitterPlugin, QuartzTransformerPlugin } from "../../plugins/types";
+import style from "./styles/playground.scss"
 
 // @ts-ignore
 import elementScript from "./element.inline"
@@ -13,14 +14,6 @@ const markdownPlaygroundElementFilter = (tree: MdRoot, file: VFile) => {
     visit(tree, "code", (node: Code) => {
         if (!SUPPORTED_LANGUAGES.some(lang => lang === node.lang)) {
             return;
-        }
-
-        node.data = {
-            hName: PLAYGROUND_ELEMENT_TAG,
-            hProperties: {
-                language: node.lang,
-                "data-clipboard": JSON.stringify(node.value),
-            },
         }
 
         file.data.hasScriptPlayground = true;
@@ -48,7 +41,13 @@ export const Emitter: QuartzEmitterPlugin = () => {
                     {
                         contentType: "inline",
                         script: elementScript,
-                        loadTime: "beforeDOMReady",
+                        loadTime: "afterDOMReady",
+                    }
+                ],
+                css: [
+                    {
+                        content: style,
+                        inline: true,
                     }
                 ]
             }
