@@ -1,9 +1,11 @@
 // Events
 // --
 
+export type ConsoleEventLevel = 'log' | 'info' | 'warn' | 'error';
+
 export type SandboxConsoleEventMessage = {
     kind: 'console',
-    level: 'log' | 'info' | 'warn' | 'error',
+    level: ConsoleEventLevel,
     arguments: string[],
 }
 

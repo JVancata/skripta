@@ -4,6 +4,7 @@ import { keymap } from "@codemirror/view"
 import { indentWithTab } from "@codemirror/commands"
 import { ScriptSandbox } from "./sandbox";
 import { RUNNER_HTML_PATH } from "./const";
+import { ConsoleEventLevel } from "./sandbox/messages";
 
 class PlaygroundElement {
     private readonly sandbox: ScriptSandbox;
@@ -48,8 +49,8 @@ class PlaygroundElement {
         this.sandbox = new ScriptSandbox({
             parent: container,
             iFrameSource: RUNNER_HTML_PATH,
-            onLog: (e) => { this.log.appendLine(e.arguments.join(' ')) },
-            onError: (e) => { this.log.appendLine(`${e.message}`) },
+            onLog: (e) => { this.log.appendLine(e.level, e.arguments.join(' ')) },
+            onError: (e) => { this.log.appendLine('error', `${e.message}`) },
         });
 
         resetButton.addEventListener('click', () => {
@@ -65,6 +66,7 @@ class PlaygroundElement {
             this.runScript()
                 .finally(() => {
                     runButton.disabled = false;
+                    this.log.appendFinish('Script finished');
                 });
         });
 
@@ -107,16 +109,32 @@ class PlaygroundLog {
         this.element = container;
     }
 
-    appendLine(text: string) {
+    appendLine(level: ConsoleEventLevel, text: string) {
         const row = document.createElement('tr');
 
-        const textCode = document.createElement('code');
+        const levelCell = document.createElement('td');
+        levelCell.textContent = level.toUpperCase();
+        levelCell.classList.add('log-level', level);
+
+        const textCode = document.createElement('pre');
         textCode.textContent = text;
 
         const textCell = document.createElement('td');
         textCell.append(textCode);
 
-        row.append(textCell);
+        row.append(levelCell, textCell);
+
+        this.body.append(row);
+    }
+
+    appendFinish(text: string) {
+        const row = document.createElement('tr');
+
+        const cell = document.createElement('td');
+        cell.textContent = text;
+        cell.classList.add('log-finish');
+
+        row.append(cell);
 
         this.body.append(row);
     }

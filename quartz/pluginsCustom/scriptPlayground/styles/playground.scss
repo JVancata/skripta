@@ -6,6 +6,10 @@
     --warn-color: #db8942;
     --warn-border: #db894244;
     --warn-bg: #db894210;
+
+    --error-color: #db4242;
+    --error-border: #db424244;
+    --error-bg: #db424210;
 }
 
 #playground-header {
@@ -86,6 +90,32 @@
 .playground-log-container {
     &.table-container>table {
         margin: 0;
+    }
+
+    & pre {
+        margin: 0;
+    }
+
+    & .log-level {
+        font-weight: 600;
+        color: var(--log-level-color);
+
+        &.info,
+        .log {
+            --log-level-color: var(--dark);
+        }
+
+        &.warn {
+            --log-level-color: var(--warn-color);
+        }
+
+        &.error {
+            --log-level-color: var(--error-color);
+        }
+    }
+
+    & .log-finish {
+        font-style: italic;
     }
 }
 
