@@ -15,6 +15,8 @@ import style from "./styles/playground.scss"
 
 const PLUGIN_NAME = "ScriptPlayground" as const;
 
+const CSS_FILE_NAME = 'script-playground' as const;
+
 const markdownPlaygroundElementFilter = (tree: MdRoot, file: VFile) => {
     visit(tree, "code", (node: Code) => {
         if (!SUPPORTED_LANGUAGES.some(lang => lang === node.lang)) {
@@ -45,6 +47,10 @@ export const Emitter: QuartzEmitterPlugin = () => {
                 throw new Error('Invalid RUNNER_HTML_FILENAME configured.');
             }
 
+            if (!isFullSlug(CSS_FILE_NAME)) {
+                throw new Error('Invalid CSS_FILE_NAME configured.');
+            }
+
             const runnerHtml = `<script type="text/javascript">${sandboxRunnerScript}</script>`;
 
             return [
@@ -53,6 +59,12 @@ export const Emitter: QuartzEmitterPlugin = () => {
                     content: runnerHtml,
                     slug: RUNNER_HTML_FILENAME,
                     ext: ".html",
+                }),
+                await write({
+                    ctx,
+                    content: style,
+                    slug: CSS_FILE_NAME,
+                    ext: ".css",
                 })
             ];
         },
@@ -66,9 +78,9 @@ export const Emitter: QuartzEmitterPlugin = () => {
                     }
                 ],
                 css: [
+                    // Inline CSS doesn't work for some reason
                     {
-                        content: style,
-                        inline: true,
+                        content: `/${CSS_FILE_NAME}.css`,
                     }
                 ]
             }

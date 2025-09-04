@@ -1,10 +1,20 @@
+.playground-container {
+    --success-color: #00bfa5;
+    --success-border: #00bfa544;
+    --success-bg: #00bfa510;
+
+    --warn-color: #db8942;
+    --warn-border: #db894244;
+    --warn-bg: #db894210;
+}
+
 #playground-header {
     display: flex;
     justify-content: left;
 }
 
 .playground-button {
-    display: flex;
+    display: inline-flex;
     padding: 0.4rem;
     margin: 0.3rem;
     color: var(--color);
@@ -14,6 +24,25 @@
     border-radius: 5px;
     transition: 0.2s;
     font-weight: 600;
+    align-items: center;
+    text-align: center;
+
+    --icon-size: 16px;
+    --icon-play: url('data:image/svg+xml; utf8, <svg viewBox="0 0 24 24" width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.4086 9.35258C22.5305 10.5065 22.5305 13.4935 20.4086 14.6474L7.59662 21.6145C5.53435 22.736 3 21.2763 3 18.9671L3 5.0329C3 2.72368 5.53435 1.26402 7.59661 2.38548L20.4086 9.35258Z" stroke="currentColor" stroke-width="2"/></svg>');
+    --icon-undo: url('data:image/svg+xml; utf8, <svg viewBox="0 0 24 24" width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 4L4 7L7 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path opacity="1" d="M4 7H15C17.7614 7 20 9.23857 20 12C20 14.7614 17.7614 17 15 17H8.00001" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>');
+
+    &:before {
+        display: flex;
+        content: '';
+        width: var(--icon-size);
+        height: var(--icon-size);
+        padding-right: 3px;
+        background-color: var(--color);
+        mask-image: var(--icon);
+        mask-size: var(--icon-size) var(--icon-size);
+        mask-position: center;
+        mask-repeat: no-repeat;
+    }
 
     &>svg {
         fill: var(--light);
@@ -32,16 +61,31 @@
         --border: var(--dark);
     }
 
-    &.success {
-        --color: #00bfa5;
-        --border: #00bfa544;
-        --bg: #00bfa510;
+    &.play {
+        --icon: var(--icon-play);
+        --color: var(--success-color);
+        --border: var(--success-border);
+        --bg: var(--success-bg);
+    }
+
+    &.undo {
+        --icon: var(--icon-undo);
+        --color: var(--warn-color);
+        --border: var(--warn-border);
+        --bg: var(--warn-bg);
     }
 
     &:disabled {
         --color: #6a6a6a65;
         --border: #6a6a6a65;
-        filter: brightness(50%);
+        filter: brightness(70%);
+        opacity: 0.7;
+    }
+}
+
+.playground-log-container {
+    &.table-container>table {
+        margin: 0;
     }
 }
 

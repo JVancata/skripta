@@ -14,9 +14,12 @@ class PlaygroundElement {
     constructor(element: Element) {
         this.originalCode = element.textContent;
 
-        const container = createDiv('container');
+        const container = document.createElement('div');
+        container.classList.add('playground-container');
+
         const { container: header, runButton, resetButton } = createHeader();
-        const editor = createDiv('editor');
+
+        const editor = document.createElement('editor');
 
         this.log = new PlaygroundLog();
 
@@ -46,7 +49,7 @@ class PlaygroundElement {
             parent: container,
             iFrameSource: RUNNER_HTML_PATH,
             onLog: (e) => { this.log.appendLine(e.arguments.join(' ')) },
-            onError: (e) => { this.log.appendLine(`${e.message}\n${e.stack ?? ''}`) },
+            onError: (e) => { this.log.appendLine(`${e.message}`) },
         });
 
         resetButton.addEventListener('click', () => {
@@ -55,7 +58,6 @@ class PlaygroundElement {
         });
 
         runButton.addEventListener('click', () => {
-            console.log('click');
             this.log.reset();
 
             runButton.disabled = true;
@@ -93,7 +95,7 @@ class PlaygroundLog {
 
     constructor() {
         const container = document.createElement('div');
-        container.classList.add('table-container');
+        container.classList.add('playground-log-container', 'table-container');
 
         const table = document.createElement('table');
         container.append(table);
@@ -125,17 +127,19 @@ class PlaygroundLog {
 }
 
 const createHeader = () => {
-    const container = createDiv('playground-header');
+    const container = document.createElement('div');
+    container.classList.add('playground-header');
 
     const runButton = createButton();
     runButton.id = 'run-button';
-    runButton.classList.add('success');
-    runButton.textContent = '▶️ Run';
+    runButton.classList.add('success', 'play');
+    runButton.textContent = 'Run';
 
     const resetButton = createButton();
     resetButton.id = 'reset-button';
+    resetButton.classList.add('undo');
     resetButton.disabled = true;
-    resetButton.textContent = '🔁 Reset';
+    resetButton.textContent = 'Reset';
 
     container.append(runButton, resetButton);
 
@@ -152,13 +156,6 @@ const createButton = (): HTMLButtonElement => {
 
     return button;
 }
-
-const createDiv = (id: string): HTMLDivElement => {
-    const div = document.createElement('div');
-    div.id = id;
-
-    return div;
-};
 
 const targetElements = document.querySelectorAll('pre code[class="language-javascript"]');
 
