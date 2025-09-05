@@ -1,7 +1,7 @@
 import { Root as MdRoot, Code } from "mdast";
 import { visit } from "unist-util-visit";
 import { VFile } from "vfile";
-import { RUNNER_HTML_FILENAME, RUNNER_HTML_PATH, SUPPORTED_LANGUAGES } from "./const";
+import { PLAYGROUND_ELEMENT_TAG, REQUIRED_META_PARAM, RUNNER_HTML_FILENAME, SUPPORTED_LANGUAGES } from "./const";
 import { QuartzEmitterPlugin, QuartzTransformerPlugin } from "../../plugins/types";
 import { write } from "../../plugins/emitters/helpers";
 import { isFullSlug } from "../../util/path";
@@ -23,7 +23,14 @@ const markdownPlaygroundElementFilter = (tree: MdRoot, file: VFile) => {
             return;
         }
 
+        if (node.meta !== REQUIRED_META_PARAM) {
+            return;
+        }
+
         file.data.hasScriptPlayground = true;
+        node.data = {
+            hName: PLAYGROUND_ELEMENT_TAG,
+        }
     })
 }
 

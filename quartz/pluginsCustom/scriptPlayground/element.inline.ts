@@ -3,12 +3,13 @@ import { javascript } from "@codemirror/lang-javascript"
 import { keymap } from "@codemirror/view"
 import { indentWithTab } from "@codemirror/commands"
 import { ScriptSandbox } from "./sandbox";
-import { RUNNER_HTML_PATH } from "./const";
+import { PLAYGROUND_ELEMENT_TAG, RUNNER_HTML_PATH } from "./const";
 import { ConsoleEventLevel } from "./sandbox/messages";
 import { oneDarkTheme as customTheme } from "./editorTheme";
 
 const EDITOR_COLOR_MAP = new Map([
     ['rgb(0, 0, 255)', 'rgb(100, 100, 255)'], // variables
+    ['rgb(0, 0, 204)', 'rgb(100, 100, 235)'], // field names
     ['rgb(119, 0, 136)', 'rgb(166, 72, 179)'], // flow-control
     ['rgb(34, 17, 153)', 'rgb(114, 102, 192)'], // bool literals
     ['rgb(17, 102, 68)', 'rgb(55, 145, 109)'], // num literals
@@ -93,9 +94,9 @@ class PlaygroundElement {
         spans.forEach(span => {
             if (!(span instanceof HTMLSpanElement)) return;
 
-            const styles = span.computedStyleMap();
+            const styles = window.getComputedStyle(span);
 
-            const currentColor = styles.get('color')?.toString();
+            const currentColor = styles.color;
             if (!currentColor) return;
 
             const colorFix = EDITOR_COLOR_MAP.get(currentColor);
@@ -165,6 +166,7 @@ class PlaygroundLog {
         const cell = document.createElement('td');
         cell.textContent = text;
         cell.classList.add('log-finish');
+        cell.colSpan = 2;
 
         row.append(cell);
 
@@ -207,6 +209,6 @@ const createButton = (): HTMLButtonElement => {
     return button;
 }
 
-const targetElements = document.querySelectorAll('pre code[class="language-javascript"]');
+const targetElements = document.querySelectorAll(`${PLAYGROUND_ELEMENT_TAG}`);
 
 targetElements.forEach((element) => new PlaygroundElement(element));

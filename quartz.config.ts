@@ -58,13 +58,6 @@ const config: QuartzConfig = {
       Plugin.CreatedModifiedDate({
         priority: ["frontmatter", "git", "filesystem"],
       }),
-      // Plugin.SyntaxHighlighting({
-      //   theme: {
-      //     light: "github-light",
-      //     dark: "github-dark",
-      //   },
-      //   keepBackground: false,
-      // }),
       Plugin.ObsidianFlavoredMarkdown({ enableInHtmlEmbed: false, enableCheckbox: true }),
       Plugin.GitHubFlavoredMarkdown(),
       Plugin.TableOfContents(),
@@ -72,6 +65,13 @@ const config: QuartzConfig = {
       Plugin.Description(),
       Plugin.Latex({ renderEngine: "katex" }),
       CustomPlugins.ScriptPlayground.Transformer(),
+      Plugin.SyntaxHighlighting({
+        theme: {
+          light: "github-light",
+          dark: "github-dark",
+        },
+        keepBackground: false,
+      }),
     ],
     filters: [Plugin.RemoveDrafts()],
     emitters: [

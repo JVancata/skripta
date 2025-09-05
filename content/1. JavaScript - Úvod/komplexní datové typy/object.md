@@ -4,7 +4,7 @@ Díky objektům můžeme v JavaScriptu tvořit **komplexní datové struktury** 
 
 Uděláme si proměnnou, která obsahuje data o písni ze Spotify
 
-```javascript
+```javascript playground
 const song = {
 	title: "FE!N (feat. Playboi Carti)",
 	author: "Travis Scott",
@@ -35,7 +35,7 @@ Ke každému **klíči** je v objektu přiřazena **hodnota** - `key` a `value`.
 - Hodnota může být **jakýkoli typ** v JavaScriptu, například i funkce
 
 **Syntaxe objektu**:
-```javascript
+```javascript playground
 const indentifier = {
 	key: "value",
 	key1: "value1",
@@ -57,7 +57,7 @@ Pozor! Syntaxe JavaScript objektu a JSONu **není stejná**, v detailech se liš
 Tohle je trochu techničtější, ale v [[Pass by value]] je vysvětleno, že hodnota `object` je jenom **pointer na paměť**.
 
 V praxi to znamená toto:
-```javascript
+```javascript playground
 const product1 = { id: 1, name: "Káva" };
 const product2 = { id: 1, name: "Káva" };
 

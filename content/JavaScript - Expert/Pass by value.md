@@ -5,7 +5,7 @@ V JavaScript se **všechny** data předávají přes **hodnotu**. Nikdy přes re
 Na internetu se různě píše, že [[1. JavaScript - Úvod/index#Primitivní datové typy|primitivní datové typy]] se předávají pomocí **hodnoty** (value) a objekty se předávají pomocí **reference**, ALE TECHNICKY TO NENÍ PRAVDA!
 
 Nejlíp si to ukážeme na následujících dvou snippetech:
-```javascript
+```javascript playground
 const cislo = 42;
 let druheCislo = cislo;
 
@@ -22,7 +22,7 @@ Tady je vše v pořádku a vidíme, že se do proměnné `druheCislo` **předala
 
 Problém ale nastává u `object` a `array`, kde se milně tvrdí, že jsou předávány pomocí `reference`. Ale není tomu tak.
 
-```javascript
+```javascript playground
 const objekt = { jmeno: "Karel Smrádek" };
 const druhyObjekt = objekt;
 
@@ -66,7 +66,7 @@ Vytvořili jsme dva různé objekty, které se nachází na odlišných adresác
 
 Pro důkaz toho, že hodnotou objektu je jenom pointer slouží následující kód převzatý z původního článku.
 
-```js
+```js playground
 const já = { name: 'Aneta' };
 let mojePřezdívka = já;
 mojePřezdívka = { name: 'Anča' };

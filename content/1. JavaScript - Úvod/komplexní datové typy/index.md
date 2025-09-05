@@ -4,7 +4,7 @@ title: Komplexní datové typy
 # Komplexní datové typy
 V JavaScriptu jsou všechny komplexní datové typy pod pokličkou `object`.
 
-```javascript
+```javascript playground
 console.log(typeof [1, 2, 3]);
 // Výstup: object
 console.log(typeof new Set());

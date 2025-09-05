@@ -4,7 +4,7 @@ V **množině**:
 1. Každý prvek může být **jenom jednou**
 2. Prvky nemají pořadí
 
-```javascript
+```javascript playground
 const grades = [
 	{ student: "Božena Němcová", grade: 1 },
 	{ student: "František Palacký", grade: 2 },
