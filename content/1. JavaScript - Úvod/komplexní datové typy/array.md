@@ -2,7 +2,7 @@ Array (česky **pole**) je **více hodnot za sebou**. Zapisuje se pomocí hranat
 
 Příklad **známek** z předmětu Programování v JavaScriptu:
 
-```javascript
+```javascript playground
 const grades = [1, 3, 2, 1, 5];
 
 console.log(grades);
@@ -12,7 +12,7 @@ console.log("Celkový počet známek:", grades.length);
 ```
 
 Nebo už naprogramované projekty:
-```javascript
+```javascript playground
 const completedProjects = ["Soundboard", "Reader bar", "Countdown timer"];
 console.log(`Počet hotový projektů: ${completedProjects.length}`);
 // Výstup: Počet hotový projektů: 3
@@ -32,7 +32,7 @@ Nový prvek do pole vložíš přes `.push()`
 # Procházení array - indexování od nuly
 První prvek v `array` má vždy **index `0`**. Druhý prvek má index `1`, atd...
 
-```javascript
+```javascript playground
 const completedProjects = ["Soundboard", "Reader bar", "Countdown timer"];
 console.log("První hotový projekt:");
 console.log(completedProjects[0]);
@@ -51,7 +51,7 @@ Pokud máš v poli 15 prvků, první je na indexu 0 a poslední na indexu 14 (d�
 
 Když chceš projít všechny prvky v poli a vypsat je, použiješ `.forEach()`.
 
-```javascript
+```javascript playground
 const completedProjects = ["Soundboard", "Reader bar", "Countdown timer"];
 
 completedProjects.forEach((project) => {
@@ -77,7 +77,7 @@ Najde a vrátí první první prvek v poli, který splňuje nějakou podmínku. 
 
 [Array.find()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find)
 
-```javascript
+```javascript playground
 const products = [
 	{ id: 1, name: "Yeezy" },
 	{ id: 2, name: "Air Jordan" },
@@ -95,7 +95,7 @@ Vrátí `true`/`false`, jestli se daný prvek nachází v poli.
 
 [Array.includes()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes)
 
-```javascript
+```javascript playground
 const cities = ["Prague", "Berlin", "Tokyo", "Budapest"];
 
 console.log(cities.includes("Munich"));
@@ -109,7 +109,7 @@ Vrátí nový `array`, který obsahuje pozměněná (pře**map**ovaná) data.
 
 [Array.map()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
 
-```javascript
+```javascript playground
 const plants = [
 	{id: 1, name: "Ficus Robusta", price: 199},
 	{id: 2, name: "Rhaphidophora tetrasperma", price: 479},
@@ -140,7 +140,7 @@ Spojí všechny prvky do jednoho `string` a mezi jednotlivé prvky dá **oddělo
 [Array.join()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join)
 
 
-```javascript
+```javascript playground
 const food = ["🌭", "🥖", "🍔", "🥓"];
 
 // Jako oddělovač dáváme emoji
@@ -156,7 +156,7 @@ Obrátí celé pole - prvek na konci bude na začátku a prvek na začátku bude
 
 [Array.reverse()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse)
 
-```javascript
+```javascript playground
 const animals = ["Křeček 🐹", "Kočka 🐱", "Pes 🐶", "Velryba 🐳"];
 console.log(animals);
 
@@ -173,7 +173,7 @@ Pokud chceš pracovat s novým polem a původní neměnit, použij `.toReversed(
 [Array.toReversed()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toReversed)
 
 
-```javascript
+```javascript playground
 const animals = ["Křeček 🐹", "Kočka 🐱", "Pes 🐶", "Velryba 🐳"];
 console.log(animals);
 
@@ -196,7 +196,7 @@ Porovnávací funkce přijímá dva parametry - `a` a `b` a vrací hodnotu podle
 | `a` je stejné jako `b` | 0                                   |
 `(a, b) => a - b` seřadí čísla ve vzestupném pořadí.
 
-```javascript
+```javascript playground
 const countries = [
 	{ name: "SK", population: 5_473_631 },
 	{ name: "CZ", population: 10_604_294 },
@@ -222,7 +222,7 @@ Vrací `true` nebo `false`, pokud alespoň jeden prvek v poli splňuje podmínku
 
 [Array.some()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some)
 
-```javascript
+```javascript playground
 const AMOUNT_THRESHOLD = 10_000;
 
 const transactions = [
@@ -245,7 +245,7 @@ Vyfiltruje prvky, který splňují podmínku. Vrací `array`.
 
 [Array.filter()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
 
-```javascript
+```javascript playground
 const companies = [
 	{ name: "Agrofert", field: "AGRICULTURE" },
 	{ name: "Fortuna", field: "GAMBLING" },
@@ -263,7 +263,7 @@ Vrátí poslední prvek v poli a odebere ho. Použiješ to, když potřebuješ d
 
 [Array.pop()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop)
 
-```javascript
+```javascript playground
 const vegetables = ["Brokolice 🥦", "Paprika 🫑", "Okurka 🥒", "Rajče 🍅"];
 const last = vegetables.pop();
 

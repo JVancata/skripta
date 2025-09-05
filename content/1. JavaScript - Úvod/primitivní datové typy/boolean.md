@@ -28,7 +28,7 @@ Používáme jedině **trojité rovná se** `===` ([strict equality](https://dev
 
 Použití pouze **dvou rovná se** `==` sice funguje, ale **nekontroluje datový typ** a to vede k chybám. Můžeme porovnávat `number` se `string`, což vůbec **nedává** smysl.
 
-```javascript
+```javascript playground
 console.log(666 == "666"); // true - Ďáblovo dílo, nepoužívat 👿
 console.log(666 === "666"); // false - Zde je svět v pořádku 🤗
 ```
@@ -46,7 +46,7 @@ console.log(666 === "666"); // false - Zde je svět v pořádku 🤗
 # Porovnání stringů
 Stringy mezi sebou porovnáš **úplně stejně, jako čísla**.
 
-```javascript
+```javascript playground
 const string1 = "12";
 const string2 = "24";
 const string3 = "🥔";
@@ -71,7 +71,7 @@ Máme například `string` s názvem školy (**má obsah**). Když ho dáme jako
 
 Ale pokud je `string` **prázdný**, podmínka se **neprovede**.
 
-```javascript
+```javascript playground
 let schoolName = "Střední škola přírodovědecká - katedra mravenců 🐜";
 
 if (schoolName) {
@@ -94,7 +94,7 @@ else {
 
 To stejné platí i u **dalších hodnot** v tabulce dole, ale hlavně tě to zajímá ještě u **čísel**.
 
-```javascript
+```javascript playground
 let beanCounter = 13; // Počet fazolí 🫘
 
 if (beanCounter) {
@@ -151,7 +151,7 @@ Občas potřebujeme **převrátit** `false` na `true` a naopak. Z nepravdy uděl
 | ✅ `true`  | ❌ `false`  | ✅ `true`    |
 | ❌ `false` | ✅ `true`   | ❌ `false`   |
 
-```javascript
+```javascript playground
 const isOnSale = true;
 
 console.log(!isOnSale);
@@ -164,7 +164,7 @@ Negace má ještě jedno využití - převést **truthy** hodnotu na `true` a **
 
 V tabulce nahoře jsme si ukázali hodnoty co jsou "jakoby pravda" a "jakoby nepravda". Když je chceme **převést na tvrdý `boolean`**, použijeme dva vykřičníky `!!`.
 
-```javascript
+```javascript playground
 const greetingText = "Čus bus autobus 🚌";
 const hasGreeting = !!greetingText;
 
@@ -192,7 +192,7 @@ AND se čte jako "**a zároveň**". [^1]
 
 Následující kód přečteš takto: "Pokud je výška větší nebo rovna 180 centimetrům a zároveň je věk větší nebo roven 18, můžeš na horskou dráhu."
 
-```javascript
+```javascript playground
 const heightCentimeters = 180;
 const age = 18;
 
@@ -222,7 +222,7 @@ OR se čte jako "**nebo**". [^2]
 
 `||` se na české klávesnici píše pomocí AltGr + W.
 
-```javascript
+```javascript playground
 const isThirsty = true;
 const isHungry = false;
 

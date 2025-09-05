@@ -15,7 +15,7 @@ Proměnná může obsahovat různé **typy** dat, zatím jsme si ukázali `strin
 | `symbol`    | To zatím nepotřebuješ znát 😊                              |                                            |
 Typ proměnné si můžeme v kódu **ověřit** pomocí klíčového slovíčka [`typeof`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof).
 
-```javascript
+```javascript playground
 const exampleString = "👁👅👁";
 const exampleNumber = 0.5;
 const exampleBoolean = true;

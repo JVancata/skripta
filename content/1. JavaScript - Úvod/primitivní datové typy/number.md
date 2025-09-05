@@ -6,13 +6,13 @@
 
 Při zápisu můžeš použít **tríček s podtržítkem** `_`. Nedělá to vůbec nic, jenom tím **zlepšíš čitelnost** - hezky oddělíš řády. 
 
-```javascript
+```javascript playground
 100000 === 100_000 // true
 9_007_199_254_740_991 === 9007199254740991 // true
 ```
 # Operace s čísly
 ## Sčítání, odčítání, násobení, dělení
-```javascript
+```javascript playground
 const number1 = 33;
 const number2 = 77;
 
@@ -27,19 +27,19 @@ console.log(number1 / number2); // Dělení
 ```
 
 Pozor na **dělení nulou**!
-```javascript
+```javascript playground
 console.log(100 / 0);
 // Výstup: Infinity
 ```
 ## Zbytek po dělení - modulo `%`
-```javascript
+```javascript playground
 const durationSeconds = 125;
 // Minuta má 60 sekund
 console.log(durationSeconds % 60);
 // Výstup: 5
 ```
 ## Umocnění - `**`
-```javascript
+```javascript playground
 console.log(2 ** 2); // Dva na druhou
 // Výstup: 4
 console.log(2 ** 3); // Dva na třetí
@@ -54,7 +54,7 @@ console.log(2 ** 6); // Dva na šestou
 ## Nutné vědět
 Dej si **pozor** na hodnotu [`NaN`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN) (not a number).  Jednou nebo později na to narazíš, tak se připrav.
 
-```javascript
+```javascript playground
 const parsedNumber = parseInt("asdf");
 
 console.log(parsedNumber); 
@@ -83,7 +83,7 @@ Pokud chceš pracovat s většími čísly, použij **[`BigInt`](https://develop
 
 > [!danger]+ Pozor na přesnost desetinných čísel (**floating point arithmetic**)!
 > Vlož do konzole tento kód:
-> ```javascript
+> ```javascript playground
 > const fractionSum = 0.2+0.1;
 > console.log(fractionSum);
 > console.log(fractionSum === 0.3); // Je to true, nebo false?
@@ -124,7 +124,7 @@ Benzín Tě vyšel na **36.90 Kč** za litr.
 > 
 > Jinak bychom **šli do pekla** za použití desetinných čísel při počítání peněz.
 > 
-> ```javascript
+> ```javascript playground
 > const gasPrice = 36.90;
 > const distanceTraveledKilometers = 225;
 > const gasConsumedLiters = 15;
@@ -178,7 +178,7 @@ Ve Spotify wrapped 2024 máš nejposlouchanější skladbu FE!N od Travise Scott
 > 
 > Když budu mít čas, upravím to. Nebo mi pošli Tvůj hezčí kód a já ho sem dám, dík :-)
 > 
-> ```javascript
+> ```javascript playground
 > // 3 minuty a 11 sekund
 > const songDuration = 3 * 60 + 11;
 > // 112x přehrání

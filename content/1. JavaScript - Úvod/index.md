@@ -18,7 +18,7 @@ Otevři **vývojářskou konzoli** v prohlížeči (F12) a klikni na záložku "
 
 Možná ti to nedovolí vkládat text, **bacha**. Přečti si tu chybovou hlášku, co to píše.
 
-```javascript
+```javascript playground
 const greet = () => {
 	console.log("Ahoj, světe!");
 }
@@ -34,7 +34,7 @@ Proměnná je **základ** programování, uchováváme v ní **data** a následn
 
 Hodnotu **vypíšeme** pomocí `console.log`
 
-```javascript
+```javascript playground
 const pageTitle = "JavaScript - Úvod";
 console.log(pageTitle);
 // Výstup: JavaScript - Úvod
@@ -74,7 +74,7 @@ Kód, který využívá proměnnou, **musí následovat** až po její **deklara
 
 > [!todo]- Proč to nefunguje?
 > Spusť si následující kód:
-> ```javascript
+> ```javascript playground
 > console.log(personName);
 > const personName = "František Palacký";
 > ```
@@ -85,20 +85,20 @@ Jeden název proměnné **nemůžeme** použít dvakrát - musí být **unikátn
 
 > [!todo]- Proč to nefunguje?
 > Spusť si následující kód:
-> ```javascript
+> ```javascript playground
 > const personAge = 68;
 > const personAge = 82;
 > ```
 > Víš, proč to nefunguje?
 > 
 > Pozor, ani toto nebude fungovat:
-> ```javascript
+> ```javascript playground
 > let personShoeSize = 41;
 > let personShoeSize = 42;
 > ```
 > 
 > Ani `let` nemůžeme **založit** dvakrát se stejným názvem. Můžeme ale udělat toto:
-> ```javascript
+> ```javascript playground
 > let personShoeSize = 41;
 > personShoeSize = 42;
 > ```
@@ -123,7 +123,7 @@ Jeden název proměnné **nemůžeme** použít dvakrát - musí být **unikátn
 # Funkce
 Když potřebuješ opakovat nějakou logiku **pořád dokola**, akorát s jiným vstupem, použiješ na to **funkce**.
 
-```javascript
+```javascript playground
 // Zápis pomocí klíčového slovíčka function
 function getUserGreeting(name) {
 	// Tělo funkce - zde můžeš dělat třeba výpočet
@@ -170,7 +170,7 @@ Funkce může **vracet** (returnovat) úplně cokoli - číslo, [[object|objekt]
 ## Příklad použití funkcí
 
 Zjednodušený výpočet úroku na ročním termínovaném vkladu[^2]:
-```javascript
+```javascript playground
 // Neřešíme nepřesnost desetinných čísel, neděláme core systém banky 💰
 const CAPITAL_INCOME_TAX_RATE = 0.15; // 15 %
 
@@ -244,7 +244,7 @@ Můžeme se v kódu **rozhodovat**, co se má stát, pokud nastala nějaká **po
 
 Stačí nám dvě **klíčová slovíčka** - `if` a `else`. Buď to, nebo to.
 
-```javascript
+```javascript playground
 const isRaining = true;
 
 // Pokud je proměnná isRaining true, spustí se následující kód
@@ -260,7 +260,7 @@ else {
 
 Kód v `if` bloku se vykoná vždy, když je hodnota `true`. Na vysvětlení vyhodnocení podmínek slouží celá kapitola [[boolean]].
 
-```javascript
+```javascript playground
 const age = 17;
 
 if (age < 18) {
@@ -286,7 +286,7 @@ flowchart TD
 
 Ten bychom v JavaScriptu zapsali takto:
 
-```javascript
+```javascript playground
 function getItemsByWeather(isRaining, isWarmWeather, isSunny) {
 	if (isRaining) {
 		console.log("Vem si deštník");

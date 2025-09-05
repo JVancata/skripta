@@ -1,6 +1,6 @@
 
 Uvažujme následující kód:
-```javascript
+```javascript playground
 const shoeSize = 42;
 console.log(typeof shoeSize);
 // "number"
@@ -13,7 +13,7 @@ Jakto, že jsme mohli na **primitivním** obyčejném číslu volat metodu `toSt
 Přece když na kalkulačce naťukám `42`, tak to neznamená nic jiného, než číslo `42`. Neumí nic speciálního a už vůbec ne se na něco proměnit..
 
 Stejně tak můžeme na **primitivním** typu `string` volat metodu `toUpperCase`.
-```javascript
+```javascript playground
 const greeting = "Ahoj!";
 console.log(greeting.toUpperCase())
 // AHOJ!
@@ -25,7 +25,7 @@ Za běhu JavaScript **primitivní hodnotu** obalí do **wrapperu**, zavolá na n
 
 Příklad toho, jak se wrapper zahazuje, z knihy Effective Typescript - bod 10.
 
-```javascript
+```javascript playground
 const x = "Ahoj";
 x.kohoZdravim = "Marcelu";
 console.log(x);
@@ -36,7 +36,7 @@ Wrapper objekty primitivních typů by se **nikdy neměly používat** napřímo
 
 Navíc je ještě rozdíl, když použiješ globální wrapper objekt a když použiješ jeho konstruktor.
 
-```javascript
+```javascript playground
 // Vrací primitivní hodnotu
 const primitive = Number(123);
 console.log(typeof primitive);

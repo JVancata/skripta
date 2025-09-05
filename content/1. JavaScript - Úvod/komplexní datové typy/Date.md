@@ -8,7 +8,7 @@
 
 [Date](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) v JavaScriptu není nic jiného, než počet milisekund od [Unixové Epochy](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date) (1. 1. 1970).
 
-```javascript
+```javascript playground
 // Právě teď
 const now = new Date();
 console.log(now);
@@ -25,7 +25,7 @@ Jeden typ je pro **počítače**, druhý typ je pro **uživatele**. Nemíchej je
 
 Když posíláš data na API, ukládáš timestampy nebo mezi daty něco počítáš, tak použij **standardizovaný formát** -  UNIX Timestamp (`1753791226321`) nebo [ISO 8601](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString) (`2025-07-29T12:11:55.833Z`).
 
-```javascript
+```javascript playground
 const now = new Date();
 
 // Tohle klidně pošli na API, ale blbě se to čte
@@ -37,7 +37,7 @@ console.log("ISO time", now.toISOString());
 
 Když zobrazuješ datum uživateli, vypiš mu ho podle jeho **nastavení systému**[^1].
 
-```javascript
+```javascript playground
 const now = new Date();
 
 console.log("Čas dle prohlížeče: ", now.toLocaleString());
@@ -50,7 +50,7 @@ Nikdy neparsuj nic, co není **standardizovaný formát**. Je to [hroznej bordel
 
 ISO string formát je vždycky UTC - [koordinovaný světový čas](https://cs.wikipedia.org/wiki/Koordinovan%C3%BD_sv%C4%9Btov%C3%BD_%C4%8Das). To znamená to "Z" na konci.
 
-```javascript
+```javascript playground
 // Večeře v Praze ve 20:00
 const stedrovecerniVecere2025 = new Date("2005-12-24T19:00:00Z");
 console.log(stedrovecerniVecere2025.toLocaleString("cs-CZ"));

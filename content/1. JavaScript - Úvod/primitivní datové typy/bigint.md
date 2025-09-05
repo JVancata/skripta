@@ -1,6 +1,6 @@
 Do `bigint` můžeš uložit **libovolně velký číslo**[^1] a normálně s ním počítat bez toho, aby se Ti ztratila přesnost.
 
-```javascript
+```javascript playground
 // Když zapisuješ bigint, vždycky je za číslem písmeno n
 const hugeNumber = 100_000_000_000_000_000_000_000_000_000_000_000_000n;
 console.log(hugeNumber * hugeNumber);

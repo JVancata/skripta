@@ -1,6 +1,6 @@
 String (česky **řetězec**) je vlastně **libovolný text**. Technicky správně je to **sekvence znaků**.
 
-```javascript
+```javascript playground
 const message = "Čau 👋 Můžeš sem napsat úplně cokoli budeš chtít.";
 console.log(message);
 // Výstup: Čau 👋 Můžeš sem napsat úplně cokoli budeš chtít.
@@ -15,7 +15,7 @@ console.log(message);
 # Zápis stringu
 
 Existuje **více způsobů** pro zápis stringu
-```javascript
+```javascript playground
 const simpleQuotes = 'Buď v jednoduchých uvozovkách';
 const doubleQUotes = "Nebo v dvojitých uvozovkách";
 
@@ -29,7 +29,7 @@ Zápis pomocí **backticků** má dvě výhody
  2. můžeš použít **template literály** (zní to strašidelně, ale neboj)
 
 Zkus si spustit následující kód:
-```javascript
+```javascript playground
 // ✅ Správné skládání stringů
 const favouriteAnimal = "Šnek 🐌";
 const animalMessage = `Čau!
@@ -47,7 +47,7 @@ console.log(animalMessage);
 Pomocí **template literálů** (template stringů) můžeš mezi svůj text **vkládat proměnné**. 
 
 Nic na tom není, ne? Nemusíš potom dělat toto:
-```javascript
+```javascript playground
 // ❌ Krkolomné skládání stringů, tohle spíš nedělej
 const favouriteFood = "Cibule 🧅";
 const foodMessage = "Jo, " + favouriteFood + " mi taky moc chutná!\n\nSnídaně bez " + favouriteFood + " není pořádná snídaně."
@@ -62,7 +62,7 @@ Někdy potřebuješ **projít** `string` po jednotlivých **znacích** (písmenk
 
 Stringy jsou v JavaScriptu [iterable](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols), funguje tedy úplně to stejné, co u [[array|arraye]].
 
-```javascript
+```javascript playground
 const animals = "Zvířátka: 🦓🐴🦄🐔🐹🐗🐶🐒🦍🦧";
 
 // ✅ Můžeš je proloopovat přes for const of
@@ -84,7 +84,7 @@ console.log(Array.from("👩‍👩‍👧‍👧"));
 
 ⚠ Dej si ale **pozor** na procházení `string` přes indexy, pokud si ho předtím nepřevedeš na `array`.
 
-```javascript
+```javascript playground
 // ⚠ BACHA!!!
 // Emoji (a i jiné Unicode znaky) jsou napozadí 2 a více různých UTF-16 znaků
 const emojis = "🎈🎆🎇🧨✨🎉🎊🎃";
@@ -106,7 +106,7 @@ console.log(emojis.split(""));
 > 
 > Na speciální emoji potřebuješ použít [Intl.Segmenter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter).
 > 
-> ```javascript
+> ```javascript playground
 > const segmenter = new Intl.Segmenter();
 > 
 > const getStringSegments = (input) => {
@@ -121,7 +121,7 @@ console.log(emojis.split(""));
 
 ## .length
 
-```js
+```js playground
 // Délka stringu, bacha na emoji!!!
 console.log("Čau".length);
 // Výstup: 3
@@ -131,23 +131,23 @@ console.log("👩‍👩‍👧‍👧".length);
 // Výstup: 11
 ```
 ## .toLowerCase
-```javascript
+```javascript playground
 console.log("Ahoj, PŘEVEDU TO MALÝ, OK?".toLowerCase());
 // Výstup: ahoj, převedu to malý, ok?
 ```
 ## .toUpperCase
-```javascript
+```javascript playground
 console.log("ČAU, převedu to velký, ok?".toUpperCase());
 // Výstup: ČAU, PŘEVEDU TO VELKÝ, OK?
 ```
 ## .trim
-```javascript
+```javascript playground
 console.log("    Vyhodím mezery ze začátku a z konce, jo?     ".trim());
 // Výstup: "Vyhodím mezery ze začátku a z konce, jo?"
 ```
 ## .split
 
-```javascript
+```javascript playground
 // todo
 console.log("Udělám ze stringu array podle rozdělovače, třeba ho rozdělám na mezery".split(" "));
 ```
@@ -176,7 +176,7 @@ Můžou se pak stát vtipný situace, když to správně neošetříš.
 > 
 > [Opět propůjčeno](https://adamjedlicka.notion.site/Meme-ka-3458e0f7a1c3431bbf231e3a52550552#7e963e73ba1e48438c503440f69aee70)
 
-```javascript
+```javascript playground
 const person = {};
 console.log(`Dobrá ráno, ${person.name}!
 Dnes Ti je ${parseInt(person.age)} let!`);
@@ -199,7 +199,7 @@ Udělej funkci, která pořádně **opepří obyčejnou větu**, ať to nemusí�
 3. Všechny malá písmena **převeď na velká**
 
 > [!todo]- Řešení
-> ```javascript
+> ```javascript playground
 > const makeSentenceFire = (input) => {
 >     const trimmed = input.trim();
 >     
