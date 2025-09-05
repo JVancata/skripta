@@ -121,7 +121,7 @@ console.log(emojis.split(""));
 
 ## .length
 
-```js
+```js playground
 // Délka stringu, bacha na emoji!!!
 console.log("Čau".length);
 // Výstup: 3

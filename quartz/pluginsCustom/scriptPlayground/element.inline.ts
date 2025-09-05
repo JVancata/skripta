@@ -209,6 +209,6 @@ const createButton = (): HTMLButtonElement => {
     return button;
 }
 
-const targetElements = document.querySelectorAll(`${PLAYGROUND_ELEMENT_TAG}`);
+const targetElements = document.querySelectorAll(PLAYGROUND_ELEMENT_TAG);
 
 targetElements.forEach((element) => new PlaygroundElement(element));
