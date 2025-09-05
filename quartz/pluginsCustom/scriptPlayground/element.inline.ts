@@ -5,10 +5,21 @@ import { indentWithTab } from "@codemirror/commands"
 import { ScriptSandbox } from "./sandbox";
 import { RUNNER_HTML_PATH } from "./const";
 import { ConsoleEventLevel } from "./sandbox/messages";
+import { oneDarkTheme as customTheme } from "./editorTheme";
+
+const EDITOR_COLOR_MAP = new Map([
+    ['rgb(0, 0, 255)', 'rgb(100, 100, 255)'], // variables
+    ['rgb(119, 0, 136)', 'rgb(166, 72, 179)'], // flow-control
+    ['rgb(34, 17, 153)', 'rgb(114, 102, 192)'], // bool literals
+    ['rgb(17, 102, 68)', 'rgb(55, 145, 109)'], // num literals
+    ['rgb(170, 17, 17)', 'rgb(214, 39, 39)'], // string literals
+]);
+
 
 class PlaygroundElement {
     private readonly sandbox: ScriptSandbox;
     private readonly log: PlaygroundLog;
+    private readonly editorContainer: HTMLElement;
     private readonly editor: EditorView;
     private readonly originalCode: string;
 
@@ -20,24 +31,27 @@ class PlaygroundElement {
 
         const { container: header, runButton, resetButton } = createHeader();
 
-        const editor = document.createElement('editor');
+        this.editorContainer = document.createElement('editor');
 
         this.log = new PlaygroundLog();
 
         container.append(
             header,
-            editor,
+            this.editorContainer,
             this.log.element,
         );
 
         this.editor = new EditorView({
-            parent: editor,
+            parent: this.editorContainer,
             doc: this.originalCode,
             extensions: [
                 basicSetup,
                 keymap.of([indentWithTab]),
                 javascript(),
+                customTheme,
                 EditorView.updateListener.of((updateEvent) => {
+                    this.unfuckEditorColors();
+
                     const currentCode = updateEvent.state.doc.toString();
                     const isCodeUntouched = currentCode === this.originalCode;
 
@@ -71,6 +85,24 @@ class PlaygroundElement {
         });
 
         element.replaceChildren(container);
+    }
+
+    private unfuckEditorColors() {
+        const spans = this.editorContainer.querySelectorAll('.cm-content span');
+
+        spans.forEach(span => {
+            if (!(span instanceof HTMLSpanElement)) return;
+
+            const styles = span.computedStyleMap();
+
+            const currentColor = styles.get('color')?.toString();
+            if (!currentColor) return;
+
+            const colorFix = EDITOR_COLOR_MAP.get(currentColor);
+            if (!colorFix) return;
+
+            span.style.color = colorFix;
+        });
     }
 
     private resetEditor() {
