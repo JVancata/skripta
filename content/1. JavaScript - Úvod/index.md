@@ -221,7 +221,7 @@ Na příkladu je použitej i [default parameter](https://developer.mozilla.org/e
 
 - Funkce dělá **jednu věc** a tu dělá dobře (je atomická)
 - Funkce funguje **samostatně** (nemá sideffecty)
-	- Pracuje jenom parametry, ne s hodnotami "okolo"[^3]
+	- Pracuje jenom s parametry, ne s hodnotami "okolo"[^3]
 	- Vrací hodnoty, nesahá na hodnoty "okolo"
 - Má konzistentní výstup - vrací vždy stejný datový typ
 - Když má více vstupních/výstupních parametrů, používej [[object|objekty]]
