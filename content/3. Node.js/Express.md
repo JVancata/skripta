@@ -49,6 +49,7 @@ Je to, bohužel, daleko složitější než nasadit appku v PHPčku.
 
 Nestačí někam nahrát .js/.ts soubor, musíš ten skript na nějakém serveru reálně spustit, aby poslouchal na určitém portu. A potom použiješ reverse-proxy [NGINX](https://nginx.org/), aby requesty místo servování statických souborů předával na např. `http://localhost:3000`.
 
+Aby ten skript běžel i potom, co se ze serveru odpojíš, můžeš použít třeba [pm2](https://pm2.keymetrics.io/docs/usage/quick-start/).
 [^1]: Konvence je port 3000, ale pravidlo to určitě není.
 
 [^2]: Samozřejmě můžeš mít souborů víc a různě je do sebe importovat, ale vždycky máš jeden hlavní skript, co spouštíš.
