@@ -17,3 +17,4 @@ console.log(process.env.API_KEY);
 // Output: secret-key-stored-in-dot-env
 ```
 
+[Oficiální návod](https://nodejs.org/en/learn/command-line/how-to-read-environment-variables-from-nodejs)
