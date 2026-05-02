@@ -12,4 +12,4 @@
 Each deploy should have its own user (because of deployment SSH keys, otherwise a magic with ~/.ssh/config file has to be made to make GIT use different keys for different github repos)
 
 # Acknowledgment
-Thank you very much, [Jacky Zhao](https://github.com/jackyzha0/quartz)
+Thank you very much, [Jacky Zhao](https://github.com/jackyzha0/quartz).
